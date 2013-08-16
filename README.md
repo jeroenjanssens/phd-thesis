@@ -16,11 +16,26 @@ $ tikz2pdf figures/tikz/*.tikz --template figures/thesis-template.tex --output f
 
 Below are some figures from the thesis. Please note that these are rendered with a different font. Also, the conversion from PDF to PNG with ImageMagick isn't all that great.
 
+### figures/examples/bg-banana-roc.png
 ![Example 1](figures/examples/bg-banana-roc.png)
+
+### figures/examples/bg-multiclass.png
 ![Example 2](figures/examples/bg-multiclass.png)
+
+### figures/examples/eval-boxplot-preprocessing-pca.png
 ![Example 3](figures/examples/eval-boxplot-preprocessing-pca.png)
+
+### figures/examples/mlc-mapping-auc-overview.png
 ![Example 4](figures/examples/mlc-mapping-auc-overview.png)
+
+### figures/examples/sos-densities.png
 ![Example 5](figures/examples/sos-densities.png)
+
+### figures/examples/sos-graph-matlab-binding.png
 ![Example 6](figures/examples/sos-graph-matlab-binding.png)
+
+### figures/examples/sos-graphs-sample.png
 ![Example 7](figures/examples/sos-graphs-sample.png)
+
+### figures/examples/sos-nemenyi.png
 ![Example 8](figures/examples/sos-nemenyi.png)
