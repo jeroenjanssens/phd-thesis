@@ -1,0 +1,79 @@
+%pdfcrop ? ? ? ?
+\vspace*{0.1cm}
+\begin{tikzpicture}
+   
+\pgfplotstableread{data/results-real-errorbars-aistats.dat}\realresults%
+  \begin{axis}[
+    width=13.1cm,
+	%height=5cm,
+	height=6.5cm,
+    xtick=data,
+	legend columns=-1,
+    xticklabels={
+{Iris},
+{Ecoli},
+%{Vowel Recognition},
+{Breast W. Original},
+{Delft Pump},
+%{Balance Scale},
+{Waveform Generator},
+{Wine Recognition},
+{Colon Gene},
+{BioMed},
+%{Automobile},
+{Vehicle Silhouettes},
+{Glass Identification},
+%{Sonar},
+%{Ionosphere},
+{Boston Housing},
+{Heart Disease},
+{Arrhythmia},
+{Haberman's Survival},
+{Breast W. New},
+%{Diabetes},
+{Liver Disorders},
+{SPECTF Heart},
+{Hepatitis}},
+    %symbolic x coords={a,b,c,d,e,f,g,h,i},
+    %ymin=0.35,
+ ymin=0.4,
+    ymax=1.03,
+	xmin=0.5,
+	xmax=18.5,
+    ytick={0.4,0.5,0.6,0.7,0.8,0.9,1.0},
+yticklabels={0,0.5,0.6,0.7,0.8,0.9,1},
+xmajorgrids,
+ymajorgrids,
+every major grid/.append style={semithick, dotted},
+every major tick/.append style={black,thin},
+    %yticklabels={0.5,0.6,0.7,0.8,0.9,1.0},
+    axis y discontinuity=crunch,
+    enlarge x limits=false,
+    enlarge y limits=false,
+    ylabel={weighted AUC},
+	every axis y label/.style={at={(ticklabel cs:0.5)},rotate=90,anchor=near ticklabel},
+    xticklabel style={rotate=-30,anchor=west,yshift=-0.2 cm},
+	 legend pos=outer north east,reverse legend,legend cell align=left,legend entries={LSOD,LOCI,LOF,KNNDD,SOS},
+  legend style={xshift=-0.32cm,yshift=0.3cm,anchor=south east},
+legend image post style={}]
+
+    \addplot[mark=square*,mark options={scale=0.75,solid},legend image post style={xshift=0.08cm,mark options={scale=1,solid}},xshift=-0.08cm,thick,dashed,orange,error bars/.cd,y dir=both,y explicit,error bar style={solid,opacity=0}] table[x index=0,y index=4,y error index=9] {\realresults}; %LSOD
+
+ 	\addplot[mark=star,mark options={scale=1.2,solid,very thick},legend image post style={xshift=0.04cm,mark options={scale=1.5,solid,very thick,yshift=0.01cm}},xshift=-0.04cm,thick,densely dashed,green!50!black,error bars/.cd,y dir=both,y explicit,error bar style={solid,opacity=0}] table[x index=0,y index=2,y error index=7] {\realresults}; %LOCI
+
+	\addplot[mark=*,mark options={scale=0.75,solid},legend image post style={xshift=-0.04cm,mark options={scale=1,solid}},xshift=0.04cm,thick,dotted,blue,error bars/.cd,y dir=both,y explicit,error bar style={solid,opacity=0}] table[x index=0,y index=3,y error index=8] {\realresults}; %LOF 
+
+	\addplot[mark=triangle*,mark options={scale=0.75,solid},legend image post style={xshift=-0.08cm,mark options={scale=1.2,solid,yshift=-0.02cm}},xshift=0.08cm,thick,densely dotted,red,error bars/.cd,y dir=both,y explicit,error bar style={solid,opacity=0}] table[x index=0,y index=1,y error index=6] {\realresults}; %KNN
+
+    \addplot[mark=diamond*,mark options={scale=0.75,solid},legend image post style={xshift=0cm,mark options={scale=1.2,solid}},thick,violet!80,error bars/.cd,y dir=both,y explicit,error bar style={solid,opacity=0}] table[x index=0,y index=5,y error index=10] {\realresults};	%SOS
+
+  \end{axis}
+
+
+\pgfresetboundingbox
+
+\path (-0.98cm,-1.55cm) rectangle (12.22cm,5.75cm);
+
+%\thesisbb
+
+\end{tikzpicture}

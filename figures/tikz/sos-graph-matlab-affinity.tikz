@@ -1,0 +1,113 @@
+\begin{tikzpicture}[
+>=latex,
+auto,
+data object/.style={font=\normalsize,circle,draw=#1!70!white,fill=#1!30!white,thick,inner sep=0.1cm},
+selects/.style={->,thick},
+affinity normal/.style={thick,draw=blue!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=blue!#1!white]{>}}}, postaction={decorate}},
+affinity give/.style={very thick,draw=orange!#1!white,decoration={markings,mark=at position .9 with {\arrow[thick,fill=orange!#1!white]{>}}}, postaction={decorate}},
+affinity get/.style={very thick,draw=cyan!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=cyan!#1!white]{>}}}, postaction={decorate}},
+affinity hidden/.style={thick,draw=gray!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=gray!#1!white]{>}}}, postaction={decorate}},
+]
+\begin{scope}[yshift=0.000cm]
+    \node[data object=blue] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=blue] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=blue] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=blue] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=blue] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=blue] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [affinity normal=10.7618,bend left=22,overlay] (o-6) to  (o-1);
+    \draw [affinity normal=10.7618,bend right=22,overlay] (o-6) to  (o-4);
+    \draw [affinity normal=16.5486,bend right=16,overlay] (o-1) to  (o-6);
+    \draw [affinity normal=16.5832,bend right=2,overlay] (o-2) to  (o-6);
+    \draw [affinity normal=16.8197,bend left=28,overlay] (o-4) to  (o-6);
+    \draw [affinity normal=17.3616,bend left=3,overlay] (o-5) to  (o-6);
+    \draw [affinity normal=17.5966,bend left=10,overlay] (o-3) to  (o-6);
+    \draw [affinity normal=23.3156,bend left=3,overlay] (o-6) to  (o-5);
+    \draw [affinity normal=32.3156,bend right=2,overlay] (o-6) to  (o-3);
+    \draw [affinity normal=32.9699,bend left=10,overlay] (o-6) to  (o-2);
+    \draw [affinity normal=61.1409,bend left=24,overlay] (o-3) to  (o-1);
+    \draw [affinity normal=63.6435,bend left=24,overlay] (o-2) to  (o-4);
+    \draw [affinity normal=78.9692,bend left=24,overlay] (o-1) to  (o-3);
+    \draw [affinity normal=79.1536,bend left=7,overlay] (o-2) to  (o-1);
+    \draw [affinity normal=80.6367,bend left=7,overlay] (o-3) to  (o-4);
+    \draw [affinity normal=81.9604,bend right=12,overlay] (o-4) to  (o-2);
+    \draw [affinity normal=85.1223,bend left=7,overlay] (o-2) to  (o-3);
+    \draw [affinity normal=86.0408,bend left=7,overlay] (o-3) to  (o-2);
+    \draw [affinity normal=89.6343,bend right=7,overlay] (o-5) to  (o-1);
+    \draw [affinity normal=91.4293,bend left=7,overlay] (o-1) to  (o-2);
+    \draw [affinity normal=91.6422,bend left=7,overlay] (o-1) to  (o-4);
+    \draw [affinity normal=91.7614,bend left=7,overlay] (o-4) to  (o-1);
+    \draw [affinity normal=91.7614,bend left=7,overlay] (o-4) to  (o-3);
+    \draw [affinity normal=94.6749,bend right=7,overlay] (o-1) to  (o-5);
+    \draw [affinity normal=94.6754,bend left=7,overlay] (o-5) to  (o-4);
+    \draw [affinity normal=94.9296,bend left=7,overlay] (o-2) to  (o-5);
+    \draw [affinity normal=97.6346,bend left=7,overlay] (o-5) to  (o-2);
+    \draw [affinity normal=98.3319,bend left=7,overlay] (o-4) to  (o-5);
+    \draw [affinity normal=98.3845,bend left=7,overlay] (o-3) to  (o-5);
+    \draw [affinity normal=100,bend left=7,overlay] (o-5) to  (o-3);
+    \path[red] (-0.2cm,-0.42cm) rectangle (8cm,2.62cm);
+\end{scope}
+\begin{scope}[xshift=9.000cm,yshift=0.000cm,scale=0.300]
+    \fill[blue!0!white] (1.000cm,6.000cm) rectangle (2.000cm,5.000cm);
+    \fill[blue!91.4293!white] (2.000cm,6.000cm) rectangle (3.000cm,5.000cm);
+    \fill[blue!78.9692!white] (3.000cm,6.000cm) rectangle (4.000cm,5.000cm);
+    \fill[blue!91.6422!white] (4.000cm,6.000cm) rectangle (5.000cm,5.000cm);
+    \fill[blue!94.6749!white] (5.000cm,6.000cm) rectangle (6.000cm,5.000cm);
+    \fill[blue!16.5486!white] (6.000cm,6.000cm) rectangle (7.000cm,5.000cm);
+    \fill[blue!79.1536!white] (1.000cm,5.000cm) rectangle (2.000cm,4.000cm);
+    \fill[blue!0!white] (2.000cm,5.000cm) rectangle (3.000cm,4.000cm);
+    \fill[blue!85.1223!white] (3.000cm,5.000cm) rectangle (4.000cm,4.000cm);
+    \fill[blue!63.6435!white] (4.000cm,5.000cm) rectangle (5.000cm,4.000cm);
+    \fill[blue!94.9296!white] (5.000cm,5.000cm) rectangle (6.000cm,4.000cm);
+    \fill[blue!16.5832!white] (6.000cm,5.000cm) rectangle (7.000cm,4.000cm);
+    \fill[blue!61.1409!white] (1.000cm,4.000cm) rectangle (2.000cm,3.000cm);
+    \fill[blue!86.0408!white] (2.000cm,4.000cm) rectangle (3.000cm,3.000cm);
+    \fill[blue!0!white] (3.000cm,4.000cm) rectangle (4.000cm,3.000cm);
+    \fill[blue!80.6367!white] (4.000cm,4.000cm) rectangle (5.000cm,3.000cm);
+    \fill[blue!98.3845!white] (5.000cm,4.000cm) rectangle (6.000cm,3.000cm);
+    \fill[blue!17.5966!white] (6.000cm,4.000cm) rectangle (7.000cm,3.000cm);
+    \fill[blue!91.7614!white] (1.000cm,3.000cm) rectangle (2.000cm,2.000cm);
+    \fill[blue!81.9604!white] (2.000cm,3.000cm) rectangle (3.000cm,2.000cm);
+    \fill[blue!91.7614!white] (3.000cm,3.000cm) rectangle (4.000cm,2.000cm);
+    \fill[blue!0!white] (4.000cm,3.000cm) rectangle (5.000cm,2.000cm);
+    \fill[blue!98.3319!white] (5.000cm,3.000cm) rectangle (6.000cm,2.000cm);
+    \fill[blue!16.8197!white] (6.000cm,3.000cm) rectangle (7.000cm,2.000cm);
+    \fill[blue!89.6343!white] (1.000cm,2.000cm) rectangle (2.000cm,1.000cm);
+    \fill[blue!97.6346!white] (2.000cm,2.000cm) rectangle (3.000cm,1.000cm);
+    \fill[blue!100!white] (3.000cm,2.000cm) rectangle (4.000cm,1.000cm);
+    \fill[blue!94.6754!white] (4.000cm,2.000cm) rectangle (5.000cm,1.000cm);
+    \fill[blue!0!white] (5.000cm,2.000cm) rectangle (6.000cm,1.000cm);
+    \fill[blue!17.3616!white] (6.000cm,2.000cm) rectangle (7.000cm,1.000cm);
+    \fill[blue!10.7618!white] (1.000cm,1.000cm) rectangle (2.000cm,0.000cm);
+    \fill[blue!32.9699!white] (2.000cm,1.000cm) rectangle (3.000cm,0.000cm);
+    \fill[blue!32.3156!white] (3.000cm,1.000cm) rectangle (4.000cm,0.000cm);
+    \fill[blue!10.7618!white] (4.000cm,1.000cm) rectangle (5.000cm,0.000cm);
+    \fill[blue!23.3156!white] (5.000cm,1.000cm) rectangle (6.000cm,0.000cm);
+    \fill[blue!0!white] (6.000cm,1.000cm) rectangle (7.000cm,0.000cm);
+    \draw[thin]  (1.000cm,1.000cm) -- (7.000cm,1.000cm);
+    \draw[thin]  (1.000cm,2.000cm) -- (7.000cm,2.000cm);
+    \draw[thin]  (1.000cm,3.000cm) -- (7.000cm,3.000cm);
+    \draw[thin]  (1.000cm,4.000cm) -- (7.000cm,4.000cm);
+    \draw[thin]  (1.000cm,5.000cm) -- (7.000cm,5.000cm);
+    \node[font=\small,inner sep=0cm,anchor=base east] at (0.500cm,5.200cm) {1};
+    \node[font=\small,inner sep=0cm,anchor=base east] at (0.500cm,4.200cm) {2};
+    \node[font=\small,inner sep=0cm,anchor=base east] at (0.500cm,3.200cm) {3};
+    \node[font=\small,inner sep=0cm,anchor=base east] at (0.500cm,2.200cm) {4};
+    \node[font=\small,inner sep=0cm,anchor=base east] at (0.500cm,1.200cm) {5};
+    \node[font=\small,inner sep=0cm,anchor=base east] at (0.500cm,0.200cm) {6};
+    \node[font=\small,inner sep=0cm,anchor=base] at (1.500cm,6.250cm) {1};
+    \node[font=\small,inner sep=0cm,anchor=base] at (2.500cm,6.250cm) {2};
+    \node[font=\small,inner sep=0cm,anchor=base] at (3.500cm,6.250cm) {3};
+    \node[font=\small,inner sep=0cm,anchor=base] at (4.500cm,6.250cm) {4};
+    \node[font=\small,inner sep=0cm,anchor=base] at (5.500cm,6.250cm) {5};
+    \node[font=\small,inner sep=0cm,anchor=base] at (6.500cm,6.250cm) {6};
+    \node[inner sep=0cm,anchor=base east] at (0.500cm,6.250cm) {$\mathbf{A}$};
+    \draw[thin]  (2.000cm,0.000cm) -- (2.000cm,6.000cm);
+    \draw[thin]  (3.000cm,0.000cm) -- (3.000cm,6.000cm);
+    \draw[thin]  (4.000cm,0.000cm) -- (4.000cm,6.000cm);
+    \draw[thin]  (5.000cm,0.000cm) -- (5.000cm,6.000cm);
+    \draw[thin]  (6.000cm,0.000cm) -- (6.000cm,6.000cm);
+    \draw[thin]  (1.000cm,0.000cm) rectangle (7.000cm,6.000cm);
+\end{scope}
+\end{tikzpicture}

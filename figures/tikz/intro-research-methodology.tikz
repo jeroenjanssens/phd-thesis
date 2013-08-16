@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\node[inner sep=0.25cm,rectangle,draw,rounded corners,fill=ChapterColor1!30,draw=ChapterColor1!60,thick] %12.75
+{\begin{minipage}[t]{6.8cm}\color{black}%
+\begin{enumerate}[itemsep=0.05cm,topsep=0cm,leftmargin=0.6cm]
+\item Literature review and analysis
+\item Develop a novel algorithm for detecting outliers 
+\item For three experiments:
+\begin{itemize}[itemsep=0.05cm,topsep=0cm,leftmargin=0.5cm]
+\item Implement algorithm for outlier selection
+\item Perform~comparative experiments
+\item  Analyse obtained results
+\end{itemize} 
+\end{enumerate}
+~\vspace*{-0.4cm}
+\end{minipage}
+};
+%\thesisbb;
+\end{tikzpicture}

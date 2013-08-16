@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+\node[text width=13.2cm,rectangle,font=\small,inner sep=0cm] {
+\begin{enumerate}[leftmargin=0.6cm,topsep=0cm,itemsep=0cm]
+
+\item \textbf{J.H.M. Janssens} and E.O. Postma. One-class classification with LOF and LOCI: An empirical
+comparison. In M.G.J. Van Erp, J.H. Stehouwer, and M.M. Van Zaanen, editors, \emph{Proceedings
+of the 18th Annual Belgian-Dutch Conference on Machine Learning (BENELEARN 2009)}, pages
+56-64, Tilburg, The Netherlands, 2009.
+
+\item \textbf{J.H.M. Janssens}, I. Flesch, and E.O. Postma. Outlier detection with one-class classifiers from
+ML and KDD. In M.A. Wani, M. Kantardzic, V. Palade, L. Kurgan, and Y. Qi, editors, \emph{Proceedings of the 8th International Conference on Machine Learning and Applications (ICMLA
+2009)}, pages 147-153, Miami, FL, Dec. 2009.
+
+\item \textbf{J.H.M. Janssens}, H. Hiemstra, and E.O. Postma. Creating artificial vessel trajectories with
+Presto. \emph{In Proceedings of the 22nd Benelux Conference on Artificial Intelligence (BNAIC
+2010)}, Luxembourg, Luxembourg, 2010.
+
+\item C.M.E. Willems, W.R. van Hage, G.K.D. de Vries, \textbf{J.H.M. Janssens}, and V. Malaise. An integrated approach for visual analysis of a multi-source moving objects knowledge base.
+\emph{International Journal of Geographical Information Science},
+24(10):1543-1558, 2010.
+
+\item C.M.E. Willems, W.R. van Hage, G.K.D. de Vries, \textbf{J.H.M. Janssens}, and V. Malaise. An integrated approach for visual analysis of a multi-source moving objects knowledge base. In
+G. Andrienko, N. Andrienko, J. Dykes, M-J. Kraak, and H. Schumann, editors, \emph{Geospatial
+Visual Analytics: Focus on Time}, Guimares, Portugal, 2010.
+
+\item \textbf{J.H.M. Janssens}, E.O. Postma, and H.J. Van den Herik. \emph{Unsupervised Outlier Selection with Pairwise Affinities}. In SNN Symposium: Intelligent Machines, Nijmegen, The Netherlands, November 2010.
+
+\item \textbf{J.H.M. Janssens}, and E.O. Postma, \emph{Ranking Images on Semantic Attributes using Human Computation}. In SNN Symposium: Intelligent Machines, Nijmegen, The Netherlands, November 2010.
+
+\item \textbf{J.H.M. Janssens},  Ranking images on semantic attributes using human computation. In \emph{NIPS Workshop on Computational Social Science and the Wisdom of Crowds}, Whistler, Canada, December 2010
+\textcolor{orange!70!black}{
+\item\textbf{J.H.M. Janssens}, F. Huszar, E.O. Postma, and H.J. Van den Herik. Stochastic Outlier Selection. \emph{Submitted to AISTATS}, 2011.  (Author notification: 28 Feb).}
+\textcolor{orange!70!black}{
+\item \textbf{J.H.M. Janssens}, E.O. Postma and H.J. Van den Herik. Ranking images through human computation. \emph{Submitted to IJCAI}, 2011. (Author notification: 31 Mar).}
+%\textcolor{red}{
+\textcolor{gray}{
+\item  \textbf{J.H.M. Janssens}, D.M.J. Tax, E.O. Postma and H.J. Van den Herik. Classifying one-class classifiers (working title). \emph{Intending to submit to PAMI or JMLR}.}
+\textcolor{gray}{
+\item  \textbf{J.H.M. Janssens}, K. Heller, and Z. Ghahramani. To LDA or not to LDA? (working title). \emph{Intending to submit to ECML}.}
+\end{enumerate}
+};
+%\thesisbb
+\end{tikzpicture}

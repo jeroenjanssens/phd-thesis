@@ -1,0 +1,38 @@
+\begin{tikzpicture}[
+el/.style={draw=ChapterColor1!70!white,fill=ChapterColor1!30!white,thick},
+]
+
+\node[shape=regular polygon,draw=none,minimum size=9cm,xscale=-1,rotate=144] (c) {};
+
+\node[rectangle,minimum size=1.75cm,el] at (c.corner 3) (expert) {};
+
+\node[inner sep=0cm,text width=1.2cm,circle,minimum size=1.75cm,el]  at (c.corner 4) (algorithm) {};
+%\node[inner sep=0cm,align=center,text width=1.2cm,circle,minimum size=1.75cm,el]  at (c.corner 4) (algorithm) {Outlier\\[-0.1cm]selection\\[-0.1cm]algorithm};
+
+\node[cylinder,el,minimum width=1.75cm,shape border rotate=90,aspect=0.2,minimum height=1.5cm]  at (c.corner 5) (dataset) {Data set};
+
+\node[cloud,el,aspect=1,cloud puffs=20,minimum width=1.5cm,inner sep=-0.07cm]  at (c.corner 2) (realworld) {Real world};
+
+\node[inner sep=0cm,align=center,text width=1.2cm,circle,minimum size=1.75cm,el]  at (c.corner 1) (measure) {Represent as data};
+
+\node[xshift=-0.05cm] at (algorithm) {\includegraphics[height=1.2cm]{../dev/algorithm-noarrows.pdf}};
+\node[xshift=-0.00cm] at (expert) {\includegraphics[height=1.4cm]{../dev/expert.pdf}};
+
+\path [->,thick] 
+(realworld) edge node[above,sloped] {observations} (measure)
+			edge[bend left=10] node [below,sloped] {observations} (expert)
+(measure)	edge node[above,sloped] {unlabelled data points} (dataset)
+(dataset)	edge node[above,sloped] {(un)labelled data points} (algorithm)
+(algorithm)	edge[bend left=10] node[above,sloped] {classifications} node[below,sloped] {\{outlier, inlier\}} (expert)
+(expert)	edge[bend left=10] node[above,sloped] {parameters} (algorithm)
+			edge[densely dashed] node[above,sloped] {labels} node[below,sloped] {\{anomaly, normality\}} (dataset)
+			edge node[sloped,above] {features or dissimilarity measure} (measure)
+			edge[bend left=10] node[above,sloped] {anomaly detections} (realworld);
+
+\node[anchor=south west] at (expert.south west) {(1)};
+\node[anchor=south,xshift=0.25cm,yshift=-0.1cm] at (algorithm.south west) {(2)};
+\node[anchor=south,xshift=0.cm,yshift=0.1cm] at (realworld.south) {(3)};
+\node[anchor=south,xshift=0.cm,yshift=0.05cm] at (measure.south) {(4)};
+\node[anchor=south east,xshift=0.3cm,yshift=0.05cm] at (dataset.south east) {(5)};
+
+\end{tikzpicture}

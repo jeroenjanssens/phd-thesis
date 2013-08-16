@@ -1,0 +1,404 @@
+%pdfcrop 1 40 1 10
+\begin{tikzpicture}
+\pgfplotstableread{data/mld-metafeatures-log-right.dat}\data%
+	\matrix[name=ma,inner sep=0.01cm,row sep=0.4cm,column sep=0.2cm,ampersand replacement=\&]{
+	\begin{axis}[name=ax0,
+		axis x line=bottom,extra x ticks={-1.793410,-1.219983,-1.060932,-1.002271,-0.988098,-0.898457,-0.879843,-0.843618,-0.827773,-0.793661,-0.755023,-0.707041,-0.693147,-0.679902,-0.659075,-0.645366,-0.595394,-0.573936,-0.560057,-0.538050,-0.523112,-0.503539,-0.488847,-0.478603,-0.437446,-0.420833,-0.416941,-0.395220,-0.357151,-0.336172,-0.316310,-0.300947,-0.266262,-0.255381,-0.237465,-0.226000,-0.217830,-0.206648,-0.162622,-0.127360,-0.009642,0.043020,0.058230,0.068406,0.101320,0.119971,0.131905,0.175546,0.211052,0.256836,0.362326},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-2.079,
+		xmax=1.352,
+		xlabel={nodes-per-class},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x0,y=y0f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x0,y=y0f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x0,y=y0f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax1,
+		axis x line=bottom,extra x ticks={-5.334736,-4.280189,-3.791108,-3.608086,-3.430706,-3.276782,-3.202372,-3.056843,-2.893468,-2.854731,-2.785213,-2.753289,-2.711904,-2.654372,-2.634090,-2.600966,-2.573483,-2.547954,-2.538974,-2.502225,-2.440261,-2.379895,-2.354288,-2.316041,-2.253308,-2.232731,-2.192078,-2.178176,-2.139485,-2.119411,-2.094644,-2.084650,-2.078761,-2.055559,-2.038790,-2.023271,-2.003793,-1.991394,-1.980238,-1.960142,-1.919775,-1.896802,-1.868646,-1.814830,-1.782611,-1.767407,-1.701653,-1.674087,-1.595648,-1.411201,-1.307275},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-7.132,
+		xmax=-0.125,
+		xlabel={nodes-per-data-point},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x1,y=y1f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x1,y=y1f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x1,y=y1f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax2,
+		axis x line=bottom,extra x ticks={0.662688,0.693147,0.712950,0.875469,0.966984,1.071584,1.121678,1.175573,1.196948,1.238374,1.291984,1.350667,1.383791,1.398717,1.439835,1.465568,1.479329,1.504077,1.517323,1.564441,1.589235,1.613430,1.658228,1.688249,1.697449,1.715598,1.747459,1.756132,1.808289,1.826161,1.851599,1.860975,1.873339,1.902108,1.954445,1.964311,1.979621,2.013569,2.032088,2.059239,2.074429,2.089392,2.170196,2.231089,2.252344,2.339881,2.417698,2.522524,2.631889,2.704711,2.745988},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=0.363,
+		xmax=3.964,
+		xlabel={depth},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		legend entries={$\lambda = 0.2$, $\lambda = 0.1$,$\lambda = 0.0$},
+		legend to name=namedlegend,legend columns=-1,reverse legend,legend style={/tikz/every even column/.append style={column sep=0.25cm}},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x2,y=y2f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x2,y=y2f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x2,y=y2f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax3,
+		axis x line=bottom,extra x ticks={0.500775,0.693147,0.693147,0.832909,0.932164,1.015231,1.101940,1.118415,1.184790,1.220830,1.289233,1.321756,1.337629,1.353255,1.376244,1.393766,1.408545,1.435085,1.451614,1.470176,1.488400,1.506297,1.512927,1.530395,1.549688,1.564441,1.578979,1.607436,1.617406,1.627278,1.644805,1.662030,1.697449,1.710188,1.724551,1.733424,1.757858,1.790091,1.814825,1.843719,1.873339,1.902108,1.915451,2.016235,2.048982,2.078191,2.166765,2.198335,2.228939,2.267994,2.381396},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=0.223,
+		xmax=3.561,
+		xlabel={width},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x3,y=y3f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x3,y=y3f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x3,y=y3f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax4,
+		axis x line=bottom,extra x ticks={-1.959080,-1.356644,-1.202301,-0.806142,-0.670492,-0.518503,-0.430748,-0.351506,-0.262352,-0.217115,-0.186650,-0.168282,-0.115213,0.001650,0.115244,0.167594,0.197842,0.219438,0.266904,0.320150,0.349462,0.370550,0.409570,0.440362,0.459453,0.484942,0.495740,0.517537,0.531174,0.560353,0.573503,0.597109,0.625554,0.651812,0.672030,0.682280,0.720609,0.742385,0.755014,0.781466,0.791720,0.805681,0.844339,0.882487,0.976499,1.004679,1.073646,1.135201,1.178757,1.306764,1.399592},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-2.325,
+		xmax=2.063,
+		xlabel={shape},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x4,y=y4f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x4,y=y4f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x4,y=y4f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax5,
+		axis x line=bottom,extra x ticks={-4.605170,-3.912023,-2.995732,-2.525729,-2.302585,-2.040221,-1.714798,-1.609438,-1.309333,-1.108663,-0.994252,-0.891598,-0.755023,-0.673345,-0.579818,-0.462035,-0.385662,-0.139262,-0.020203,0.000000,0.000000,0.000000,0.058269,0.157004,0.207014,0.254642,0.350657,0.412110,0.524729,0.636577,0.672944,0.722706,0.824175,0.862890,0.940007,1.085189,1.264127,1.501853,1.678964,1.781709,1.925707,2.036012,2.124654,2.197225,2.334084,2.440606,2.503892,2.575661,2.952303,3.185526,3.668932},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-5.519,
+		xmax=5.451,
+		xlabel={number-of-repeated-nodes},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x5,y=y5f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x5,y=y5f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x5,y=y5f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax6,
+		axis x line=bottom,extra x ticks={1.882988,1.987480,2.086147,2.225974,2.334219,2.370602,2.433638,2.452699,2.466417,2.494596,2.544942,2.568889,2.583998,2.599054,2.626728,2.641613,2.658998,2.675130,2.697719,2.715800,2.748407,2.762375,2.773854,2.809001,2.835709,2.865810,2.877793,2.902914,2.943280,2.968335,2.995070,3.050063,3.080992,3.123428,3.157748,3.240453,3.295779,3.298679,3.328237,3.359681,3.420484,3.466736,3.486208,3.585299,3.878185,3.954346,4.005639,4.183170,4.421631,4.572330,4.879752},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=0.822,
+		xmax=7.709,
+		xlabel={leaf-corroboration},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x6,y=y6f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x6,y=y6f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x6,y=y6f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax7,
+		axis x line=bottom,extra x ticks={-4.116976,-3.961381,-2.890491,-2.618828,-2.498138,-2.356231,-2.341311,-2.325486,-2.074327,-1.951845,-1.886312,-1.690498,-1.682291,-1.620631,-1.546270,-1.366895,-1.361103,-1.327944,-1.318987,-1.280934,-1.280934,-1.280934,-1.280934,-1.260235,-1.226276,-1.132615,-1.085074,-1.078012,-1.078008,-1.063823,-1.050501,-1.038323,-1.035554,-1.003277,-0.995429,-0.987955,-0.978821,-0.970084,-0.941013,-0.778309,-0.739693,-0.702293,-0.699994,-0.699941,-0.693392,-0.693174,-0.693174,-0.693174,-0.693174,-0.693174,-0.693174},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-4.459,
+		xmax=-0.351,
+		xlabel={impurity},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x7,y=y7f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x7,y=y7f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x7,y=y7f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax8,
+		axis x line=bottom,extra x ticks={-6.802395,-5.264196,-4.435308,-4.135167,-3.907553,-3.731936,-3.632159,-3.560141,-3.515556,-3.428821,-3.399079,-3.368045,-3.328434,-3.277456,-3.236146,-3.174259,-3.146752,-3.135136,-3.083508,-3.047205,-3.026613,-3.007576,-2.981463,-2.964634,-2.950433,-2.912729,-2.875290,-2.844367,-2.817696,-2.777464,-2.744212,-2.699091,-2.651771,-2.632996,-2.601748,-2.581112,-2.545687,-2.535033,-2.526493,-2.495411,-2.480853,-2.454530,-2.417388,-2.381278,-2.372031,-2.330717,-2.302741,-2.285628,-2.193378,-1.669692,0.000000},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-11.494,
+		xmax=1.045,
+		xlabel={mean-error},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x8,y=y8f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x8,y=y8f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x8,y=y8f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax9,
+		axis x line=bottom,extra x ticks={-5.703782,-3.897700,-3.394245,-2.953388,-2.608885,-2.382504,-2.224255,-2.164470,-2.035622,-1.935795,-1.893792,-1.724450,-1.687870,-1.646272,-1.567106,-1.493176,-1.394855,-1.340071,-1.268470,-1.226226,-1.194699,-1.150077,-1.123365,-1.082328,-1.049096,-1.029716,-0.955258,-0.917079,-0.871857,-0.815626,-0.735780,-0.690832,-0.613001,-0.550926,-0.520861,-0.433013,-0.309245,-0.207774,-0.052354,0.000000,0.000000,0.115520,0.138908,0.187867,0.322830,0.381100,0.475217,0.521274,0.621503,0.935254,1.028818},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-9.924,
+		xmax=3.092,
+		xlabel={total-error},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x9,y=y9f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x9,y=y9f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x9,y=y9f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax10,
+		axis x line=bottom,extra x ticks={-5.259130,-3.496571,-3.287412,-3.066782,-2.967092,-2.690348,-2.618852,-2.576140,-2.548887,-2.415796,-2.382129,-2.368814,-2.322765,-2.211872,-2.193820,-2.149556,-2.113641,-2.082106,-2.016741,-1.930698,-1.875961,-1.827685,-1.606913,-1.590398,-1.504998,-1.477434,-1.456728,-1.439855,-1.423335,-1.404654,-1.382814,-1.278656,-1.250173,-1.235471,-1.221456,-1.188379,-1.164109,-1.140479,-0.956385,-0.932711,-0.834256,-0.727071,-0.701850,-0.632281,-0.560053,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-5.894,
+		xmax=0.536,
+		xlabel={correlation},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x10,y=y10f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x10,y=y10f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x10,y=y10f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax11,
+		axis x line=bottom,extra x ticks={-0.821587,0.012740,0.327037,0.521837,0.573149,0.639741,0.860003,0.980943,1.000088,1.026838,1.104209,1.169324,1.185109,1.209277,1.271029,1.333584,1.351831,1.424393,1.488783,1.531658,1.576860,1.666617,1.706257,1.797445,1.849453,2.005304,2.126878,2.201284,2.228817,2.358449,2.391482,2.397021,2.423927,2.471273,2.742379,2.852049,3.208608,4.040116,4.103147,4.255394,4.420605,4.552587,4.641871,4.705781,4.997167,5.232186,5.356540,5.398681,5.434182,5.605499,5.824278},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-2.062,
+		xmax=7.615,
+		xlabel={euclidean-mean},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x11,y=y11f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x11,y=y11f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x11,y=y11f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax12,
+		axis x line=bottom,extra x ticks={-0.859483,0.024539,0.038982,0.256253,0.375624,0.484636,0.573673,0.933957,0.972591,0.997203,1.067533,1.093405,1.173790,1.193014,1.280904,1.325268,1.353861,1.388229,1.437121,1.490781,1.532380,1.575449,1.630121,1.707236,1.817843,1.930871,2.043903,2.143154,2.181333,2.356021,2.388857,2.404117,2.496122,2.523210,2.646843,2.771002,3.138235,3.846552,4.081230,4.108452,4.289157,4.372683,4.483604,4.555159,4.773313,4.933280,5.042055,5.181663,5.280259,5.609372,5.671850},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-2.181,
+		xmax=7.373,
+		xlabel={euclidean-median},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x12,y=y12f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x12,y=y12f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x12,y=y12f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax13,
+		axis x line=bottom,extra x ticks={-1.564389,-0.714475,-0.668612,-0.171129,-0.050033,-0.014645,0.032980,0.052086,0.126226,0.149760,0.175607,0.192197,0.239430,0.304904,0.351212,0.364638,0.387904,0.434355,0.471452,0.488941,0.551622,0.611248,0.757503,0.809548,0.868886,0.956969,1.007192,1.064332,1.131648,1.203897,1.232261,1.250429,1.314274,1.360781,1.414106,1.838674,2.259203,2.367419,2.874317,3.632879,3.725637,3.856370,4.148868,4.215492,4.363090,4.598898,4.855629,5.008171,5.125940,5.344225,5.526584},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-2.837,
+		xmax=7.428,
+		xlabel={euclidean-std},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x13,y=y13f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x13,y=y13f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x13,y=y13f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax14,
+		axis x line=bottom,extra x ticks={0.506305,0.639153,0.673997,0.729373,0.810484,0.847678,0.870180,0.880355,0.902484,0.904220,0.938567,0.978669,1.007143,1.028121,1.047522,1.063811,1.076456,1.102555,1.124443,1.136389,1.155943,1.164490,1.172061,1.176361,1.180118,1.185386,1.194521,1.201628,1.217392,1.227766,1.237620,1.251665,1.271629,1.294829,1.312482,1.322791,1.346671,1.369376,1.407777,1.449016,1.482649,1.547412,1.603178,1.703017,1.751526,1.869332,1.994382,2.061418,2.160041,2.434422,2.576544},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=0.067,
+		xmax=4.029,
+		xlabel={euclidean-kurtosis},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x14,y=y14f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x14,y=y14f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x14,y=y14f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax15,
+		axis x line=bottom,extra x ticks={-8.353920,-4.011745,-3.222973,-3.154112,-3.060454,-2.816527,-2.289424,-1.825070,-1.737413,-1.643958,-1.490660,-1.380980,-1.315937,-1.108480,-0.986587,-0.855919,-0.683954,-0.421607,-0.375567,-0.330218,-0.201347,-0.161964,-0.143958,-0.081846,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.012523,0.055140,0.084613,0.105544,0.134993,0.164726,0.219773,0.243145,0.341512,0.434177,0.485029,0.616155,0.694160,0.714410,0.894971,0.958916},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-9.330,
+		xmax=2.382,
+		xlabel={euclidean-skewness},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x15,y=y15f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x15,y=y15f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x15,y=y15f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax16,
+		axis x line=bottom,extra x ticks={-8.594154,-4.681841,-4.388295,-4.185951,-3.950442,-3.709732,-3.412299,-3.296418,-3.205083,-3.134985,-3.085096,-3.044869,-2.979195,-2.942657,-2.933311,-2.887109,-2.843842,-2.814768,-2.779005,-2.716849,-2.602067,-2.586514,-2.552397,-2.510367,-2.491511,-2.462231,-2.443900,-2.419522,-2.385906,-2.358204,-2.334891,-2.283596,-2.222066,-2.186556,-2.144778,-2.089751,-2.050668,-2.037907,-2.004395,-1.956367,-1.914153,-1.873535,-1.772101,-1.713248,-1.642298,-1.572388,-1.470152,-1.283945,-1.160248,-1.084849,-0.951960},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-9.454,
+		xmax=0.859,
+		xlabel={hardness},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x16,y=y16f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x16,y=y16f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x16,y=y16f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax17,
+		axis x line=bottom,extra x ticks={-3.505554,-3.211238,-3.170467,-2.760051,-2.712109,-2.563190,-2.430895,-2.341416,-2.245305,-1.992898,-1.944696,-1.888221,-1.725737,-1.535577,-1.403022,-1.271701,-1.187100,-1.101352,-1.033354,-1.007326,-0.910044,-0.877875,-0.847009,-0.797685,-0.773793,-0.761227,-0.725612,-0.670546,-0.612891,-0.601531,-0.564745,-0.511763,-0.499416,-0.475920,-0.441123,-0.429206,-0.404067,-0.377599,-0.348275,-0.338719,-0.324219,-0.300021,-0.281353,-0.261558,-0.252314,-0.181748,-0.139284,-0.123359,-0.076930,-0.063482,0.000000},
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=5.800cm,extra x tick labels={\empty},
+		extra x tick style={every x tick/.append style={draw=black,thin,opacity=0.5},thin,black,grid=none},
+		scaled x ticks=false,tick style={draw=none},
+		height=3.500cm,
+		outer sep=0cm,
+		xticklabel shift={.1cm},
+		xmin=-3.908,
+		xmax=0.355,
+		xlabel={variance-curve},
+		ymin=0.0,
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		ytick=\empty]
+		\addplot+[mark=none,yshift=0.0cm,thick,orange] table[x=x17,y=y17f20] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,blue] table[x=x17,y=y17f10] from \data;
+		\addplot+[mark=none,yshift=0.0cm,thick,green] table[x=x17,y=y17f0] from \data;
+	\end{axis}
+	\\
+	};
+\end{tikzpicture}

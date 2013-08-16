@@ -1,0 +1,63 @@
+\input{data/bg-banana-splits}
+\begin{tikzpicture}
+
+\begin{axis}[
+	scatter/classes={
+	hit={hit},
+	falsealarm={falsealarm},
+	miss={miss},
+	correctreject={correctreject}
+	},
+	clip marker paths=true,
+	%clip=false,
+	width=7cm,
+	xmin=0,
+	xmax=\dsn,
+	ymin=0,
+	ymax=1.05,
+	axis on top,
+	xtick=\empty,
+	xlabel near ticks,
+	ylabel near ticks,
+	ylabel={outlier score},
+	%ylabel style={inner sep=0},
+	axis x line=top,
+	axis y line=left,
+	ytick align=inside,
+	every outer x axis line/.style={},
+	every outer y axis line/.style={},
+	legend cell align=left,
+	%legend pos=outer north east,
+	legend columns=-1,
+	%reverse legend,
+	legend style={at={(1,1)},anchor=south east,yshift=0.1cm},
+	legend cell align=left,
+	legend entries={hit,false alarm,miss,correct reject},
+	]
+	\addplot[scatter, only marks, scatter src=explicit symbolic,
+	] table[x=x, y=o,meta=con] {data/bg-banana-scores.dat};
+
+	\coordinate (bel) at (axis cs:0,0);	
+	\coordinate (bec) at (axis cs:\ec,0);
+	\coordinate (ber) at (axis cs:\dsn,0);	
+	\coordinate (bat) at (axis cs:\dsn,1.05);	
+	\coordinate (bac) at (axis cs:\dsn,\ac);
+	\coordinate (bab) at (axis cs:\dsn,0);	
+
+	\draw[black,densely dotted] (axis cs:\ec,-0.1) -- (axis cs:\ec,1.2);
+	\draw[red,densely dashed] (axis cs:-2,\ac) -- (axis cs:\dsn,\ac);
+
+\end{axis}
+
+\begin{scope}
+	\draw[black,decorate,decoration={brace,mirror}] (bel) to node[below,yshift=-0.2cm,inner sep=0] {$\mathcal{C}_{\text{A}}$} (bec); 
+	\draw[black,decorate,decoration={brace,mirror}] (bec) to node[below,yshift=-0.2cm,inner sep=0] {$\mathcal{C}_{\text{N}}$} (ber); 
+
+	\draw[black,decorate,decoration={brace}] (bat) to node[right,xshift=0.2cm,inner sep=0] {$\mathcal{C}_{\text{O}}$} (bac); 
+	\draw[black,decorate,decoration={brace}] (bac) to node[right,xshift=0.2cm,inner sep=0] {$\mathcal{C}_{\text{I}}$} (bab); 
+
+	\draw[red] (bac) -- ++(0.1cm,0cm) node[black,right,anchor=base west,yshift=-0.1cm] {$\theta^{'}$};
+\end{scope}
+%\draw[blue,densely dotted] (current bounding box.south west) rectangle (current bounding box.north east);
+
+\end{tikzpicture}

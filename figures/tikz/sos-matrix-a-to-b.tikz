@@ -1,0 +1,5 @@
+\begin{tikzpicture}
+\sosmatrix{a}{6}{title=$\mathbf{A}$,colormap name=cma,xshift=1.24cm,point meta max=1}
+\sosmatrix{b}{6}{title=$\mathbf{B}$,at={(matrix-a.north east)},anchor={north west},colormap name=cmb,xshift=1.5cm,point meta max=0.3}
+\draw[semithick,->,distance=0.75cm] ($(matrix-a.above north)+(0.1cm,0cm)$) to[bend left] node[above] {Equation 4.5 / 4.6} ($(matrix-b.above north)+(-0.1cm,0cm)$);
+\end{tikzpicture}

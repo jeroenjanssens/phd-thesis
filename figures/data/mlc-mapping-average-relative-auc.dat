@@ -1,0 +1,8 @@
+done	dtwo	one	two	value	variant
+0.008	0.059	0.336	0.386	0.328	raw
+0.052	0.038	0.438	0.425	0.387	standardised, selected
+0.039	0.036	0.470	0.467	0.431	standardised
+-0.017	-0.063	0.472	0.426	0.489	log, standardised
+-0.011	-0.087	0.481	0.405	0.492	log
+-0.023	0.010	0.475	0.507	0.497	log, selected
+-0.092	-0.139	0.424	0.378	0.517	log, standardised, selected

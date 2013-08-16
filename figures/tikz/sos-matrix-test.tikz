@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+\begin{axis}[name=matrix-a, x=0.3cm, y=-0.3cm, z=0cm, xtick={1,...,6}, ytick={1,...,6}, view={90}{90}, xticklabel style={gray,xshift=0.15cm,yshift=-0.1cm,font=\footnotesize}, yticklabel style={gray,yshift=-0.15cm,font=\footnotesize}, axis x line=top, x axis line style={-}, y axis line style={-}, z axis line style={-}, title style={yshift=0.2cm,anchor=base}, colormap name=cmb, title={$\mathbf{B}$}]
+\addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=7,mesh/ordering=y varies] file {data/sos-matrix-b.dat};
+\end{axis}
+\draw[thin] (matrix-a.north east) rectangle (matrix-a.south west);
+\begin{axis}[name=matrix-a-hl, at={(matrix-a.north west)}, xshift=0.9cm, anchor=north west, x=0.3cm, y=-0.3cm, z=0cm, view={90}{90}, x axis line style={-}, y axis line style={-}, z axis line style={-}, xtick={\empty}, ytick={\empty}, colormap name=cmx, colorbar sampled, colorbar style={ymin=0,ymax=4,try min ticks=5,max space between ticks=12pt,font=\footnotesize,at={(matrix-a.north east)},xshift=-0.2cm,width=0.25cm,ytick style={draw=none},samples=100,scaled ticks = false},
+point meta min=0,
+point meta max=5,
+]
+\addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=2,mesh/ordering=y varies] coordinates {
+(1,1,0)
+(1,2,1)
+(1,3,4)
+(1,4,2)
+(1,5,0)
+(1,6,3)
+(1,7,0)
+(2,1,0)
+(2,2,0)
+(2,3,0)
+(2,4,0)
+(2,5,0)
+(2,6,0)
+(2,7,0)
+};
+\end{axis}
+\draw[thick,red,densely dotted] (matrix-a-hl.north east) rectangle (matrix-a-hl.south west);
+\end{tikzpicture}

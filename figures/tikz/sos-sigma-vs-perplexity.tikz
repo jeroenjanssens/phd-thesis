@@ -1,0 +1,73 @@
+\begin{tikzpicture}
+\input{tikz/sos-graphs-styles}
+\pgfplotstableread{data/sos-sigma-vs-perplexity.dat}\data%
+
+\begin{axis}[
+	xmode=log,
+	ymode=normal,
+	ymin=0.5,
+	ymax=5.5,
+	xmin=0,
+	xmax=100,
+	enlarge x limits=false,
+	xmax=100,
+	ytick={1,...,5},
+	yticklabels={1,...,5},
+	height=6cm,
+	xlabel={variance~~ $\sigma^{\,2}_i$},
+	ylabel={perplexity~~ $h(\mathbf{b}_i)$},
+	ylabel near ticks,
+	xlabel near ticks,
+	]
+	\draw[gray,densely dotted] (axis cs:4,0) -- (axis cs:4,6);
+	\draw[gray,densely dotted] (axis cs:16,0) -- (axis cs:16,6);
+	\draw[semithick,red] (axis cs:0.000000001,4.5) -- (axis cs:100,4.5);
+	\addplot[line x1] table[x index=0,y index=1] {\data};
+	\addplot[line x2] table[x index=0,y index=2] {\data};
+	\addplot[line x3] table[x index=0,y index=3] {\data};
+	\addplot[line x4] table[x index=0,y index=4] {\data};
+	\addplot[line x5] table[x index=0,y index=5] {\data};
+	\addplot[line x6] table[x index=0,y index=6] {\data};
+\end{axis}
+
+\begin{axis}[
+	xshift=5.75cm,
+	ymin=0.5,
+	ymax=5.5,
+	xmin=4,
+	xmax=16,
+	enlarge x limits=false,
+	ytick={1,...,5},
+	yticklabels={1,...,5},
+	height=6cm,
+	width=5.98cm,
+	xlabel={variance~~ $\sigma^{\,2}_i$},
+	yticklabel={\empty},
+	ylabel near ticks,
+	xlabel near ticks,
+	x label style={yshift=-0.075cm},
+	legend cell align=left,
+	legend pos=outer north east,
+	legend style={xshift=0.2cm},
+	]
+	\draw[semithick,red] (axis cs:0,4.5) -- (axis cs:100,4.5);
+	\addlegendimage{semithick,red};
+    \addlegendentry{$h = 4.5$};
+	\addplot[line x1] table[x index=0,y index=1] {\data};
+    \addlegendentry{$\mathbf{x}_1$};
+	\addplot[line x2] table[x index=0,y index=2] {\data};
+    \addlegendentry{$\mathbf{x}_2$};
+	\addplot[line x3] table[x index=0,y index=3] {\data};
+    \addlegendentry{$\mathbf{x}_3$};
+	\addplot[line x4] table[x index=0,y index=4] {\data};
+    \addlegendentry{$\mathbf{x}_4$};
+	\addplot[line x5] table[x index=0,y index=5] {\data};
+    \addlegendentry{$\mathbf{x}_5$};
+	\addplot[line x6] table[x index=0,y index=6] {\data};
+    \addlegendentry{$\mathbf{x}_6$};
+
+\end{axis}
+
+
+
+\end{tikzpicture}

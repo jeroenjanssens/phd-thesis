@@ -1,0 +1,19 @@
+\begin{tabular}{llrrr}
+\toprule
+&\multicolumn{4}{c}{Parameter $\lambda$}\\
+ \cmidrule(l){2-5}
+Data set&Determines\phantom{000000000000000000000!!}&$\lambda_{\textrm{start}}$&step size&$\lambda_{\textrm{end}}$\\
+\midrule
+\rowcolor[gray]{0.9}
+(a)&Radius of ring&5&0.1&2\\
+(b)&Cardinality of cluster and ring&100&5&5\\
+\rowcolor[gray]{0.9}
+(c)&Distance between clusters&4&0.1&0\\
+(d)&Cardinality of one cluster and ring&0&5&45\\
+\rowcolor[gray]{0.9}
+(e)&Density of one cluster and ring&1&0.05&0\\
+(f)&Radius of square ring&2&0.05&0.8\\
+\rowcolor[gray]{0.9}
+(g)&Radius of square ring&2&0.05&0.8\\
+\bottomrule
+\end{tabular}

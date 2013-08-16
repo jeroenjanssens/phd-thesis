@@ -1,0 +1,4 @@
+%pdfcrop 0.1 0.1 0.1 5 
+\begin{tikzpicture}
+\node[inner sep=0pt, outer sep=0pt] at (0,0){\includegraphics[width=8cm]{logos/mad.pdf}};%
+\end{tikzpicture}

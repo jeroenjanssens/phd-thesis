@@ -1,0 +1,105 @@
+%\newcommand{\gargantuan}{\fontsize{8}{9.6}\selectfont}
+
+\begin{sideways}
+%\gargantuan%
+
+\pgfplotstableset{create on use/datasetnames/.style={create col/set list={
+{Iris \it{(Setosa)}},
+{Iris \it{(Versicolor)}},
+{Iris \it{(Virginica)}}, 
+{Breast W. Original \it{(malignant)}},
+{Breast W. Original \it{(benign)}}, 
+{Heart Disease \it{(diseased)}}, 
+{Heart Disease \it{(healthy)}}, 
+{BioMed \it{(healthy)}}, 
+{BioMed \it{(diseased)}}, 
+{Arrhythmia \it{(normal)}}, 
+{Arrhythmia \it{(abnormal)}},
+{Hepatitis \it{(normal)}}, 
+{Ecoli \it{(periplasm)}}, 
+{Delft Pump \it{(AR app.)}}, 
+{Delft Pump \it{(5x3)}}, 
+{Delft Pump \it{(5x1)}}, 
+{Delft Pump \it{(3x2)}}, 
+{Delft Pump \it{(2x2)}}, 
+{Delft Pump \it{(1x3)}}, 
+{Delft Pump \it{(5x3 noisy)}},
+{Delft Pump \it{(5x1 noisy)}}, 
+{Delft Pump \it{(3x2 noisy)}},
+{Delft Pump \it{(2x2 noisy)}},
+{Delft Pump \it{(1x3 noisy)}}, 
+{Breast W. New \it{(non-ret)}}, 
+{Breast W. New \it{(ret)}}, 
+{SPECTF Heart \it{(0)}}, 
+{SPECTF Heart \it{(1)}},
+{Colon Gene \it{(2)}}, 
+{Glass Identification \it{(float)}},
+{Glass Identification \it{(nonfloat)}}, 
+{Liver \it{(1)}}, 
+{Liver \it{(2)}}, 
+{Wine Recognition \it{(1)}}, 
+{Wine Recognition \it{(2)}}, 
+{Wine Recognition \it{(3)}}, 
+{Waveform Generator \it{(0)}}, 
+{Waveform Generator \it{(1)}}, 
+{Waveform Generator \it{(2)}}, 
+{Vehicle Silhouettes \it{(van)}}, 
+{Vehicle Silhouettes \it{(Saab)}}, 
+{Vehicle Silhouettes \it{(bus)}}, 
+{Vehicle Silhouettes \it{(Opel)}}, 
+{Haberman's Survival \it{($>$5yr)}}, 
+{Haberman's Survival \it{($<$5yr)}}, 
+{Boston Housing \it{(MEDV$<$35)}}, 
+{Boston Housing \it{(MEDV$>$35)}}
+}
+}}
+
+\setlength{\tabcolsep}{3.5pt}
+
+\newcolumntype{L}{>{}p{3.8cm}<{}}
+\pgfplotstableset{col sep=comma}
+
+\pgfplotstableread{data/sos-auc-results.dat}\loadedtable
+
+\pgfplotstabletypeset[
+  skip rows between index={24}{50},
+  skip 0.,
+  fixed,
+  empty cells with={--},
+  columns={datasetnames,0,1,...,22},
+  columns/datasetnames/.style={
+    string type,
+    column name={Dataset \it{(normal class)}},
+    column type=l,
+  },
+  columns/0/.style={column name={$h_{5}$},}, 
+  columns/1/.style={column name={$h_{10}$},}, 
+  columns/2/.style={column name={$h_{20}$},}, 
+  columns/3/.style={column name={$h_{50}$},}, 
+  columns/4/.style={column name={$h_{100}$},}, 
+  columns/5/.style={column name={$h_{b}$},}, 
+  columns/6/.style={column name={\color{gray}$h$},fonts by sign={\color{gray}}{}},%
+%
+  columns/7/.style={column name={$k_{5}$},}, 
+  columns/8/.style={column name={$k_{10}$},}, 
+  columns/9/.style={column name={$k_{20}$},}, 
+  columns/10/.style={column name={$k_{50}$},}, 
+  columns/11/.style={column name={$k_{100}$},}, 
+  columns/12/.style={column name={$k_{b}$},}, 
+  columns/13/.style={column name={\color{gray}$k$},fonts by sign={\color{gray}}{}},%
+%
+  columns/14/.style={column name={$k_{5}$},}, 
+  columns/15/.style={column name={$k_{10}$},}, 
+  columns/16/.style={column name={$k_{20}$},}, 
+  columns/17/.style={column name={$k_{50}$},}, 
+  columns/18/.style={column name={$k_{100}$},}, 
+  columns/19/.style={column name={$k_{b}$},}, 
+  columns/20/.style={column name={\color{gray}$k$},fonts by sign={\color{gray}}{}},%
+%
+columns/21/.style={column name={--},}, 
+columns/22/.style={column name={--},}, 
+  every even row/.style={before row={\rowcolor[gray]{0.9}}},
+  every head row/.style={before row=\toprule&\multicolumn{7}{c}{SOS}&\multicolumn{7}{c}{KNNDD}&\multicolumn{7}{c}{LOF}&\multicolumn{1}{c}{LOCI}&\multicolumn{1}{c}{LSOD}\\\cmidrule(l{.25em}r{.25em}){2-8}\cmidrule(l{.25em}r{.25em}){9-15}\cmidrule(l{.25em}r{.25em}){16-22}\cmidrule(l{.25em}r{.25em}){23-23}\cmidrule(l{.25em}){24-24},after row=\midrule},
+  every last row/.style={after row=\bottomrule}
+]\loadedtable
+\end{sideways}

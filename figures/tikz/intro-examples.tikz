@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+
+\def\im(#1){
+	\node (p) {\includegraphics[height=3cm]{png/intro-examples-#1.jpg}};
+	\draw[semithick] (p.north west) rectangle (p.south east);
+}
+
+\matrix (ex1) [column sep=0.2cm, row sep=0.2cm, inner sep=0cm] {
+	\im(coloncancer) &
+	\im(vangogh) &
+	\im(pirate) \\
+};
+
+\matrix at (ex1.south west) (ex2) [anchor=north west, yshift=-0.2cm, column sep=0.2cm, row sep=0.2cm, inner sep=0cm] {
+	\im(comet) &
+	\im(blackswan) &
+	\im(redlight2) \\
+};
+
+\thesisbb
+\end{tikzpicture}

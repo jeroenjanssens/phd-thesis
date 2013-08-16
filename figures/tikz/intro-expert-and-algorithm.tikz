@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+\newcommand{\vp}{\vphantom{Ap}}
+\matrix (m) [matrix of nodes,nodes={anchor=west,minimum height=0.55cm,draw=none},row sep=0cm,column sep=1cm]{
+\toprule\\[-0.1cm]
+\emph{The}\vp&Domain expert & Outlier-selection algorithm\\[-0.1cm]
+\midrule\\
+&
+|[outer sep=0cm,inner sep=0.1cm,name=expert]| \includegraphics[height=1.5cm]{../dev/expert.pdf} 
+& 
+|[outer sep=0cm, inner sep=0.1cm,name=algorithm]| \includegraphics[height=1.5cm]{../dev/algorithm-noarrows.pdf} \\
+\midrule\\
+\emph{employs}\vp& Knowledge and experience\vp & Mathematics and statistics\vp \\
+\emph{on the}\vp& Real world\vp & Data set\vp \\
+\emph{to}\vp& Detect\vp & Select\vp \\
+\emph{those}\vp& Observations\vp & Data points\vp \\
+\emph{that are}\vp& Abnormal\vp & Outlying\vp \\
+\emph{as}\vp& Anomalies\vp & Outliers\vp \\[-0.1cm]
+\bottomrule\\
+};
+
+\draw[semithick,->,bend left=15] ($(expert.east) + (0,0.4cm)$) to node[above]{configures} ($(algorithm.west) + (0,0.4cm)$);
+\draw[semithick,->,bend left=15] ($(algorithm.west) + (0,0.2cm)$) to node[below]{supports} ($(expert.east) + (0,0.2cm)$);
+
+\end{tikzpicture}
+

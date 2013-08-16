@@ -1,0 +1,76 @@
+\begin{tikzpicture}[>=latex]
+
+\pgfplotstableread{data/lofloci.dat}\dataset
+
+\matrix (figs) [column sep=1cm,outer sep=0.0cm,inner sep=0cm] {
+\begin{axis}[
+	inner sep=0cm,
+	outer sep=0cm,
+	x=0.025cm,
+	y=0.025cm,
+	%width=7cm,
+	clip=true,
+	axis on top,
+	%height=5cm,
+	axis x line=bottom,
+	axis y line=left,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	enlarge x limits={rel=0.2},
+	enlarge y limits={rel=0.2},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+	\addplot[object=blue] table[x index=0, y index=1] {\dataset};
+	\node [circle,draw=white,minimum size=0.14cm,font=\tiny,inner sep=0cm] (xi) at (axis cs: 90.776, 30.677) {};
+	\node [circle,draw=white,minimum size=0.14cm,font=\tiny,inner sep=0cm] (nn) at (axis cs: 40.776, 93.177) {};
+
+
+
+	\node[outer sep=0cm,inner sep=0cm,anchor=west,xshift=0.15cm] at (nn) {$\text{NN} ( \mathbf{x}_i, 3)$};
+	
+\draw[->,outer sep=0cm,green,thick] (xi) to[below,sloped,outer sep=0cm] node[black,outer sep=0cm,inner sep=0.1cm] {$d_{\rm{border}}$} (nn) ;
+
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (xi) {$\mathbf{x}_i$};
+\end{axis}
+&
+\begin{axis}[
+	inner sep=0cm,
+	outer sep=0cm,
+	x=0.025cm,
+	y=0.025cm,
+	clip=true,
+	axis on top,
+	axis x line=bottom,
+	axis y line=left,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	enlarge x limits={rel=0.2},
+	enlarge y limits={rel=0.2},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+	\addplot[object=blue] table[x index=0, y index=1] {\dataset};
+	\node [circle,draw=white,minimum size=0.14cm,font=\tiny,inner sep=0cm] (xi) at (axis cs: 90.776, 30.677) {};
+	\node [circle,draw=white,minimum size=0.14cm,font=\tiny,inner sep=0cm] (xp) at (axis cs: 40.776, 93.177) {};
+	\node [circle,draw=white,minimum size=0.14cm,font=\tiny,inner sep=0cm] (xq) at (axis cs: 94.837,78.802) {};
+	\node [circle,draw=white,minimum size=0.14cm,font=\tiny,inner sep=0cm] (xr) at (axis cs: 134.525,71.614) {};
+
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (xi) {$\mathbf{x}_i$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (xp) {$\mathbf{x}_p$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (xq) {$\mathbf{x}_q$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (xr) {$\mathbf{x}_r$};
+
+	\node[draw=green,dashed] at (xi) [circle through={(xp)}] {};
+
+\end{axis}
+\\
+};
+
+\path ($(figs.north west) - (0.05cm, 0cm)$) rectangle ($(figs.south east) + (0cm,-0.05cm)$);
+%\thesisbb
+\end{tikzpicture}

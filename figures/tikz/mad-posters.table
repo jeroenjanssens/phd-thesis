@@ -1,0 +1,17 @@
+\begin{tabular}{cp{4.4cm}p{6.8cm}}
+\toprule
+Poster &Title &Authors\\
+\midrule
+\rowcolor[gray]{0.9}
+A &A Bayesian Network Approach to Maritime Situation Assessment &Yvonne Fischer, Karlsruhe Institute of Technology, Germany; and Joris Ijsselmuiden, Fraunhofer IOSB, Germany\\
+B &Maritime Anomaly Detection by Fusing Sensor Information and Intelligence &Bert van den Broek, Martijn Neef, Patrick Hanckmann, Arthur Smith, TNO, The Netherlands; and Fok Bolderheij, NLDA, The Netherlands\\
+\rowcolor[gray]{0.9}
+C &Web-based Geographical Visualization of Container Itineraries &Tatyana Dimitrova and Evangelos Kotsakis, European Commission, Joint Research Centre, Italy\\
+D &Finding Fraud in Health Insurance Data with Two-Layer Outlier Detection Approach &Rob Konijn and Wojtek Kowalczyk, Vrije Universiteit Amsterdam, The Netherlands\\
+\rowcolor[gray]{0.9}
+E &Semantic-based Anomalous Pattern Detection from Maritime Trajectories &Paola Villa and Elena Camossi, European Commission, Joint Research Centre, Italy\\
+F &Detection of near misses and undesired encounters on the North Sea &Erwin van Iperen, MARIN, The Netherlands\\
+\rowcolor[gray]{0.9}
+G &PRESTO: A Poseidon Research Tool To Create Artificial Vessel Trajectories &Jeroen Janssens, Tilburg University, The Netherlands; Hans Hiemstra, Thales Naval, The Netherlands; and Eric Postma, Tilburg University, The Netherlands\\
+\bottomrule
+\end{tabular}

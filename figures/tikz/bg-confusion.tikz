@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+
+\begin{scope}[block/.style={align=center,rectangle,draw=black!100,inner sep=0cm,minimum size=2.3cm,fill=#1!60},
+		     red block/.style={block=red},
+		     green block/.style={block=green}]
+%Draw the four blocks
+\matrix[inner sep=0cm,row sep=0.2cm,column sep=0.2cm,ampersand replacement=\&]{
+    \node [block=green] (h)  {\begin{tabular}{c}\textbf{hit}\\\mathcal{H\!i}\end{tabular}};                       \& 
+    \node [block=violet]   (fa) {\begin{tabular}{c}\textbf{false alarm}\\\mathcal{F\!A}\end{tabular}} ;    \\
+    \node [block=red]   (m)  {\begin{tabular}{c}\textbf{miss}\\\mathcal{M\!i}\end{tabular}} ;                     \&
+    \node [block=olive] (cr) {\begin{tabular}{c}\textbf{correct reject}\\\mathcal{C\!R} \end{tabular}} ; \\
+};
+
+% Draw the class-labels
+\node[above=0.2cm,anchor=base] at (h.north) {Anomaly $(\mathcal{C}_{\text{A}})$};
+\node[above=0.2cm,anchor=base] at (fa.north) {Normality $(\mathcal{C}_{\text{N}})$};
+\node[left=0.2cm,rotate=90,anchor=base] at (h.west) {Outlier $(\mathcal{C}_{\text{O}})$};
+\node[left=0.2cm,rotate=90,anchor=base] at (m.west) {Inlier $(\mathcal{C}_{\text{I}})$};
+
+% Define necessary coordinates
+\coordinate (ul) at ($(h.north west)+(0cm,0.6cm)$);
+\coordinate (ur) at ($(fa.north east)+(0cm,0.6cm)$);
+\coordinate (la) at ($(h.north west)-(0.6cm,0cm)$);
+\coordinate (lb) at ($(m.south west)-(0.6cm,0cm)$);
+
+% Draw the two lines
+\draw (ul) -- (ur);
+\draw (la) -- (lb);
+
+% Draw the ``Expert'' and ``Algorithmic'' labels
+\node[above=0.2cm,anchor=base,inner sep=0cm,outer sep=0cm] at ($ (ul)!.5!(ur) $) {Expert labels the observation as a(n)};
+\node[left=0.2cm,rotate=90,anchor=base,inner sep=0cm,outer sep=0cm] at ($ (la)!.5!(lb) $) {Algorithm classifies the data point as an};
+\end{scope}
+
+%\thesisbb
+
+\end{tikzpicture}

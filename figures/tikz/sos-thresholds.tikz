@@ -1,0 +1,46 @@
+\begin{tikzpicture}
+
+  \pgfplotstableread{data/thresholds.dat}\toyresults%
+  \begin{axis}[
+	      enlarge x limits=false,
+	      enlarge y limits=false,
+	      ymin=0,
+	      ymax=5.2,
+	      xmax=1,
+	      xmin=0,
+			%xtick={0,0.2,0.4,0.6,0.8,1},
+			%ytick={0,1,...,5},
+every major tick/.append style={black,thin},
+%xmajorgrids,
+%ymajorgrids,
+%every major grid/.append style={semithick, dotted},
+%every major tick/.append style={black},
+		  every axis y label/.style={at={(ticklabel cs:0.5)},rotate=90,anchor=near ticklabel},
+		  every axis x label/.style={at={(ticklabel cs:0.5)},anchor=near ticklabel},
+	      axis on top,
+	      width=9.108cm,
+	      height=5cm,
+xlabel={normalized $\theta$},
+ylabel={proportion of datasets},
+		%legend cell align=left,
+		legend columns=-1,
+		legend pos=outer north east,reverse legend,legend entries={LSOD,LOCI\hspace*{0.2cm},LOF\hspace*{0.2cm},KNN\hspace*{0.2cm},SOS\hspace*{0.2cm}},
+		legend style={xshift=-0.22cm,yshift=0.2cm,anchor=south east},
+%legend image post style={yshift=0.03cm,xscale=0.452,yscale=1},
+%   legend style={xshift=1.452cm}
+area legend,
+	      ]
+      %\addplot[semithick,dotted] {0.99};
+	  \addplot[thick,dashed,orange,fill=orange,fill opacity=0.2] table[x index=0,y index=4] {\toyresults};
+	  \addplot[thick,densely dashed,draw=green!50!black,fill=green!50!black,fill opacity=0.2] table[x index=0,y index=2] {\toyresults};
+ 	  \addplot[thick,dotted,blue,fill=blue,fill opacity=0.2] table[x index=0,y index=3] {\toyresults};
+      \addplot[thick,densely dotted,red,fill=red,fill opacity=0.2] table[x index=0,y index=1] {\toyresults};
+      \addplot[thick,fill=violet!80,violet!80,fill opacity=0.2] table[x index=0,y index=5] {\toyresults};
+  \end{axis}
+
+
+    
+
+
+  %\node[at=($(toyplotg.east)+(0.3cm,0)$),anchor=west]{\ref{toylegend};
+\end{tikzpicture}

@@ -1,0 +1,67 @@
+%pdfcrop 0.1 0.1 1 10
+\begin{tikzpicture}
+\makeatletter
+\pgfplotsset{
+    /pgfplots/flexible yticklabels from table/.code n args={3}{%
+        \pgfplotstableread[#3]{#1}\coordinate@table
+        \pgfplotstablegetcolumn{#2}\of{\coordinate@table}\to\pgfplots@yticklabels
+        \let\pgfplots@yticklabel=\pgfplots@user@ticklabel@list@y
+    }
+}
+\makeatother
+\pgfplotstableread{data/mld-metafeature-ranking.dat}\data%
+	\begin{axis}[xbar,
+	axis on top,
+	height=20cm,	
+	width=11.5cm,	
+	ymin=-0.5,
+	ymax=35.5,
+	xmin=74,
+	xmax=93,
+	xticklabel=\pgfmathprintnumber{\tick}\,\%,
+	xlabel style={overlay},
+	xmajorgrids=true,
+	every major grid/.append style={semithick, white},
+	every major tick/.append style={opacity=0},
+	axis x line=bottom,
+	axis y line=left,
+    %axis x discontinuity=crunch,
+	every outer x axis line/.append style={-,white},
+	every outer y axis line/.append style={-,white},
+	bar width=0.12cm,
+	y dir=reverse,
+	flexible yticklabels from table={data/mld-metafeature-ranking.dat}{name}{},
+	ytick=data,
+	legend style={anchor=south east,at={(1,0)},xshift=-0.7cm,yshift=0.4cm},
+	area legend,
+	reverse legend,
+	] 
+		\addplot[draw=none,fill=orange,yshift=0.07cm,legend image post style={yshift=-0.07cm,yscale=0.6,draw=white}] table[x=20,y expr=\coordindex] from \data;
+		\addplot[draw=none,fill=green,yshift=-0.0cm,legend image post style={yshift=0.0cm,yscale=0.6,draw=white}] table[x=10,y expr=\coordindex] from \data;
+		\addplot[draw=none,fill=blue,yshift=-0.07cm,legend image post style={yshift=0.07cm, yscale=0.6,draw=white}] table[x=0,y expr=\coordindex] from \data;
+	\legend{$\lambda = 0.2$, $\lambda = 0.1$,$\lambda = 0.0$}
+	\end{axis}
+
+	\begin{axis}[
+	xticklabel=\pgfmathprintnumber{\tick}\,\%,
+	xticklabel pos=upper,
+	width=11.5cm,	
+	height=20cm,	
+	ytick=\empty,
+	xlabel={Score},
+	xlabel near ticks,
+	xlabel style={xshift=-0.3cm},
+	every outer x axis line/.append style={-,white},
+	every outer y axis line/.append style={-,white},
+	every major tick/.append style={opacity=0},
+	axis y line=none,
+	xmin=74,
+	xmax=93,
+	name=ax,
+	]
+
+	\addplot[draw=none,fill=none] table[x=0,y expr=\coordindex] from \data;
+	\end{axis}
+
+	%\thesisbb
+\end{tikzpicture}

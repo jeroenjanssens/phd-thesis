@@ -1,0 +1,55 @@
+\begin{tikzpicture}[>=latex]
+
+\pgfplotstableread{data/sos-graphs-pdf-cdf.dat}\data%
+
+\begin{axis}[
+	xtick={\empty},
+	ymax=0.001,
+	scaled y ticks=base 10:4,
+	ymin=0,
+	xmin=0,
+	xmax=15.625,
+	height=5.25cm,
+	xlabel near ticks,
+	xlabel={$\mathcal{G}$},
+	ylabel=probability mass,
+	ylabel near ticks,
+	every axis y label/.append style={inner sep=0cm},
+	]
+	\addplot[blue,thick] table[x index=0,y index=1] {\data};
+	\addplot[red,thick] table[x index=0,y index=2] {\data};
+	\addplot[green,thick] table[x index=0,y index=3] {\data};
+
+\node[pin={[pin edge={<-,black,semithick}]135:{$G_a$}},circle,inner sep=0cm] at (axis cs: 15.62500000, 0.0003931887) {};
+\node[pin={[pin edge={<-,black,semithick}]90:{$G_b$}},circle,inner sep=0cm] at (axis cs: 9.37500000, 0.0000456227) {};
+\node[pin={[pin edge={<-,black,semithick}]45:{$G_c$}},circle,inner sep=0cm] at (axis cs: 0.31300000, 0.0000005950) {};
+
+
+
+
+\end{axis}
+
+\begin{axis}[
+	xtick={\empty},
+	ymin=0,
+	xmin=0,
+	ymax=1,
+	xmax=15.625,
+	xshift=5.85cm,
+	height=5.25cm,
+	xlabel={$\mathcal{G}$},
+	%every axis y label/.style={at={(0,0.5)},xshift=-0.85cm,rotate=90,anchor=base,inner sep=0cm},
+	ylabel near ticks,
+	xlabel near ticks,
+	legend cell align=left,
+	legend pos=outer north east,
+	ylabel=cumulative probability mass,
+	]
+	\addplot[blue,thick] table[x index=0,y index=4] {\data};
+    \addlegendentry{$h = 4.0$};
+	\addplot[red,thick] table[x index=0,y index=5] {\data};
+    \addlegendentry{$h = 4.5$};
+	\addplot[green,thick] table[x index=0,y index=6] {\data};
+    \addlegendentry{$h = 5.0$};
+\end{axis}
+\end{tikzpicture}

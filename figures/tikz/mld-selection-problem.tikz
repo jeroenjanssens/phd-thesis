@@ -1,0 +1,27 @@
+\begin{tikzpicture}[
+el/.style={draw=ChapterColor1!70!white,fill=ChapterColor1!30!white,thick,rectangle,rounded corners=0.3cm, minimum width=3cm, text width=2cm, align=center, minimum height=1.75cm},
+]
+
+\node[el] (dataset-space) {$\mathcal{D} \in \mathcal{P}(\mathcal{X})$\\[0.1cm]One-class\\[-0.1cm]data set space};
+
+\node[el,xshift=6cm] (auc-space) at (dataset-space) {$\text{AUC} \in \mathcal{A}\mathcal{U}\mathcal{C}$\\[0.1cm]AUC perfor-\\[-0.1cm]mance space};
+
+\node[el,yshift=-3.5cm] (feature-space) at (dataset-space) {$f\,(\mathcal{D}) \in \mathcal{F}$\\[0.1cm]Meta-feature\\[-0.1cm]space};
+
+\node[el,xshift=6cm] (occ-space) at (feature-space) {$\phi \in \textit{Φ}$\\[0.1cm]One-class\\[-0.1cm]classifier space};
+
+% dataset-space
+% feature-space
+% auc-space
+% occ-space
+
+\coordinate (hw) at ($(feature-space)!0.5!(occ-space)$);
+
+\path [->,thick]
+(dataset-space) edge node[left, xshift=-0.1cm,text width=2cm, align=right] {meta-feature\\extraction $f$} (feature-space)
+(feature-space) edge node[below,text width=3cm, align=center] {selection mapping\\$\phi = S(f\,(\mathcal{D}))$} (occ-space)
+(occ-space) edge node[right,text width=2.33cm] {$\text{AUC}(\phi, \mathcal{D})$ apply one-class classifier} (auc-space);
+
+\draw[->,thick] (auc-space) -| node[near end, right,text width=2cm] {select $\phi$ to maximize AUC} (hw);
+
+\end{tikzpicture}

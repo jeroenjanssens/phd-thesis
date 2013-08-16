@@ -1,0 +1,204 @@
+%pdfcrop 1 1 3 10
+\begin{tikzpicture}
+	\pgfplotstableread{data/mlc-mapping-auc-relative.dat}\data%
+	\matrix[name=ma,inner sep=0.01cm,row sep=1cm,column sep=0.8cm,ampersand replacement=\&]{
+	\begin{axis}[name=ax0,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={raw meta-features},
+		axis x line=bottom,
+		axis y line=left,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=-0.100cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		ylabel={Relative AUC},ylabel style={yshift=-0.2cm},
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=0f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=0f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=0f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax1,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={standardised meta-features},
+		axis x line=bottom,
+		axis y line=right,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=0.250cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=1f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=1f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=1f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax2,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={standardised and selected meta-features},
+		axis x line=bottom,
+		axis y line=left,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=-0.100cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		ylabel={Relative AUC},ylabel style={yshift=-0.2cm},
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=2f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=2f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=2f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax3,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={log meta-features},
+		axis x line=bottom,
+		axis y line=right,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=0.250cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=3f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=3f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=3f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax4,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={log and selected meta-features},
+		axis x line=bottom,
+		axis y line=left,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=-0.100cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		ylabel={Relative AUC},ylabel style={yshift=-0.2cm},
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=4f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=4f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=4f0] from \data;
+	\end{axis}
+	\&
+	\begin{axis}[name=ax5,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={log and standardised meta-features},
+		axis x line=bottom,
+		axis y line=right,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=0.250cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=5f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=5f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=5f0] from \data;
+	\end{axis}
+	\\
+	\begin{axis}[name=ax6,
+		height=5cm,
+		width=7cm,
+		xmin=0,
+		axis on top,
+		title={log, standardised, and selected meta-features},
+		axis x line=bottom,
+		axis y line=left,
+		ytick={-1,-0.6666,-0.3333,0,0.3333,0.6666,1.0},
+		y tick label style={anchor=east,xshift=-0.100cm},
+		yticklabels={$-1$,$-\frac{2}{3}$,$-\frac{1}{3}$,$0$,$\frac{1}{3}$,$\frac{2}{3}$,$1$},
+		tick style={draw=none},
+		every outer x axis line/.append style={-,draw=white,opacity=0},
+		every outer y axis line/.append style={-,draw=white,opacity=0},
+		xmax=254,
+		ymin=-1,
+		ymax=1.005,
+		ylabel={Relative AUC},ylabel style={yshift=-0.2cm},
+		xlabel={Data sets (ordered per mapping)},
+		reverse legend,
+		legend entries={oracle,best,random,meta-learning: $\lambda = 0.2$,meta-learning: $\lambda = 0.1$,meta-learning: $\lambda = 0.0$},
+		legend cell align=left,legend to name=namedlegend,legend style={/tikz/every even column/.append style={column sep=0.25cm}},
+		xlabel near ticks,
+		xtick=\empty]
+		\addplot+[mark=none,thick,densely dotted,black] table[x=x,y=max] from \data;
+		\addplot+[mark=none,thick,dashdotted,magenta] table[x=x,y=best] from \data;
+		\addplot+[mark=none,thick,densely dashed,gray] table[x=x,y=baseline] from \data;
+		\addplot+[mark=none,thick,orange,solid] table[x=x,y=6f20] from \data;
+		\addplot+[mark=none,thick,green,solid] table[x=x,y=6f10] from \data;
+		\addplot+[mark=none,thick,blue,solid] table[x=x,y=6f0] from \data;
+	\end{axis}
+	\&
+	\\};
+\node[inner sep=0cm,below=of ax5.south,anchor=north,xshift=0.0cm,yshift=-1.2cm] {\pgfplotslegendfromname{namedlegend}};
+\end{tikzpicture}

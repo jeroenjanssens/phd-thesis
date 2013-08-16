@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{pgffor}
+\usepackage{ifthen}
+\usepackage{pgfplotstable}
+\usetikzlibrary{chains,scopes,decorations.markings,intersections,patterns,shapes.geometric,shapes.symbols,through,positioning,calc,calendar,arrows,fit,backgrounds,matrix,pgfplots.groupplots,pgfplots.units,spy,pgfplots.colormaps}
+\usepgfplotslibrary{dateplot}
+\usepackage[lined]{algorithm2e}
+\usepackage[xindy,acronym,toc]{glossaries}
+
+\usepackage[active,xetex,tightpage]{preview}
+\PreviewEnvironment[]{tikzpicture}
+\PreviewEnvironment[]{pgfpicture}
+\PreviewEnvironment[]{tabular}
+
+% Custom settings and commands
+\newcommand{\y}{\raisebox{-0.12cm}{\begin{tikzpicture}\node{\includegraphics[height=0.25cm]{/home/jeroen/phd/latex/thesis//dev/tickmark.pdf}};\end{tikzpicture}}}
+\newcommand{\n}{}
+
+\tikzset{>=latex,
+object/.style={mark=o,only marks,blue,#1,mark options={scale=1}},
+realworldobject/.style={mark=o,only marks,blue},
+normal/.style={object={lime!80!black},mark=o},
+anomaly/.style={object={orange!95!black},semithick,mark=asterisk},
+inlier/.style={object={cyan!80!black},mark=o},
+outlier/.style={object={purple!80!black},semithick,mark=asterisk},
+hit/.style={object={green!80!black},mark=+,semithick},
+miss/.style={object={red!80!black},semithick,mark=asterisk},
+correctreject/.style={object={olive!80!black},mark=o},
+falsealarm/.style={object={violet!80!black},semithick,mark=-},
+}
+
+\pgfplotsset{
+	/pgfplots/colormap={cmx}{rgb255=(255,255,255) rgb255=(0,0,255)},
+	/pgfplots/colormap={cmd}{rgb255=(255,255,255) rgb255=(0,255,0)},
+	/pgfplots/colormap={cma}{rgb255=(255,255,255) rgb255=(255,0,0)},
+	/pgfplots/colormap={cmb}{rgb255=(255,255,255) color=(gray)},
+	/pgfplots/colormap={cmgive}{rgb255=(255,255,255) color=(orange)},
+	/pgfplots/colormap={cmget}{rgb255=(255,255,255) color=(cyan)},
+}	
+
+\input{preamble/abbreviations}
+\input{preamble/colors}
+
+\newcommand{\sosmatrix}[3]{%
+\pgfmathparse{#2+1}
+\pgfmathroundto{\pgfmathresult}
+\let\cols\pgfmathresult
+\begin{axis}[name=matrix-#1,
+	plot box ratio={1 1 1},
+	x=0.3cm,
+	y=-0.3cm,
+	z=0cm,
+	xtick={1,...,#2},
+	ytick={1,...,6},
+	view={90}{90},
+	xticklabel style={gray,xshift=0.15cm,yshift=-0.1cm,font=\footnotesize},
+	yticklabel style={gray,yshift=-0.15cm,font=\footnotesize},
+	axis x line=top,
+	x axis line style={-},
+	y axis line style={-},
+	z axis line style={-},
+	colorbar sampled,
+	colorbar style={try min ticks=5,max space between ticks=12pt,font=\footnotesize,xshift=-0.4cm,width=0.25cm,ytick style={draw=none},samples=100,scaled ticks = false},
+	#3,
+	title style={yshift=0.2cm,anchor=base},
+	]
+	\addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=\cols,mesh/ordering=y varies] file {data/sos-matrix-#1.dat};
+\end{axis}
+\draw[thin] (matrix-#1.north east) rectangle (matrix-#1.south west);
+}
+
+\begin{document}
+\small{
+%tikz2pdf-tikz
+}
+\end{document}

@@ -1,0 +1,68 @@
+\begin{tikzpicture}[
+>=latex,
+auto,
+data object/.style={font=\normalsize,circle,draw=#1!70!white,fill=#1!30!white,thick,inner sep=0.1cm},
+selects/.style={->,thick},
+affinity normal/.style={thick,draw=blue!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=blue!#1!white]{>}}}, postaction={decorate}},
+affinity give/.style={very thick,draw=red!#1!white,decoration={markings,mark=at position .9 with {\arrow[thick,fill=red!#1!white]{>}}}, postaction={decorate}},
+affinity get/.style={very thick,draw=green!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=green!#1!white]{>}}}, postaction={decorate}},
+affinity hidden/.style={thick,draw=gray!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=gray!#1!white]{>}}}, postaction={decorate}},
+]
+\begin{scope}[yshift=0.000cm]
+    \node at (-1cm,1cm) {($G_a$)};
+    \node[data object=gray] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=gray] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [selects,bend left=10,overlay] (o-6) to  (o-2);
+    \draw [selects,bend left=7,overlay] (o-5) to  (o-3);
+    \draw [selects,bend left=7,overlay] (o-1) to  (o-5);
+    \draw [selects,bend left=7,overlay] (o-2) to  (o-5);
+    \draw [selects,bend left=7,overlay] (o-3) to  (o-5);
+    \draw [selects,bend left=7,overlay] (o-4) to  (o-5);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+   \node[anchor=west] at (8.5cm,1.5cm) {$p(G_a) = 3.931\cdot 10^{-4}$};
+   \node[anchor=west] at (8.5cm,0.5cm) {$\mathcal{C}_O|G_a = \left\{\mathbf{x}_1,\mathbf{x}_4,\mathbf{x}_6\right\}$};
+\end{scope}
+\begin{scope}[yshift=-3.500cm]
+    \node at (-1cm,1cm) {($G_b$)};
+    \node[data object=gray] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=gray] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [selects,bend left=24,overlay] (o-3) to  (o-1);
+    \draw [selects,bend left=22,overlay] (o-6) to  (o-1);
+    \draw [selects,bend right=7,overlay] (o-1) to  (o-2);
+    \draw [selects,bend left=7,overlay] (o-4) to  (o-3);
+    \draw [selects,bend left=24,overlay] (o-2) to  (o-4);
+    \draw [selects,bend left=7,overlay] (o-5) to  (o-4);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+   \node[anchor=west] at (8.5cm,1.5cm) {$p(G_b) = 4.562\cdot 10^{-5}$};
+   \node[anchor=west] at (8.5cm,0.5cm) {$\mathcal{C}_O|G_b = \left\{\mathbf{x}_5,\mathbf{x}_6\right\}$};
+\end{scope}
+\begin{scope}[yshift=-7.000cm]
+    \node at (-1cm,1cm) {($G_c$)};
+    \node[data object=gray] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=gray] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [selects,bend left=7,overlay] (o-3) to  (o-2);
+    \draw [selects,bend right=22,overlay] (o-6) to  (o-4);
+    \draw [selects,bend left=7,overlay] (o-4) to  (o-5);
+    \draw [selects,bend right=16,overlay] (o-1) to  (o-6);
+    \draw [selects,bend right=2,overlay] (o-2) to  (o-6);
+    \draw [selects,bend left=3,overlay] (o-5) to  (o-6);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+   \node[anchor=west] at (8.5cm,1.5cm) {$p(G_c) = 5.950\cdot 10^{-7}$};
+   \node[anchor=west] at (8.5cm,0.5cm) {$\mathcal{C}_O|G_c = \left\{\mathbf{x}_1,\mathbf{x}_3\right\}$};
+\end{scope}
+\end{tikzpicture}

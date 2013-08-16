@@ -1,0 +1,101 @@
+%%preview
+\begin{tikzpicture}
+
+\pgfplotstableread{data/bg-multiclass-iris-setosa.dat}\datasetosa
+\pgfplotstableread{data/bg-multiclass-iris-versicolor.dat}\dataversicolor
+\pgfplotstableread{data/bg-multiclass-iris-virginica.dat}\datavirginica
+
+\newcommand{\plotobjects}[3]{
+	\addplot[#1] table[x index=0, y index=3] {\datasetosa};
+	\addplot[#2] table[x index=0, y index=3] {\dataversicolor};
+	\addplot[#3] table[x index=0, y index=3] {\datavirginica};
+}
+
+
+\newcommand{\plotobjectslegend}[3]{
+	\addplot[#1] table[x index=0, y index=3] {\datasetosa};
+	\addlegendentry{$\mathcal{C}_1$~=~Setosa};
+	\addplot[#2] table[x index=0, y index=3] {\dataversicolor};
+	\addlegendentry{$\mathcal{C}_2$~=~Versicolor};
+	\addplot[#3] table[x index=0, y index=3] {\datavirginica};
+	\addlegendentry{$\mathcal{C}_3$~=~Virginica};
+}
+
+\begin{axis}[
+	name=multiclass-dataset,
+	xlabel={Sepal length},
+	ylabel={Petal width},
+	xlabel near ticks,
+	ylabel near ticks,
+	axis equal,
+	xmin=4,
+	xmax=8,
+	ymin=0,
+	ymax=3,
+	yshift=5cm,
+	width=5.5cm,
+	legend cell align=left,
+	legend pos=outer north east,
+	title={$\mathcal{D}_{\text{M}}$ = Iris flower data set},
+]
+
+\plotobjectslegend{object=purple}{object=blue}{object=orange}
+\end{axis}
+
+\def\ocset{
+	axis equal,
+	xmin=4,
+	xmax=8,
+	ymin=0,
+	ymax=3,
+	width=5.5cm,
+	%yshift=-5cm,
+	outer sep=0cm,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	xtick={1},
+	ytick={-1},
+	legend style={at={(0,0)},anchor=north west,yshift=-0.15cm,outer sep=0},
+	legend cell align=left,
+}
+
+
+\begin{axis}[
+	name=oneclass-dataset-1,
+	xshift=-4.5cm,
+	title={$\mathcal{D}_1$},
+	\ocset
+	reverse legend,
+	legend entries={$\mathcal{C}_{\text{N}} = \text{Setosa}$,,$\mathcal{C}_{\text{A}} = \text{Versicolor} \cup \text{Virginica}$},
+]
+\plotobjects{normal}{anomaly}{anomaly}
+\end{axis}
+
+
+
+\begin{axis}[
+	name=oneclass-dataset-2,
+	title={$\mathcal{D}_2$},
+	\ocset
+	reverse legend,
+	legend entries={,$\mathcal{C}_{\text{N}} = \text{Versicolor}$,$\mathcal{C}_{\text{A}} = \text{Setosa} \cup \text{Virginica}$},
+]
+\plotobjects{anomaly}{normal}{anomaly}
+\end{axis}
+
+\begin{axis}[
+	name=oneclass-dataset-3,
+	xshift=4.5cm,
+	title={$\mathcal{D}_3$},
+	\ocset
+	legend entries={$\mathcal{C}_{\text{A}} = \text{Setosa} \cup \text{Versicolor}$,,$\mathcal{C}_{\text{N}} = \text{Virginica}$},
+]
+
+\plotobjects{anomaly}{anomaly}{normal}
+\end{axis}
+
+%\draw[use as bounding box,red,densely dotted] (current bounding box.south west) rectangle (current bounding box.north east);
+
+
+%\thesisbb
+\end{tikzpicture}

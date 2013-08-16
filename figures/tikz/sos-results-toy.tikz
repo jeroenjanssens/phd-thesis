@@ -1,0 +1,69 @@
+\begin{tikzpicture}
+  \def\toyplot(#1,#2,#3,#4,#5){
+  \pgfplotstableread{data/results-toy-aistats-#1-mean.dat}\toyresults%
+  \pgfplotstableread{data/results-toy-aistats-#1-std.dat}\toyresultsstd%
+  \begin{axis}[
+	      name=toyplot#1,
+	      title=(#1),
+		  every axis title/.style={at={(0.5,1.15)}},
+	      ytick={0.6,0.7,0.8,0.9,1.0},
+	      enlarge x limits=false,
+	      enlarge y limits=true,
+	      ymin=0.6,
+	      ymax=1,
+	      xmax=#3,
+	      xmin=#2,
+	      x dir=#4,
+xmajorgrids,
+ymajorgrids,
+every major grid/.append style={semithick, dotted},
+every major tick/.append style={black},
+		  every axis y label/.style={at={(ticklabel cs:0.5)},rotate=90,anchor=near ticklabel},
+		  every axis x label/.style={at={(ticklabel cs:0.5)},anchor=near ticklabel},
+	      axis on top,
+	      width=7.1cm,
+	      height=4.3cm,
+		  tick pos=left,
+		  extra x tick style={every x tick/.append style={red,very thick},thick,draw=red,grid=none},
+		extra x tick labels={},
+	      #5
+	      ]
+      %\addplot[semithick,dotted] {0.99};
+
+%\addplot[draw=none,fill opacity=0.1,draw opacity=0,fill=orange] table[x index=0,y index=4] {\toyresultsstd};
+%\addplot[draw=none,fill opacity=0.1,draw opacity=0,fill=green!50!black] table[x index=0,y index=3] {\toyresultsstd};
+%\addplot[draw=none,fill opacity=0.1,draw opacity=0,fill=blue] table[x index=0,y index=2] {\toyresultsstd};
+%\addplot[draw=none,fill opacity=0.1,draw opacity=0,fill=red] table[x index=0,y index=1] {\toyresultsstd};
+%\addplot[draw=none,fill opacity=0.1,draw opacity=0,fill=violet!80] table[x index=0,y index=5] {\toyresultsstd};
+
+	\addplot[thick,dashed,orange] table[x index=0,y index=4] {\toyresults};
+ \addplot[thick,densely dashed,green!50!black] table[x index=0,y index=3] {\toyresults};
+ \addplot[thick,dotted,blue] table[x index=0,y index=2] {\toyresults};
+      \addplot[thick,densely dotted,red] table[x index=0,y index=1] {\toyresults};
+      \addplot[thick,violet!80] table[x index=0,y index=5] {\toyresults};
+  \end{axis}}
+
+  \toyplot(a,2,4,reverse,{ylabel=AUC,xlabel=$\lambda$,extra x ticks={3.5, 2.75, 2.1}});
+  \toyplot(b,5,45,reverse,{extra x ticks={20, 15, 10},yticklabel=\empty,at={($(toyplota.east)+(0.9cm,0)$)},anchor=west,xlabel=$\lambda$});
+
+
+  \toyplot(c,0,4,reverse,{extra x ticks={2, 1, 0.1},ylabel=AUC,at={($(toyplota.south)+(0cm,-1.7cm)$)},anchor=north,xlabel=$\lambda$});
+%0.215cm
+  \toyplot(d,5,45,normal,{extra x ticks={30, 20, 40},yticklabel=\empty,at={($(toyplotc.east)+(0.9cm,0)$)},anchor=west,xlabel=$\lambda$});
+
+
+  \toyplot(e,0,0.5,reverse,{extra x ticks={0.2, 0.1, 0.01},ylabel=AUC,at={($(toyplotc.south)+(0.0cm,-1.7cm)$)},anchor=north,xlabel=$\lambda$});
+  \toyplot(f,0.8,1.5,reverse,{extra x ticks={1.2, 1, 0.805},yticklabel=\empty,at={($(toyplote.east)+(0.9cm,0)$)},anchor=west,xlabel=$\lambda$});
+  \toyplot(g,0.8,1.5,reverse,{extra x ticks={1.2, 1, 0.805},ylabel=AUC,at={($(toyplote.south)+(0.0cm,-1.7cm)$)},anchor=north,xlabel=$\lambda$,legend pos=outer north east,reverse legend,legend cell align=left,legend entries={LSOD,LOCI,LOF,KNNDD,SOS},
+  legend style={xshift=4.3cm}});
+
+
+%\draw[thick,red,dashed] (toyplota.north) -- (toyplotf.north);
+
+\pgfresetboundingbox
+
+\path[thick,draw=none] (-0.95cm,-14.1cm) rectangle (12.15cm,3.3cm);
+
+%\thesisbb
+    
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+\begin{tabular}{lccccc}\toprule
+Chapter&PS&RQ1&RQ2&RQ3\\
+\midrule
+\rowcolor[gray]{0.9}
+Chapter 1: Introduction 											& \y & \y & \y & \y \\
+Chapter 2: Background and experimental set-up 						&    & \y & \y & \y \\
+\rowcolor[gray]{0.9}
+Chapter 3: Evaluating and comparing outlier-selection algorithms 	&    & \y &    &    \\
+Chapter 4: Stochastic Outlier Selection 							&    &    & \y &    \\
+\rowcolor[gray]{0.9}
+Chapter 5: Meta-features for one-class data sets 					&    &    &    & \y \\
+Chapter 6: Meta-learning for one-class classifiers 					&    &    &    & \y \\
+\rowcolor[gray]{0.9}
+Chapter 7: Conclusions  											& \y & \y & \y & \y \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,73 @@
+\begin{tikzpicture}
+
+\def\im(#1,#2){
+	\node[inner sep=0cm,minimum size=3.4cm,outer sep=0cm] (im#1#2) {\includegraphics[width=3.4cm]{png/#1-#2.png}};
+\node[rectangle,draw=black,inner sep=0cm,semithick,minimum size=3.4cm,outer sep=0cm] {};
+% \node[rectangle,draw=white,inner sep=0cm,ultra thick,minimum size=3.05cm,outer sep=0cm, rounded corners=0.1cm] {};
+% \node[rectangle,draw=black,inner sep=0cm,semithick,minimum size=3cm,outer sep=0cm,rounded corners=0.1cm] {};
+}
+
+\def\ann(#1,#2,#3,#4){%
+\coordinate (t) at ($(im#1.center) + (#2mm,#3mm)$);
+\fill[ChapterColor4!30!white]  (t) circle (1.8mm);
+\draw[black,semithick] (t) circle (1.8mm);
+\node at (t) {\textbf{#4}};
+}
+
+\def\thesisann(#1,#2,#3,#4){%
+\coordinate (t) at ($(im#1.center) + (#2mm,#3mm)$);
+\fill[formule!30, outer sep=0mm] (t) circle (1.8mm);
+\node[] at (t) {\textbf{\uppercase{#4}}};
+\draw[black,thick,outer sep=0mm] (t) circle (1.8mm);	
+}
+
+
+
+
+% \matrix[row sep=0.2cm,column sep=0.2cm,ampersand replacement=\&]{
+% 	\im(4,1) \& \im(1,1) \& \im(2,1) \& \im(3,1) \& \im(5,1) \\
+% 	\im(4,2) \& \im(1,2) \& \im(2,2) \& \im(3,2) \& \im(5,2) \\
+% 	\im(4,3) \& \im(1,3) \& \im(2,3) \& \im(3,3) \& \im(5,3) \\
+% };
+
+\matrix[row sep=0.2cm,column sep=0.2cm,ampersand replacement=\&,inner sep=0cm]{
+	\im(4,1) \& \im(4,2) \& \im(4,3) \\
+\im(1,1) \& \im(1,2) \& \im(1,3) \\
+\im(2,1) \& \im(2,2) \& \im(2,3) \\
+\im(3,1) \& \im(3,2) \& \im(3,3) \\
+\im(5,1) \& \im(5,2) \& \im(5,3) \\
+};
+
+\node[above=0.3cm,anchor=base,inner sep=0cm, outer sep=0cm]  at (im41.north) {Banana}; 
+\node[above=0.3cm,anchor=base,inner sep=0cm, outer sep=0cm]  at (im42.north) {Densities}; 
+\node[above=0.3cm,anchor=base,inner sep=0cm, outer sep=0cm]  at (im43.north) {Ring}; 
+ \node[left=0.2cm,anchor=east,inner sep=0cm, outer sep=0cm] at (im11.west) {KNNDD $(k=10)$}; 
+ \node[left=0.2cm,anchor=east,inner sep=0cm, outer sep=0cm] at (im21.west) {LOF $(k=10)$}; 
+\node[left=0.2cm,anchor=east,inner sep=0cm, outer sep=0cm] at (im31.west) {LOCI}; 
+\node[left=0.2cm,anchor=east,inner sep=0cm, outer sep=0cm] at (im41.west) {SOS $(h=10)$}; 
+\node[left=0.2cm,anchor=east,inner sep=0cm, outer sep=0cm] at (im51.west) {LSOD}; 
+
+
+% \node[left=0.1cm,anchor=east] at (im21.west) {LOF $(k=10)$}; 
+% \node[left=of im31,anchor=base,xshift=-0.1cm] {LOCI}; 
+% \node[left=of im41,anchor=base,xshift=-0.1cm] {SOS $(h=10)$}; 
+% \node[left=of im51,anchor=base,xshift=-0.1cm] {LSOD}; 
+
+
+\thesisann(11,-10,10,A);				% KNN increasing
+\thesisann(21,-10,10,B);				% LOF increasing
+\thesisann(22,-12,12,C);		% LOF nonsmooth
+\thesisann(32,-3,5,D);				% LOCI fweird shapes
+\thesisann(33,12,9,E);				% LOCI thigt bound
+\thesisann(53,2,2,H);				% LSOD fails
+\thesisann(52,2,2,G);				% LSOD fails 
+\thesisann(51,-2,2,F);			% LSOD fails
+\thesisann(42,4,4,I);				% SOS density
+\thesisann(43,-3,0,J);				% SOS density
+
+%\thesisbb
+
+%    \draw[color=black, very thick] (#1,#2) circle (6pt);
+  %  \node at (#1,#2) {\textbf{#3}};
+
+\end{tikzpicture}

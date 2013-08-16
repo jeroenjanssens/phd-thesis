@@ -1,0 +1,44 @@
+\begin{tabular}{lrrrrr}\toprule
+Dataset&\multicolumn{1}{r}{\glsentryname{knndd}}&\multicolumn{1}{r}{\glsentryname{pwdd}}&\multicolumn{1}{r}{\glsentryname{svdd}}&\multicolumn{1}{r}{\glsentryname{lof}}&\multicolumn{1}{r}{\glsentryname{loci}}\\
+\midrule
+\rowcolor[gray]{0.9}
+Arrhytmia &             \phantom{0}56.50&           \phantom{0}50.00&           \phantom{0}61.76&            \textbf{\phantom{0}62.87}&  \phantom{0}56.70\\
+Balance-scale &         \phantom{0}93.50&           \phantom{0}94.18&           \textbf{\phantom{0}95.80}&   \phantom{0}94.66&           \phantom{0}91.26\\
+\rowcolor[gray]{0.9}
+Biomed &                \textbf{\phantom{0}88.29}&  \phantom{0}72.99&           \phantom{0}88.20&            \phantom{0}78.61&           \phantom{0}85.04\\
+Breast &                \phantom{0}96.68&           \phantom{0}72.24&           \phantom{0}97.75&            \phantom{0}96.81&           \textbf{\phantom{0}98.31}\\
+\rowcolor[gray]{0.9}
+Cancer wpbc &           \phantom{0}61.37&           \phantom{0}56.56&           \phantom{0}60.59&            \textbf{\phantom{0}62.57}&  \phantom{0}58.55\\
+Colon Gene &                 \textbf{\phantom{0}75.53}&  \phantom{0}50.00&           \phantom{0}70.18&            \phantom{0}73.47&           \phantom{0}42.08\\
+\rowcolor[gray]{0.9}
+Delft Pump &            \phantom{0}93.13&           \phantom{0}92.97&           \phantom{0}94.43&            \textbf{\phantom{0}94.93}&  \phantom{0}87.27\\
+Diabetes &              \phantom{0}65.03&           \phantom{0}63.14&           \phantom{0}67.98&            \textbf{\phantom{0}68.24}&  \phantom{0}64.86\\
+\rowcolor[gray]{0.9}
+Ecoli &                 \phantom{0}96.53&           \phantom{0}93.09&           \phantom{0}93.39&            \textbf{\phantom{0}96.74}&  \phantom{0}96.10\\
+Glass Building &        \phantom{0}78.93&           \phantom{0}77.39&           \phantom{0}77.32&            \textbf{\phantom{0}81.47}&  \phantom{0}75.79\\
+\rowcolor[gray]{0.9}
+Heart &                 \phantom{0}60.53&           \phantom{0}56.86&           \textbf{\phantom{0}62.05}&   \phantom{0}61.82&           \phantom{0}60.88\\
+Hepatitis &             \phantom{0}64.72&           \phantom{0}58.73&           \phantom{0}60.89&            \textbf{\phantom{0}66.53}&  \phantom{0}62.05\\
+\rowcolor[gray]{0.9}
+Housing &               \textbf{\phantom{0}64.56}&  \phantom{0}61.66&           \phantom{0}64.24&            \phantom{0}62.86&           \phantom{0}63.75\\
+Imports &               \phantom{0}80.24&           \phantom{0}80.09&           \textbf{\phantom{0}82.11}&   \phantom{0}80.49&           \phantom{0}74.24\\
+\rowcolor[gray]{0.9}
+Ionosphere &            \phantom{0}75.47&           \phantom{0}71.14&           \textbf{\phantom{0}81.38}&   \phantom{0}74.28&           \phantom{0}68.51\\
+Iris &                  \phantom{0}98.49&           \phantom{0}98.26&           \textbf{\phantom{0}99.20}&   \phantom{0}98.28&           \phantom{0}98.23\\
+\rowcolor[gray]{0.9}
+Liver &                 \phantom{0}55.53&           \phantom{0}53.46&           \phantom{0}59.15&            \textbf{\phantom{0}59.57}&  \phantom{0}59.10\\
+Sonar &                 \phantom{0}74.22&           \phantom{0}74.45&           \phantom{0}75.77&            \textbf{\phantom{0}76.89}&  \phantom{0}66.71\\
+\rowcolor[gray]{0.9}
+Spectf &                \phantom{0}52.81&           \phantom{0}51.57&           \textbf{\phantom{0}78.92}&   \phantom{0}60.20&           \phantom{0}56.11\\
+Survival &              \phantom{0}66.64&           \phantom{0}62.30&           \textbf{\phantom{0}68.12}&   \phantom{0}67.02&           \phantom{0}64.18\\
+\rowcolor[gray]{0.9}
+Vehicle &               \phantom{0}79.15&           \phantom{0}78.81&           \textbf{\phantom{0}81.37}&   \phantom{0}75.68&           \phantom{0}74.99\\
+Vowel &                 \phantom{0}99.49&           \textbf{\phantom{0}99.56}&  \phantom{0}99.28&            \phantom{0}97.89&           \phantom{0}95.22\\
+\rowcolor[gray]{0.9}
+Waveform &              \phantom{0}89.85&           \phantom{0}86.89&           \textbf{\phantom{0}90.36}&   \phantom{0}90.26&           \phantom{0}89.17\\
+Wine &                  \textbf{\phantom{0}89.43}&  \phantom{0}84.20&           \phantom{0}86.94&            \phantom{0}88.42&           \phantom{0}87.68\\
+\rowcolor[gray]{0.9}
+\midrule Average rank&  \phantom{000}2.625&         \phantom{000}4.292&         \phantom{000}2.083&          \phantom{000}2.083&         \phantom{000}3.917\\
+\bottomrule
+\end{tabular}
+

@@ -1,0 +1,5 @@
+\begin{tikzpicture}
+\sosmatrix{b}{6}{title=$\mathbf{B}$,colormap name=cmb,xshift=1.42cm,point meta max=0.3}
+\sosmatrix{o}{1}{title=$\textbf{Φ}$,at={(matrix-b.north east)},anchor={north west},colormap/jet,xshift=1.42cm,point meta min=0,point meta max=1}
+\draw[semithick,->,distance=0.75cm] ($(matrix-b.above north)+(0.1cm,0cm)$) to[bend left] node[above] {Equation 4.14} ($(matrix-o.above north)+(-0.1cm,0cm)$);
+\end{tikzpicture}

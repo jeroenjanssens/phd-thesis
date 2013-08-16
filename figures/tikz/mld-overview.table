@@ -1,0 +1,4 @@
+\begin{tikzpicture}
+\node (a) {\includegraphics{pdf/mld-overview-a.pdf}};
+\node[anchor=north west,xshift=-0.05cm] (b) at (a.north east) {\includegraphics{pdf/mld-overview-b.pdf}};
+\end{tikzpicture}

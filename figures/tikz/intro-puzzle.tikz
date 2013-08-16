@@ -1,0 +1,154 @@
+%preview
+\begin{tikzpicture}[>=latex,remember picture]
+
+%my papers (finished or expected)
+%titel
+%hoofdstukken
+%problem statement
+%research questions
+%
+
+
+\node[rectangle, rounded corners,text width=12cm,draw=black,anchor=north west,fill=gray!20,thick,draw=gray] (notes) at (0cm,-12cm) {
+\textbf{Embedding in the literature:}
+\begin{itemize}[topsep=0cm,leftmargin=0.5cm,itemsep=0cm]
+\item We consider two approaches to anomaly detection: (1) outlier selection and (2) one-class classification.
+\item From the large body of work in anomaly detection we observe the following: 
+\begin{enumerate}[topsep=0cm,leftmargin=0.5cm,itemsep=0cm]
+\item no clear definition of anomaly and outlier (\textbf{CH1}),
+\item no clear evaluation procedure for outlier-selection algorithms (\textbf{RQ1}),
+\item current outlier selection algorithms cannot cope with data sets that contain varying densities and clusters with varying sizes (\textbf{RQ2}),
+\item not clear when to choose which one-class classification algorithm. (\textbf{RQ3}),
+\item most papers only report results from toy or benchmark data sets (\textbf{RQ4}).
+\end{enumerate}
+\end{itemize}
+};
+
+\node[inner sep=0cm,anchor=west,text width=9cm] (titel) at (0cm,0cm) {\LARGE{\thesistitle}};
+
+
+\node[yshift=-1cm,anchor=west,rectangle,rounded corners,fill=ChapterColor1!30,draw=ChapterColor1!60,thick,] (ps) at (titel.south west) {\textbf{PS:} \emph{\pstext{}}};
+
+\matrix[name=rq,at=(ps.south west),matrix anchor=north west,outer sep=0cm,yshift=-1cm,matrix of nodes,row sep=0.5cm,nodes={font=\small,text width=4cm,anchor=west,rectangle,rounded corners,fill=ChapterColor3!30,draw=ChapterColor3!60,thick}]
+{
+\textbf{RQ1:} \emph{\rqonetext{}} \\
+\textbf{RQ2:} \emph{\rqtwotext{}} \\
+\textbf{RQ3:} \emph{\rqthreetext{}} \\
+\textbf{RQ4:} \emph{\rqfourtext{}} \\
+};
+
+
+\matrix[name=chapter,at=(rq.north east),matrix anchor=north west,outer sep=0cm,xshift=1cm,matrix of nodes,row sep=0.1cm,nodes={outer sep=0.02cm,font=\small,text width=5cm,text depth=0.4cm,anchor=base,align=left,rectangle,draw=black}]
+{
+|[fill=ChapterColor1!20]|\textbf{CH1:} Anomaly detection \\
+|[fill=ChapterColor2!20]|\textbf{CH2:} Outlier selection and one-class classification \\
+|[fill=ChapterColor3!20]|\textbf{CH3:} Evaluation of existing outlier-selection algorithms \\
+|[fill=ChapterColor4!20]|\textbf{CH4:} Stochastic Outlier Selection \\
+|[fill=ChapterColor5!20]|\textbf{CH5:} Choosing the right one-class classifier for the right problem \\
+|[fill=ChapterColor6!20]|\textbf{CH6:} Anomaly detection applied to the maritime domain \\
+%|[fill=ChapterColor7!20]|\textbf{CH7:} General discussion \\
+|[fill=ChapterColor8!20]|\textbf{CH7:} Conclusions \\
+|[fill=black!20]|\textbf{A1:} Presto: A Poseidon research tool to create maritime anomalies \\
+};
+
+
+
+
+
+
+
+\node[text width=11.2cm,rectangle,font=\small,inner sep=0cm,anchor=north west,yshift=3cm,xshift=3cm] at (chapter.north east) {
+\begin{enumerate}[leftmargin=0.6cm,topsep=0cm,itemsep=0cm]
+
+%6
+\item \tikz[remember picture,overlay]\coordinate(pub-6) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, E.O. Postma, and H.J. Van den Herik. \emph{Unsupervised Outlier Selection with Pairwise Affinities}. In SNN Symposium: Intelligent Machines, Nijmegen, The Netherlands, November 2010.
+%9
+%\textcolor{orange!70!black}{
+%\item\tikz[remember picture,overlay]\coordinate(pub-9) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, F. Huszar, E.O. Postma, and H.J. Van den Herik. Stochastic Outlier Selection. \emph{Submitted to AISTATS}, 2011.  (Author notification: 28 Feb).}
+%1
+\item \tikz[remember picture,overlay]\coordinate(pub-1) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens} and E.O. Postma. One-class classification with LOF and LOCI: An empirical
+comparison. In M.G.J. Van Erp, J.H. Stehouwer, and M.M. Van Zaanen, editors, \emph{Proceedings
+of the 18th Annual Belgian-Dutch Conference on Machine Learning (BENELEARN 2009)}, pages
+56-64, Tilburg, The Netherlands, 2009.
+%2
+\item \tikz[remember picture,overlay]\coordinate(pub-2) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, I. Flesch, and E.O. Postma. Outlier detection with one-class classifiers from
+ML and KDD. In M.A. Wani, M. Kantardzic, V. Palade, L. Kurgan, and Y. Qi, editors, \emph{Proceedings of the 8th International Conference on Machine Learning and Applications (ICMLA
+2009)}, pages 147-153, Miami, FL, Dec. 2009.
+%11
+%\textcolor{gray}{
+%\item  \tikz[remember picture,overlay]\coordinate(pub-11) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, D.M.J. Tax, E.O. Postma and H.J. Van den Herik. Classifying one-class classifiers (working title). \emph{Intending to submit to PAMI or JMLR}.}
+%12
+%\textcolor{gray}{
+%\item  \tikz[remember picture,overlay]\coordinate(pub-12) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, K. Heller, and Z. Ghahramani. To LDA or not to LDA? (working title). \emph{Intending to submit to ECML}.}
+%7
+\item \tikz[remember picture,overlay]\coordinate(pub-7) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, and E.O. Postma, \emph{Ranking Images on Semantic Attributes using Human Computation}. In SNN Symposium: Intelligent Machines, Nijmegen, The Netherlands, November 2010.
+%8
+\item \tikz[remember picture,overlay]\coordinate(pub-8) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens},  Ranking images on semantic attributes using human computation. In \emph{NIPS Workshop on Computational Social Science and the Wisdom of Crowds}, Whistler, Canada, December 2010
+%10
+%\textcolor{orange!70!black}{
+%\item \tikz[remember picture,overlay]\coordinate(pub-10) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, E.O. Postma and H.J. Van den Herik. Ranking images through human computation. \emph{Submitted to IJCAI}, 2011. (Author notification: 31 Mar).}
+%13
+%\textcolor{gray}{
+%\item  \tikz[remember picture,overlay]\coordinate(pub-13) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, G.K.D De vries, M. Glandrup, P. Van de Laar, M. Van Someren. E.O. Postma, and H.J. Van den Herik . A multiple view approach to anomaly detection in the maritime domain (working title). \emph{Intending to submit to Journal of Applied Artificial Intelligence}.}
+%4
+\item \tikz[remember picture,overlay]\coordinate(pub-4) at (-0.5cm,0.1cm);C.M.E. Willems, W.R. van Hage, G.K.D. de Vries, \textbf{J.H.M. Janssens}, and V. Malaise. An integrated approach for visual analysis of a multi-source moving objects knowledge base.
+\emph{International Journal of Geographical Information Science},
+24(10):1543-1558, 2010.
+%5
+\item \tikz[remember picture,overlay]\coordinate(pub-5) at (-0.5cm,0.1cm);C.M.E. Willems, W.R. van Hage, G.K.D. de Vries, \textbf{J.H.M. Janssens}, and V. Malaise. An integrated approach for visual analysis of a multi-source moving objects knowledge base. In
+G. Andrienko, N. Andrienko, J. Dykes, M-J. Kraak, and H. Schumann, editors, \emph{Geospatial
+Visual Analytics: Focus on Time}, Guimares, Portugal, 2010.
+%3
+\item \tikz[remember picture,overlay]\coordinate(pub-3) at (-0.5cm,0.1cm);\textbf{J.H.M. Janssens}, H. Hiemstra, and E.O. Postma. Creating artificial vessel trajectories with
+Presto. \emph{In Proceedings of the 22nd Benelux Conference on Artificial Intelligence (BNAIC
+2010)}, Luxembourg, Luxembourg, 2010.
+\end{enumerate}
+};
+
+
+
+% from ps to rq
+\foreach \x in {1,2,3,4} {
+	\draw[->,thick,outer sep=0cm] (ps.west) to [out=260, in=100] (rq-\x-1.north west);
+}
+
+% from rq to chapter
+\draw[->,thick,outer sep=0cm] (rq-1-1.east) to [out=0, in=180] (chapter-3-1.west);
+\draw[->,thick,outer sep=0cm] (rq-1-1.east) to [out=0, in=180] (chapter-2-1.west);
+\draw[->,thick,outer sep=0cm] (rq-2-1.east) to [out=0, in=180] (chapter-4-1.west);
+\draw[->,thick,outer sep=0cm] (rq-3-1.east) to [out=0, in=180] (chapter-5-1.west);
+
+%\draw[->,thick,outer sep=0cm] (rq-4-1.east) to [out=0, in=180] (chapter-5-1.west);
+%\draw[->,thick,outer sep=0cm] (rq-4-1.east) to [out=0, in=180] (chapter-6-1.west);
+
+\draw[->,thick,outer sep=0cm] (rq-4-1.east) to [out=0, in=180] (chapter-6-1.west);
+
+% from chapter to publication
+
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor3] (chapter-3-1.east) to [out=0, in=190] (pub-9.west);
+\draw[->,thick,outer sep=0cm,draw=ChapterColor4] (chapter-4-1.east) to [out=0, in=190] (pub-6.west);
+
+\draw[->,thick,outer sep=0cm,draw=ChapterColor3] (chapter-3-1.east) to [out=0, in=180] (pub-1.west);
+\draw[->,thick,outer sep=0cm,draw=ChapterColor3] (chapter-3-1.east) to [out=0, in=180] (pub-2.west);
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor4] (chapter-4-1.east) to [out=0, in=180] (pub-11.west);
+
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor5] (chapter-5-1.east) to [out=0, in=180] (pub-12.west);
+
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor6] (chapter-6-1.east) to [out=0, in=180] (pub-10.west);
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor6] (chapter-6-1.east) to [out=0, in=180] (pub-7.west);
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor6] (chapter-6-1.east) to [out=0, in=180] (pub-8.west);
+
+\draw[->,thick,outer sep=0cm,draw=ChapterColor7] (chapter-6-1.east) to [out=0, in=180] (pub-4.west);
+\draw[->,thick,outer sep=0cm,draw=ChapterColor7] (chapter-6-1.east) to [out=0, in=170] (pub-5.west);
+%\draw[->,thick,outer sep=0cm,draw=ChapterColor7] (chapter-7-1.east) to [out=0, in=170] (pub-13.west);
+\draw[->,thick,outer sep=0cm,draw=ChapterColor7] (chapter-6-1.east) to [out=-10, in=160] (pub-3.west);
+
+\draw[->,thick,outer sep=0cm,draw=black] (chapter-8-1.east) to [out=-10, in=180] (pub-3.west);
+
+
+
+% \draw[red,densely dotted] (current bounding box.south west) rectangle (current bounding box.north east);
+% \draw[gray, loosely dashed] (current bounding box.north west) rectangle ($(current bounding box.north west) +  (28cm,-20cm) $);
+
+%\thesisbb
+\end{tikzpicture}

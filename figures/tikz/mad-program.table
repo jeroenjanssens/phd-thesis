@@ -1,0 +1,33 @@
+\begin{tabular}{ccp{3.5cm}p{6.3cm}}
+\toprule
+Start&Duration&Title&Authors\\
+\midrule
+\rowcolor[gray]{0.9}
+9:00&0:30&\textit{Registration}& \\
+9:30&0:15&Opening&Jaap van den Herik, Tilburg center for Cognition and Communication, The Netherlands\\
+\rowcolor[gray]{0.9}
+9:45&0:45&Keynote: Towards Maritime Behavior Recognition and Anomaly Detection&David Aha, Naval Research Laboratory, USA\\
+10:30&0:30&Density Based, Visual Anomaly Detection&Roeland Scheepens, Niels Willems, Huub van de Wetering, and Jarke van Wijk, Eindhoven University of Technology, The Netherlands\\
+\rowcolor[gray]{0.9}
+11:00&0:30&ConTraffic: Maritime container traffic anomaly detection&Aristide Varfis, Evangelos Kotsakis, Aris Tsois, Maxym Sjachyn, Alberto Donati, Elena Camossi, Paola Villa, Tatyana Dimitrova, and Muriel Pellissier, European Commission, Joint Research Centre, Italy\\
+11:30&0:30&Comparing Vessel Trajectories using Geographical Domain Knowledge and Alignments&Gerben de Vries, Universiteit van Amsterdam, The Netherlands; Willem Robert van Hage, Vrije Universiteit Amsterdam, The Netherlands; and Maarten van Someren, Universiteit van Amsterdam, The Netherlands\\
+\rowcolor[gray]{0.9}
+12:00&1:00&\textit{Lunch}& \\
+13:00&0:30&Keynote: Towards improving situation awareness for operators in the maritime domain&Maurice Glandrup, Thales Naval, The Netherlands\\
+\rowcolor[gray]{0.9}
+13:30&0:30&Spatio-Temporal Visualisation of Outliers&Laurent Etienne and Cyril Ray, Naval Academy Research Institute, France; and Gavin Mcardle, National Universtiy of Ireland Maynooth, Ireland\\
+14:00&0:30&Maritime Anomaly Detection using Stochastic Outlier Selection&Jeroen Janssens, Eric Postma, and Jaap van den Herik, Tilburg University, The Netherlands\\
+\rowcolor[gray]{0.9}
+14:30&0:30&Maritime Route Anomaly Detection&Richard Lane, QinetiQ, United Kingdom\\
+15:00&0:30&\textit{Break}& \\
+\rowcolor[gray]{0.9}
+15:30&0:30&Applying V-Analytics to AIS Data&Gennady Andrienko and Natalia Andrienko, Fraunhofer Institute IAIS, Germany\\
+16:00&0:30&An Evaluation of Fractal/Velocity Pattern Extraction&René Enguehard, Rodolphe Devillers, and Orland Hoeber, Memorial University of Newfoundland, Canada\\
+\rowcolor[gray]{0.9}
+16:30&0:30&Incremental Stream Clustering for Anomaly Detection in Maritime Surveillance&Anders Holst and Jan Ekman, Swedish Institute of Computer Science, Sweden\\
+17:00&0:10&Poster pitches& \\
+\rowcolor[gray]{0.9}
+17:10&1:50&Poster session and drinks& \\
+19:00&?&\textit{Workshop banquet}&\\
+\bottomrule
+\end{tabular}

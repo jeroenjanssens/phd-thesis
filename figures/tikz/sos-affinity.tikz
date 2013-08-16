@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+
+\pgfplotstableread{data/sos-affinity.dat}\data%
+
+\begin{axis}[
+	name=figs,
+	ymin=0,
+	xmin=0,
+	xmax=10,
+    ytick={0,0.2,0.4,0.6,0.8,1.0},
+	height=5cm,
+	width=7cm,
+	xlabel={dissimilarity~~ $d_{ij}$},
+	ylabel={affinity~~ $a_{ij}$},
+	ylabel near ticks,
+	xlabel near ticks,
+	legend cell align=left,
+	legend style={at={(1,1)},anchor=north east,xshift=-0.1cm,yshift=-0.1cm},
+	]
+	\addplot[blue,thick] table[x index=0,y index=1] {\data};
+    \addlegendentry{$\sigma^{\,2}_i = 0.1$};
+	\addplot[green,thick] table[x index=0,y index=2] {\data};
+    \addlegendentry{$\sigma^{\,2}_i = 1$};
+	\addplot[red,thick] table[x index=0,y index=3] {\data};
+    \addlegendentry{$\sigma^{\,2}_i = 10$};
+\end{axis}
+
+\sosmatrix{d}{6}{title=$\mathbf{D}$,at={(figs.south east)},anchor={south west},colormap name=cmd,xshift=1.12cm,point meta max=8}
+\sosmatrix{a}{6}{title=$\mathbf{A}$,at={(matrix-d.north east)},anchor={north west},colormap name=cma,xshift=1.24cm,point meta max=1}
+
+\draw[semithick,->] ($(matrix-d.above north)+(0.1cm,0cm)$) to[bend left,distance=0.75cm] node[above] {Equation 4.2} ($(matrix-a.above north)+(-0.1cm,0cm)$);
+
+\end{tikzpicture}

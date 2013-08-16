@@ -1,0 +1,15 @@
+\pgfplotstableread[header=true, col sep=tab, trim cells=true]{/home/jeroen/phd/latex/thesis/figures/data/mlc-mapping-average-relative-auc.dat}\datafile
+\newcolumntype{x}[1]{>{\raggedleft\arraybackslash}p{#1}}%
+\pgfplotstabletypeset[
+	%every head row/.style={before row=\toprule,after row=\midrule},
+  	every head row/.style={before row=\toprule&\multicolumn{6}{c}{ARA}&\multicolumn{2}{c}{$\Delta$ARA}\\\cmidrule(l{.25em}r{.25em}){2-7}\cmidrule(l{.25em}){8-9},after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every even row/.style={before row={\rowcolor[gray]{0.9}}},
+	columns={variant,value,one,two,done,dtwo},
+	columns/variant/.style={string type,column type=l,column name={Meta-learning variant \hspace*{1cm}$\lambda=\!\!\!\!$}},
+	columns/value/.style={column type=c,fixed,zerofill,skip 0.,dec sep align,column name={$0.0$}},
+	columns/one/.style={fixed,dec sep align,skip 0.,column name={$0.1$}},
+	columns/two/.style={fixed,dec sep align,skip 0.,column name={$0.2$}},
+	columns/done/.style={fonts by sign={+}{},showpos,skip 0.,fixed,column name={$0.1$}},
+	columns/dtwo/.style={fonts by sign={+}{},showpos,skip 0.,fixed,column name={$0.2$}},
+]\datafile

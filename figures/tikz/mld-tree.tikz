@@ -1,0 +1,66 @@
+% pdfcrop 0.1 0.1 -76.5 -135.5
+\begin{tikzpicture}[el/.style={draw=red!70!white,fill=red!30!white,thick},
+xnode/.style={el, minimum width=0.75cm,rounded corners=0.1cm,outer sep=0},
+leaf/.style={draw=black,semithick,fill=white,circle, inner sep=0.05cm},
+xnormal/.style={mark options={color=lime!80!black,semithick},mark=o},
+xanomaly/.style={mark options={color=orange!95!black,semithick},semithick,mark=asterisk},
+edge from parent/.style={draw,thick},
+edge from parent path={(\tikzparentnode.center) -- (\tikzchildnode.center)},
+object/.style={mark=*,only marks,#1,mark options={scale=1}},
+realworldobject/.style={mark=o,only marks,blue},
+normal/.style={object={lime!80!black},mark=o,semithick},
+anomaly/.style={object={orange!95!black},semithick,mark=asterisk},
+level distance=1.25cm,
+%level/.style={sibling distance=4cm/(#1*.5)}
+level 1/.style={sibling distance=4.5cm},
+level 2/.style={sibling distance=2cm},
+%level 3/.style={sibling distance=2.cm},
+]
+
+\input{/home/jeroen/phd/latex/thesis/dev/matlab/eval/tree}
+
+\tikzset{edge from parent/.style={}}
+
+\input{/home/jeroen/phd/latex/thesis/dev/matlab/eval/tree}
+
+
+\begin{axis}[draw=none,scatter/classes={
+	anomaly={anomaly},
+	normal={normal}
+	},
+	name=leftplot,
+	clip marker paths=true,
+	width=2cm,
+	xmin=99,
+	xmax=100,
+	ymin=99,
+	ymax=100,
+	axis on top,
+	axis equal,
+	title={},
+	every outer x axis line/.append style={draw=none,overlay},
+	every outer y axis line/.append style={draw=none,overlay},
+	xtick=\empty,
+	ytick=\empty,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	legend cell align=left,
+	legend pos=north east,
+	%legend columns=-1,
+	%reverse legend,
+	legend entries={anomaly,normality},
+	legend style={at={(1,1)},anchor=north east,xshift=-0.1cm,yshift=-0.1cm},
+	legend to name=legleg,
+	]
+	\addplot[scatter,
+	only marks,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y,meta=label] {data/bg-banana.dat};
+
+\end{axis}
+
+\node[xshift=3.9cm,yshift=-7.2cm,outer sep=0,inner sep=0]{\ref{legleg}};
+
+\end{tikzpicture}

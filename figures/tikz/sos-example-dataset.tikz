@@ -1,0 +1,80 @@
+\begin{tikzpicture}[>=latex]
+
+
+\begin{axis}[
+	name=figs,
+	%axis equal,
+	x=0.8cm,
+	y=0.8cm,
+	xmin=0,
+	ymin=0,
+	xmax=9,
+	ymax=4,
+	max space between ticks=20pt,
+	clip=true,
+	axis on top,
+	height=6cm,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel={first feature~~ $x_1$},
+	ylabel={second feature~~ $x_2$},
+	legend entries={data point},
+	legend style={at={(1,1)},anchor=north east,xshift=-0.1cm,yshift=-0.1cm},
+	%xlabel style={overlay},
+	%ylabel style={overlay},
+	%every outer x axis line/.append style={->},
+	%every outer y axis line/.append style={->},
+	%    xtick=\empty,
+	%    ytick=\empty,
+	]
+	%\addplot[mark=*,only marks,blue] table[x index=0, y index=1] {\dataset};
+	\addplot[object=blue] coordinates {
+	(1        , 1)
+    (3.0000   , 1.2500)
+    (3.0000   , 3.0000)
+    (     1   , 3.0000)
+    (2.2500   , 2.2500)
+    (8.0000   , 2.0000)
+	};
+	%\node [circle,draw=white,minimum size=0.10cm,font=\tiny,inner sep=0cm] (nn) at (axis cs: 40.776, 93.177) {};
+
+	%\node[outer sep=0cm,inner sep=0cm,anchor=west,xshift=0.15cm] at (nn) {$\text{NN} ( \mathbf{x}_i, 3)$};
+	
+
+	\node [circle,draw=none,minimum size=0.14cm,font=\tiny,inner sep=0cm] (x1) at (axis cs: 1, 1) {};
+	\node [circle,draw=none,minimum size=0.14cm,font=\tiny,inner sep=0cm] (x2) at (axis cs: 3, 1.25) {};
+	\node [circle,draw=none,minimum size=0.14cm,font=\tiny,inner sep=0cm] (x3) at (axis cs: 3, 3) {};
+	\node [circle,draw=none,minimum size=0.14cm,font=\tiny,inner sep=0cm] (x4) at (axis cs: 1, 3) {};
+	\node [circle,draw=none,minimum size=0.14cm,font=\tiny,inner sep=0cm] (x5) at (axis cs: 2.25, 2.25) {};
+	\node [circle,draw=none,minimum size=0.14cm,font=\tiny,inner sep=0cm] (x6) at (axis cs: 8, 2) {};
+
+
+\draw[<->,outer sep=0cm,green!63!,thick] (x2) to[above, sloped,outer sep=0cm] node[black,outer sep=0cm,inner sep=0.1cm] {$d_{2,6} \equiv d_{6,2} = 5.056$} (x6);
+\draw[<->,green!25!white,thick] (x2) to (x1);
+\draw[<->,green!22!white,thick] (x2) to (x3);
+\draw[<->,green!16!white,thick] (x2) to (x5);
+\draw[<->,green!33!white,thick] (x2) to (x4);
+
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (x1) {$\mathbf{x}_1$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (x2) {$\mathbf{x}_2$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (x3) {$\mathbf{x}_3$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (x4) {$\mathbf{x}_4$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (x5) {$\mathbf{x}_5$};
+	\node[name=test,anchor=north west,outer sep=0cm,inner sep=0cm,xshift=0.08cm,yshift=-0.08cm] at (x6) {$\mathbf{x}_6$};
+
+\end{axis}
+
+\sosmatrix{x}{2}{title=$\mathbf{X}$,at={(figs.south east)},anchor={south west},xshift=0.8cm,colormap name=cmx,point meta max=8}
+\sosmatrix{d}{6}{title=$\mathbf{D}$,at={(figs.south east)},anchor={south west},colormap name=cmd,xshift=2.85cm,point meta max=8}
+
+\draw[semithick,->] ($(matrix-x.above north)+(0.1cm,0cm)$) to[bend left,distance=0.75cm] node[above,name=subs] {Equation 4.1} ($(matrix-d.above north)+(-0.1cm,0cm)$);
+
+
+\end{tikzpicture}
+
+
+
+
+
+
+     

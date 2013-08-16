@@ -1,0 +1,52 @@
+%tikz2pdf-number 2
+\begin{tikzpicture}
+
+\node[inner sep=0cm, outer sep=0cm] (algo) {
+\begin{minipage}[t]{8cm}	
+\begin{algorithm}[H]
+%\dontprintsemicolon
+
+\KwData{unlabeled data set $\mathbf{X} = \{ \mathbf{x}_1, \ldots, \mathbf{x}_N \}$, dissimilarity measure $d$, perplexity $h$, and threshold $\theta$.}
+\KwResult{class-labels $Y \in \{\text{inlier},\text{outlier} \}$.}
+
+\Begin{
+	%\tcp{\small 3.1.1: Computing pairwise affinities}
+	\For{$\mathbf{x}_i \in \mathbf{X}$}{
+		%\For{$\mathbf{x}_j \in \mathbf{X}$}{
+			%not if i == j
+			Determine sigma\\
+			Compute binding probability $b_{ij}$ using Equation~4.1 and Equation~4.5 with dissimilarity measure~$d$ and perplexity $h$.
+		%}
+	}
+	%\tcp{\small 3.1.2: Computing the outlier probability}
+	\For{$\mathbf{x}_j \in \mathbf{X}$}{
+		Compute outlier probability $p\,(\mathcal{C}_o|\mathbf{x}_j)$ using Equation~4.2, and determine class-label:
+	
+% 		$
+% 		y_j = 
+% 		\begin{cases}
+% 			\text{inlier} & \text{if} \ p\,(\mathbf{x}_i \in \mathcal{C}_O|) > \theta, \\
+% 			\text{outlier} & \text{if} \ p\,(\mathcal{C}_o|\mathbf{x}_j) \geq \theta,
+% 		\end{cases}
+% 		$
+	%}
+	%\tcp{\small 3.1.3: Selecting outliers}
+	%\For{$\mathbf{x}_j \in \mathbf{X}$}{
+		
+		\eIf{$p\,(\mathbf{x}_i \in \mathcal{C}_O) > \theta$}{
+		  $ y_i = \text{outlier} $
+		}{
+		  $ y_i = \text{inlier} $
+		}
+	}
+
+	\Return{$Y$}
+}
+\end{algorithm}
+\end{minipage}
+};
+\pgfresetboundingbox
+\begin{pgfonlayer}{background}
+\draw[rounded corners,thick,fill=red!30,draw=red!60] ($(algo.north west) + (0.25cm,0.1cm)$) rectangle ($(algo.south east) - (0.25cm,0cm)$);
+\end{pgfonlayer}
+\end{tikzpicture}

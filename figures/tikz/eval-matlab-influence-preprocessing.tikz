@@ -1,0 +1,1070 @@
+\begin{tikzpicture}
+
+\begin{axis}[name=main,
+	xmin=-61.1982,
+	xmax=73.7464,
+	ymin=-70.047,
+	ymax=55.8048,
+	axis on top,
+	width=20.4cm,
+	height=20.4cm,
+	ytick={\empty},
+	xtick={\empty},
+	%axis line style={white},
+	]
+	\draw[draw=black!50,fill=black!05] (axis cs: -38.085, 45.400) rectangle (axis cs: -32.304, 50.543);
+\node[anchor=base west,inner sep=0cm,yshift=0.05cm] at (axis cs: -38.085, 50.543) {a};
+\draw[draw=black!50,fill=black!05] (axis cs: 13.486, 18.701) rectangle (axis cs: 22.947, 27.026);
+\node[anchor=base west,inner sep=0cm,yshift=0.05cm] at (axis cs: 13.486, 27.026) {b};
+\draw[draw=black!50,fill=black!05] (axis cs: 48.783, -12.634) rectangle (axis cs: 55.060, -8.048);
+\node[anchor=base west,inner sep=0cm,yshift=0.05cm] at (axis cs: 48.783, -8.048) {c};
+\draw[draw=black!50,fill=black!05] (axis cs: -35.975, -49.347) rectangle (axis cs: -29.119, -42.046);
+\node[anchor=base west,inner sep=0cm,yshift=0.05cm] at (axis cs: -35.975, -42.046) {d};
+\draw[draw=black!50,fill=black!05] (axis cs: 8.032, 6.183) rectangle (axis cs: 17.782, 12.241);
+\node[anchor=base west,inner sep=0cm,yshift=0.05cm] at (axis cs: 8.032, 12.241) {e};
+\draw[draw=black!50,fill=black!05] (axis cs: -59.784, 6.062) rectangle (axis cs: -41.523, 15.174);
+\node[anchor=base west,inner sep=0cm,yshift=0.05cm] at (axis cs: -59.784, 15.174) {f};
+\draw (axis cs: 12.577, 13.468) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.250cm,inner sep=0cm,outer sep=0cm,fill=blue!100!white,draw=blue!100!white,very thin] (m501N) {};
+\draw (axis cs: 16.454, 21.313) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.245cm,inner sep=0cm,outer sep=0cm,fill=blue!80!white,draw=blue!80!white,very thin] (m502N) {};
+\draw (axis cs: 14.986, 23.632) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.243cm,inner sep=0cm,outer sep=0cm,fill=blue!60!white,draw=blue!60!white,very thin] (m503N) {};
+\draw (axis cs: -36.333, 48.362) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.194cm,inner sep=0cm,outer sep=0cm,fill=blue!40!white,draw=blue!40!white,very thin] (m504N) {};
+\draw (axis cs: 18.374, 20.711) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.246cm,inner sep=0cm,outer sep=0cm,fill=blue!80!darkgray,draw=blue!80!darkgray,very thin] (m505N) {};
+\draw (axis cs: 38.641, -23.055) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.158cm,inner sep=0cm,outer sep=0cm,fill=blue!60!darkgray,draw=blue!60!darkgray,very thin] (m506N) {};
+\draw (axis cs: 21.352, -32.370) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.173cm,inner sep=0cm,outer sep=0cm,fill=blue!40!darkgray,draw=blue!40!darkgray,very thin] (m507N) {};
+\draw (axis cs: -40.191, 28.652) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.198cm,inner sep=0cm,outer sep=0cm,fill=brown!100!white,draw=brown!100!white,very thin] (m508N) {};
+\draw (axis cs: 23.757, -27.243) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.177cm,inner sep=0cm,outer sep=0cm,fill=brown!80!white,draw=brown!80!white,very thin] (m509N) {};
+\draw (axis cs: -13.979, 0.803) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.221cm,inner sep=0cm,outer sep=0cm,fill=brown!80!darkgray,draw=brown!80!darkgray,very thin] (m511N) {};
+\draw (axis cs: 55.951, -21.179) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.141cm,inner sep=0cm,outer sep=0cm,fill=brown!60!darkgray,draw=brown!60!darkgray,very thin] (m512N) {};
+\draw (axis cs: -33.835, 35.767) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.204cm,inner sep=0cm,outer sep=0cm,fill=brown!40!darkgray,draw=brown!40!darkgray,very thin] (m513N) {};
+\draw (axis cs: 24.705, -64.173) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.183cm,inner sep=0cm,outer sep=0cm,fill=cyan!100!white,draw=cyan!100!white,very thin] (m514N) {};
+\draw (axis cs: 64.276, 6.909) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.113cm,inner sep=0cm,outer sep=0cm,fill=cyan!80!white,draw=cyan!80!white,very thin] (m515N) {};
+\draw (axis cs: 32.043, -17.507) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.161cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!white,draw=cyan!60!white,very thin] (m516N) {};
+\draw (axis cs: 18.806, -29.076) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.177cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!white,draw=cyan!40!white,very thin] (m517N) {};
+\draw (axis cs: 38.346, -25.167) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.157cm,inner sep=0cm,outer sep=0cm,fill=cyan!80!darkgray,draw=cyan!80!darkgray,very thin] (m518N) {};
+\draw (axis cs: -11.000, 40.109) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.218cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!darkgray,draw=cyan!60!darkgray,very thin] (m519N) {};
+\draw (axis cs: 13.518, 15.172) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.248cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!darkgray,draw=cyan!40!darkgray,very thin] (m541N) {};
+\draw (axis cs: -7.338, 29.036) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=green!100!white,draw=green!100!white,very thin] (m542N) {};
+\draw (axis cs: -9.337, 30.008) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.221cm,inner sep=0cm,outer sep=0cm,fill=green!80!white,draw=green!80!white,very thin] (m543N) {};
+\draw (axis cs: -27.810, 30.216) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.212cm,inner sep=0cm,outer sep=0cm,fill=green!60!white,draw=green!60!white,very thin] (m544N) {};
+\draw (axis cs: -30.534, 28.183) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.204cm,inner sep=0cm,outer sep=0cm,fill=green!40!white,draw=green!40!white,very thin] (m545N) {};
+\draw (axis cs: -39.643, 22.121) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.191cm,inner sep=0cm,outer sep=0cm,fill=green!80!darkgray,draw=green!80!darkgray,very thin] (m546N) {};
+\draw (axis cs: -57.443, 15.375) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.206cm,inner sep=0cm,outer sep=0cm,fill=green!60!darkgray,draw=green!60!darkgray,very thin] (m547N) {};
+\draw (axis cs: -10.205, 29.808) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.223cm,inner sep=0cm,outer sep=0cm,fill=green!40!darkgray,draw=green!40!darkgray,very thin] (m548N) {};
+\draw (axis cs: -28.572, 28.962) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.207cm,inner sep=0cm,outer sep=0cm,fill=lime!100!white,draw=lime!100!white,very thin] (m549N) {};
+\draw (axis cs: -30.308, 27.080) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.201cm,inner sep=0cm,outer sep=0cm,fill=lime!80!darkgray,draw=lime!80!darkgray,very thin] (m550N) {};
+\draw (axis cs: -38.750, 22.357) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.194cm,inner sep=0cm,outer sep=0cm,fill=lime!60!darkgray,draw=lime!60!darkgray,very thin] (m551N) {};
+\draw (axis cs: 32.259, -60.434) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.156cm,inner sep=0cm,outer sep=0cm,fill=lime!40!darkgray,draw=lime!40!darkgray,very thin] (m554N) {};
+\draw (axis cs: 32.295, -59.504) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.152cm,inner sep=0cm,outer sep=0cm,fill=magenta!100!white,draw=magenta!100!white,very thin] (m555N) {};
+\draw (axis cs: -0.771, 5.223) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.230cm,inner sep=0cm,outer sep=0cm,fill=magenta!80!white,draw=magenta!80!white,very thin] (m556N) {};
+\draw (axis cs: 60.155, 11.111) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.125cm,inner sep=0cm,outer sep=0cm,fill=magenta!60!white,draw=magenta!60!white,very thin] (m557N) {};
+\draw (axis cs: 27.176, -66.711) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.171cm,inner sep=0cm,outer sep=0cm,fill=magenta!40!white,draw=magenta!40!white,very thin] (m570N) {};
+\draw (axis cs: 26.761, -59.380) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.170cm,inner sep=0cm,outer sep=0cm,fill=magenta!80!darkgray,draw=magenta!80!darkgray,very thin] (m571N) {};
+\draw (axis cs: -0.782, -9.369) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.220cm,inner sep=0cm,outer sep=0cm,fill=magenta!60!darkgray,draw=magenta!60!darkgray,very thin] (m572N) {};
+\draw (axis cs: -3.182, -8.382) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.224cm,inner sep=0cm,outer sep=0cm,fill=magenta!40!darkgray,draw=magenta!40!darkgray,very thin] (m573N) {};
+\draw (axis cs: 65.239, 5.336) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.120cm,inner sep=0cm,outer sep=0cm,fill=olive!100!white,draw=olive!100!white,very thin] (m574N) {};
+\draw (axis cs: 28.002, -60.725) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.172cm,inner sep=0cm,outer sep=0cm,fill=olive!80!white,draw=olive!80!white,very thin] (m575N) {};
+\draw (axis cs: 9.099, 53.147) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.230cm,inner sep=0cm,outer sep=0cm,fill=olive!60!white,draw=olive!60!white,very thin] (m579N) {};
+\draw (axis cs: -50.289, 23.524) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.185cm,inner sep=0cm,outer sep=0cm,fill=olive!40!white,draw=olive!40!white,very thin] (m580N) {};
+\draw (axis cs: 9.958, 52.812) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.231cm,inner sep=0cm,outer sep=0cm,fill=olive!80!darkgray,draw=olive!80!darkgray,very thin] (m581N) {};
+\draw (axis cs: -29.100, 35.143) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.209cm,inner sep=0cm,outer sep=0cm,fill=olive!60!darkgray,draw=olive!60!darkgray,very thin] (m582N) {};
+\draw (axis cs: -47.041, 3.836) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.186cm,inner sep=0cm,outer sep=0cm,fill=olive!40!darkgray,draw=olive!40!darkgray,very thin] (m583N) {};
+\draw (axis cs: -36.360, 25.522) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.198cm,inner sep=0cm,outer sep=0cm,fill=orange!100!white,draw=orange!100!white,very thin] (m584N) {};
+\draw (axis cs: -9.120, 31.409) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.220cm,inner sep=0cm,outer sep=0cm,fill=orange!80!white,draw=orange!80!white,very thin] (m585N) {};
+\draw (axis cs: -46.042, 37.700) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.202cm,inner sep=0cm,outer sep=0cm,fill=orange!60!white,draw=orange!60!white,very thin] (m587N) {};
+\draw (axis cs: -0.336, 30.341) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.236cm,inner sep=0cm,outer sep=0cm,fill=orange!40!white,draw=orange!40!white,very thin] (m588N) {};
+\draw (axis cs: 68.284, 11.282) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.111cm,inner sep=0cm,outer sep=0cm,fill=orange!80!darkgray,draw=orange!80!darkgray,very thin] (m589N) {};
+\draw (axis cs: 33.542, -17.564) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.160cm,inner sep=0cm,outer sep=0cm,fill=orange!60!darkgray,draw=orange!60!darkgray,very thin] (m590N) {};
+\draw (axis cs: 35.416, -17.557) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.148cm,inner sep=0cm,outer sep=0cm,fill=orange!40!darkgray,draw=orange!40!darkgray,very thin] (m591N) {};
+\draw (axis cs: 17.688, -37.820) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.181cm,inner sep=0cm,outer sep=0cm,fill=pink!100!white,draw=pink!100!white,very thin] (m592N) {};
+\draw (axis cs: 18.874, -36.570) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.178cm,inner sep=0cm,outer sep=0cm,fill=pink!80!darkgray,draw=pink!80!darkgray,very thin] (m593N) {};
+\draw (axis cs: 31.205, -24.539) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.167cm,inner sep=0cm,outer sep=0cm,fill=pink!60!darkgray,draw=pink!60!darkgray,very thin] (m594N) {};
+\draw (axis cs: -22.094, -35.158) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.215cm,inner sep=0cm,outer sep=0cm,fill=pink!40!darkgray,draw=pink!40!darkgray,very thin] (m595N) {};
+\draw (axis cs: -28.067, -34.814) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.197cm,inner sep=0cm,outer sep=0cm,fill=purple!100!white,draw=purple!100!white,very thin] (m596N) {};
+\draw (axis cs: -24.019, -34.786) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.202cm,inner sep=0cm,outer sep=0cm,fill=purple!80!white,draw=purple!80!white,very thin] (m597N) {};
+\draw (axis cs: -28.054, 41.489) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.211cm,inner sep=0cm,outer sep=0cm,fill=purple!60!white,draw=purple!60!white,very thin] (m598N) {};
+\draw (axis cs: -8.181, -0.114) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.222cm,inner sep=0cm,outer sep=0cm,fill=purple!40!white,draw=purple!40!white,very thin] (m599N) {};
+\draw (axis cs: -13.556, 4.670) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.225cm,inner sep=0cm,outer sep=0cm,fill=purple!80!darkgray,draw=purple!80!darkgray,very thin] (m600N) {};
+\draw (axis cs: -2.567, 30.823) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.233cm,inner sep=0cm,outer sep=0cm,fill=purple!60!darkgray,draw=purple!60!darkgray,very thin] (m601N) {};
+\draw (axis cs: -2.669, 29.885) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.235cm,inner sep=0cm,outer sep=0cm,fill=purple!40!darkgray,draw=purple!40!darkgray,very thin] (m602N) {};
+\draw (axis cs: 4.408, 31.672) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.238cm,inner sep=0cm,outer sep=0cm,fill=red!100!white,draw=red!100!white,very thin] (m603N) {};
+\draw (axis cs: 3.226, 31.076) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.238cm,inner sep=0cm,outer sep=0cm,fill=red!80!white,draw=red!80!white,very thin] (m604N) {};
+\draw (axis cs: -26.912, 34.027) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.216cm,inner sep=0cm,outer sep=0cm,fill=red!60!white,draw=red!60!white,very thin] (m605N) {};
+\draw (axis cs: 7.249, 40.233) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.225cm,inner sep=0cm,outer sep=0cm,fill=red!40!white,draw=red!40!white,very thin] (m606N) {};
+\draw (axis cs: -30.406, 34.330) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.206cm,inner sep=0cm,outer sep=0cm,fill=red!80!darkgray,draw=red!80!darkgray,very thin] (m607N) {};
+\draw (axis cs: 5.463, 31.854) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.237cm,inner sep=0cm,outer sep=0cm,fill=red!60!darkgray,draw=red!60!darkgray,very thin] (m608N) {};
+\draw (axis cs: 10.019, 38.286) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.221cm,inner sep=0cm,outer sep=0cm,fill=red!40!darkgray,draw=red!40!darkgray,very thin] (m609N) {};
+\draw (axis cs: -36.975, 27.607) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.200cm,inner sep=0cm,outer sep=0cm,fill=teal!100!white,draw=teal!100!white,very thin] (m610N) {};
+\draw (axis cs: 11.443, 39.104) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.225cm,inner sep=0cm,outer sep=0cm,fill=teal!80!white,draw=teal!80!white,very thin] (m611N) {};
+\draw (axis cs: -20.505, -42.184) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.204cm,inner sep=0cm,outer sep=0cm,fill=teal!60!white,draw=teal!60!white,very thin] (m612N) {};
+\draw (axis cs: 32.697, -14.412) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.169cm,inner sep=0cm,outer sep=0cm,fill=teal!40!white,draw=teal!40!white,very thin] (m613N) {};
+\draw (axis cs: -29.943, -35.498) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.190cm,inner sep=0cm,outer sep=0cm,fill=teal!80!darkgray,draw=teal!80!darkgray,very thin] (m614N) {};
+\draw (axis cs: 32.897, -15.358) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.162cm,inner sep=0cm,outer sep=0cm,fill=teal!60!darkgray,draw=teal!60!darkgray,very thin] (m615N) {};
+\draw (axis cs: 34.203, -36.724) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.169cm,inner sep=0cm,outer sep=0cm,fill=teal!40!darkgray,draw=teal!40!darkgray,very thin] (m616N) {};
+\draw (axis cs: 48.818, -24.107) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.146cm,inner sep=0cm,outer sep=0cm,fill=violet!100!white,draw=violet!100!white,very thin] (m617N) {};
+\draw (axis cs: 31.655, -20.821) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.163cm,inner sep=0cm,outer sep=0cm,fill=violet!80!white,draw=violet!80!white,very thin] (m618N) {};
+\draw (axis cs: -27.755, -36.198) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.183cm,inner sep=0cm,outer sep=0cm,fill=violet!60!white,draw=violet!60!white,very thin] (m619N) {};
+\draw (axis cs: -21.870, -36.429) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.215cm,inner sep=0cm,outer sep=0cm,fill=violet!40!white,draw=violet!40!white,very thin] (m621N) {};
+\draw (axis cs: -32.619, -43.546) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.196cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray,very thin] (m622N) {};
+\draw (axis cs: -33.872, -47.847) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.191cm,inner sep=0cm,outer sep=0cm,fill=violet!60!darkgray,draw=violet!60!darkgray,very thin] (m623N) {};
+\draw (axis cs: -33.679, -46.487) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.180cm,inner sep=0cm,outer sep=0cm,fill=violet!40!darkgray,draw=violet!40!darkgray,very thin] (m624N) {};
+\draw (axis cs: -33.175, -44.703) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.181cm,inner sep=0cm,outer sep=0cm,fill=yellow!80!darkgray,draw=yellow!80!darkgray,very thin] (m625N) {};
+\draw (axis cs: -34.475, -46.380) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.185cm,inner sep=0cm,outer sep=0cm,fill=yellow!60!darkgray,draw=yellow!60!darkgray,very thin] (m626N) {};
+\draw (axis cs: 12.200, 10.614) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.249cm,inner sep=0cm,outer sep=0cm,fill=blue!100!white,draw=blue!100!white,very thin] (m501V) {};
+\draw (axis cs: 17.428, 25.526) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.243cm,inner sep=0cm,outer sep=0cm,fill=blue!80!white,draw=blue!80!white,very thin] (m502V) {};
+\draw (axis cs: 16.239, 23.591) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.242cm,inner sep=0cm,outer sep=0cm,fill=blue!60!white,draw=blue!60!white,very thin] (m503V) {};
+\draw (axis cs: -36.585, 49.043) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.192cm,inner sep=0cm,outer sep=0cm,fill=blue!40!white,draw=blue!40!white,very thin] (m504V) {};
+\draw (axis cs: 18.225, 22.091) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.245cm,inner sep=0cm,outer sep=0cm,fill=blue!80!darkgray,draw=blue!80!darkgray,very thin] (m505V) {};
+\draw (axis cs: 18.111, -27.063) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.177cm,inner sep=0cm,outer sep=0cm,fill=blue!60!darkgray,draw=blue!60!darkgray,very thin] (m506V) {};
+\draw (axis cs: -42.506, 36.797) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.201cm,inner sep=0cm,outer sep=0cm,fill=blue!40!darkgray,draw=blue!40!darkgray,very thin] (m507V) {};
+\draw (axis cs: -50.181, 4.406) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.184cm,inner sep=0cm,outer sep=0cm,fill=brown!100!white,draw=brown!100!white,very thin] (m508V) {};
+\draw (axis cs: -47.831, 6.458) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.188cm,inner sep=0cm,outer sep=0cm,fill=brown!80!white,draw=brown!80!white,very thin] (m509V) {};
+\draw (axis cs: 5.309, 39.828) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=brown!80!darkgray,draw=brown!80!darkgray,very thin] (m511V) {};
+\draw (axis cs: 42.971, -20.332) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.155cm,inner sep=0cm,outer sep=0cm,fill=brown!60!darkgray,draw=brown!60!darkgray,very thin] (m512V) {};
+\draw (axis cs: -32.716, 36.421) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.209cm,inner sep=0cm,outer sep=0cm,fill=brown!40!darkgray,draw=brown!40!darkgray,very thin] (m513V) {};
+\draw (axis cs: -33.433, 20.949) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.199cm,inner sep=0cm,outer sep=0cm,fill=cyan!100!white,draw=cyan!100!white,very thin] (m514V) {};
+\draw (axis cs: 64.363, 9.431) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.116cm,inner sep=0cm,outer sep=0cm,fill=cyan!80!white,draw=cyan!80!white,very thin] (m515V) {};
+\draw (axis cs: -44.144, 37.449) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.204cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!white,draw=cyan!60!white,very thin] (m516V) {};
+\draw (axis cs: -43.757, 5.364) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.188cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!white,draw=cyan!40!white,very thin] (m517V) {};
+\draw (axis cs: 43.361, -21.912) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.154cm,inner sep=0cm,outer sep=0cm,fill=cyan!80!darkgray,draw=cyan!80!darkgray,very thin] (m518V) {};
+\draw (axis cs: -11.645, 40.115) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.218cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!darkgray,draw=cyan!60!darkgray,very thin] (m519V) {};
+\draw (axis cs: 11.839, 7.683) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.242cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!darkgray,draw=cyan!40!darkgray,very thin] (m541V) {};
+\draw (axis cs: -14.506, 26.586) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.222cm,inner sep=0cm,outer sep=0cm,fill=green!100!white,draw=green!100!white,very thin] (m542V) {};
+\draw (axis cs: -16.412, 26.138) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.216cm,inner sep=0cm,outer sep=0cm,fill=green!80!white,draw=green!80!white,very thin] (m543V) {};
+\draw (axis cs: -30.613, 24.957) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.205cm,inner sep=0cm,outer sep=0cm,fill=green!60!white,draw=green!60!white,very thin] (m544V) {};
+\draw (axis cs: -38.006, 10.996) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.188cm,inner sep=0cm,outer sep=0cm,fill=green!40!white,draw=green!40!white,very thin] (m545V) {};
+\draw (axis cs: 25.286, -33.185) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.171cm,inner sep=0cm,outer sep=0cm,fill=green!80!darkgray,draw=green!80!darkgray,very thin] (m546V) {};
+\draw (axis cs: 24.140, -34.149) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.176cm,inner sep=0cm,outer sep=0cm,fill=green!60!darkgray,draw=green!60!darkgray,very thin] (m547V) {};
+\draw (axis cs: -15.530, 26.480) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.217cm,inner sep=0cm,outer sep=0cm,fill=green!40!darkgray,draw=green!40!darkgray,very thin] (m548V) {};
+\draw (axis cs: -37.691, 12.979) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.192cm,inner sep=0cm,outer sep=0cm,fill=lime!100!white,draw=lime!100!white,very thin] (m549V) {};
+\draw (axis cs: -37.875, 11.895) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.189cm,inner sep=0cm,outer sep=0cm,fill=lime!80!darkgray,draw=lime!80!darkgray,very thin] (m550V) {};
+\draw (axis cs: 26.319, -32.773) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.164cm,inner sep=0cm,outer sep=0cm,fill=lime!60!darkgray,draw=lime!60!darkgray,very thin] (m551V) {};
+\draw (axis cs: 40.369, -26.579) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.153cm,inner sep=0cm,outer sep=0cm,fill=lime!40!darkgray,draw=lime!40!darkgray,very thin] (m554V) {};
+\draw (axis cs: 33.274, -28.370) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.168cm,inner sep=0cm,outer sep=0cm,fill=magenta!100!white,draw=magenta!100!white,very thin] (m555V) {};
+\draw (axis cs: -1.740, 4.475) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.233cm,inner sep=0cm,outer sep=0cm,fill=magenta!80!white,draw=magenta!80!white,very thin] (m556V) {};
+\draw (axis cs: 59.406, 11.988) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.125cm,inner sep=0cm,outer sep=0cm,fill=magenta!60!white,draw=magenta!60!white,very thin] (m557V) {};
+\draw (axis cs: 26.348, -66.694) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.171cm,inner sep=0cm,outer sep=0cm,fill=magenta!40!white,draw=magenta!40!white,very thin] (m570V) {};
+\draw (axis cs: 26.632, -61.529) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.177cm,inner sep=0cm,outer sep=0cm,fill=magenta!80!darkgray,draw=magenta!80!darkgray,very thin] (m571V) {};
+\draw (axis cs: 21.788, -65.322) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.203cm,inner sep=0cm,outer sep=0cm,fill=magenta!60!darkgray,draw=magenta!60!darkgray,very thin] (m572V) {};
+\draw (axis cs: 22.764, -64.852) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.200cm,inner sep=0cm,outer sep=0cm,fill=magenta!40!darkgray,draw=magenta!40!darkgray,very thin] (m573V) {};
+\draw (axis cs: 65.270, 4.216) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.125cm,inner sep=0cm,outer sep=0cm,fill=olive!100!white,draw=olive!100!white,very thin] (m574V) {};
+\draw (axis cs: 28.544, -61.565) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.171cm,inner sep=0cm,outer sep=0cm,fill=olive!80!white,draw=olive!80!white,very thin] (m575V) {};
+\draw (axis cs: 9.744, 50.979) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.230cm,inner sep=0cm,outer sep=0cm,fill=olive!60!white,draw=olive!60!white,very thin] (m579V) {};
+\draw (axis cs: -49.819, 23.356) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.188cm,inner sep=0cm,outer sep=0cm,fill=olive!40!white,draw=olive!40!white,very thin] (m580V) {};
+\draw (axis cs: 8.847, 50.988) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.231cm,inner sep=0cm,outer sep=0cm,fill=olive!80!darkgray,draw=olive!80!darkgray,very thin] (m581V) {};
+\draw (axis cs: -27.252, 36.910) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.214cm,inner sep=0cm,outer sep=0cm,fill=olive!60!darkgray,draw=olive!60!darkgray,very thin] (m582V) {};
+\draw (axis cs: -45.891, 5.478) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.185cm,inner sep=0cm,outer sep=0cm,fill=olive!40!darkgray,draw=olive!40!darkgray,very thin] (m583V) {};
+\draw (axis cs: -32.246, 27.406) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.205cm,inner sep=0cm,outer sep=0cm,fill=orange!100!white,draw=orange!100!white,very thin] (m584V) {};
+\draw (axis cs: -29.918, 30.504) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.208cm,inner sep=0cm,outer sep=0cm,fill=orange!80!white,draw=orange!80!white,very thin] (m585V) {};
+\draw (axis cs: -14.452, -0.954) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.214cm,inner sep=0cm,outer sep=0cm,fill=orange!60!white,draw=orange!60!white,very thin] (m587V) {};
+\draw (axis cs: -2.574, -5.928) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.232cm,inner sep=0cm,outer sep=0cm,fill=orange!40!white,draw=orange!40!white,very thin] (m588V) {};
+\draw (axis cs: 67.814, 11.902) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.112cm,inner sep=0cm,outer sep=0cm,fill=orange!80!darkgray,draw=orange!80!darkgray,very thin] (m589V) {};
+\draw (axis cs: 32.257, -29.197) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.167cm,inner sep=0cm,outer sep=0cm,fill=orange!60!darkgray,draw=orange!60!darkgray,very thin] (m590V) {};
+\draw (axis cs: 41.567, -27.124) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.152cm,inner sep=0cm,outer sep=0cm,fill=orange!40!darkgray,draw=orange!40!darkgray,very thin] (m591V) {};
+\draw (axis cs: -24.566, 15.834) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.210cm,inner sep=0cm,outer sep=0cm,fill=pink!100!white,draw=pink!100!white,very thin] (m592V) {};
+\draw (axis cs: 19.312, -37.073) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.180cm,inner sep=0cm,outer sep=0cm,fill=pink!80!darkgray,draw=pink!80!darkgray,very thin] (m593V) {};
+\draw (axis cs: -25.167, 15.748) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.196cm,inner sep=0cm,outer sep=0cm,fill=pink!60!darkgray,draw=pink!60!darkgray,very thin] (m594V) {};
+\draw (axis cs: 11.525, 8.919) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.242cm,inner sep=0cm,outer sep=0cm,fill=pink!40!darkgray,draw=pink!40!darkgray,very thin] (m595V) {};
+\draw (axis cs: -9.406, 4.210) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.230cm,inner sep=0cm,outer sep=0cm,fill=purple!100!white,draw=purple!100!white,very thin] (m596V) {};
+\draw (axis cs: 10.386, 10.741) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.241cm,inner sep=0cm,outer sep=0cm,fill=purple!80!white,draw=purple!80!white,very thin] (m597V) {};
+\draw (axis cs: -28.396, 40.102) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.213cm,inner sep=0cm,outer sep=0cm,fill=purple!60!white,draw=purple!60!white,very thin] (m598V) {};
+\draw (axis cs: -8.736, 1.044) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.224cm,inner sep=0cm,outer sep=0cm,fill=purple!40!white,draw=purple!40!white,very thin] (m599V) {};
+\draw (axis cs: -12.331, 4.074) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.226cm,inner sep=0cm,outer sep=0cm,fill=purple!80!darkgray,draw=purple!80!darkgray,very thin] (m600V) {};
+\draw (axis cs: -4.467, -7.344) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.225cm,inner sep=0cm,outer sep=0cm,fill=purple!60!darkgray,draw=purple!60!darkgray,very thin] (m601V) {};
+\draw (axis cs: -1.421, -6.059) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=purple!40!darkgray,draw=purple!40!darkgray,very thin] (m602V) {};
+\draw (axis cs: -4.851, -10.878) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.224cm,inner sep=0cm,outer sep=0cm,fill=red!100!white,draw=red!100!white,very thin] (m603V) {};
+\draw (axis cs: -8.028, 3.809) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.230cm,inner sep=0cm,outer sep=0cm,fill=red!80!white,draw=red!80!white,very thin] (m604V) {};
+\draw (axis cs: -15.942, -1.930) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.212cm,inner sep=0cm,outer sep=0cm,fill=red!60!white,draw=red!60!white,very thin] (m605V) {};
+\draw (axis cs: -16.151, 0.473) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.218cm,inner sep=0cm,outer sep=0cm,fill=red!40!white,draw=red!40!white,very thin] (m606V) {};
+\draw (axis cs: -31.656, 20.271) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.204cm,inner sep=0cm,outer sep=0cm,fill=red!80!darkgray,draw=red!80!darkgray,very thin] (m607V) {};
+\draw (axis cs: -1.356, -8.029) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.223cm,inner sep=0cm,outer sep=0cm,fill=red!60!darkgray,draw=red!60!darkgray,very thin] (m608V) {};
+\draw (axis cs: -6.719, -6.935) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.220cm,inner sep=0cm,outer sep=0cm,fill=red!40!darkgray,draw=red!40!darkgray,very thin] (m609V) {};
+\draw (axis cs: -34.591, 20.129) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.193cm,inner sep=0cm,outer sep=0cm,fill=teal!100!white,draw=teal!100!white,very thin] (m610V) {};
+\draw (axis cs: -8.068, -6.446) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.223cm,inner sep=0cm,outer sep=0cm,fill=teal!80!white,draw=teal!80!white,very thin] (m611V) {};
+\draw (axis cs: -2.735, 2.933) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=teal!60!white,draw=teal!60!white,very thin] (m612V) {};
+\draw (axis cs: -34.793, 24.054) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.199cm,inner sep=0cm,outer sep=0cm,fill=teal!40!white,draw=teal!40!white,very thin] (m613V) {};
+\draw (axis cs: -4.438, 29.907) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.231cm,inner sep=0cm,outer sep=0cm,fill=teal!80!darkgray,draw=teal!80!darkgray,very thin] (m614V) {};
+\draw (axis cs: -35.998, 24.026) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.195cm,inner sep=0cm,outer sep=0cm,fill=teal!60!darkgray,draw=teal!60!darkgray,very thin] (m615V) {};
+\draw (axis cs: 33.792, -35.162) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.166cm,inner sep=0cm,outer sep=0cm,fill=teal!40!darkgray,draw=teal!40!darkgray,very thin] (m616V) {};
+\draw (axis cs: 48.078, -25.316) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.146cm,inner sep=0cm,outer sep=0cm,fill=violet!100!white,draw=violet!100!white,very thin] (m617V) {};
+\draw (axis cs: -31.593, 39.646) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.209cm,inner sep=0cm,outer sep=0cm,fill=violet!80!white,draw=violet!80!white,very thin] (m618V) {};
+\draw (axis cs: -2.424, -10.385) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.210cm,inner sep=0cm,outer sep=0cm,fill=violet!60!white,draw=violet!60!white,very thin] (m619V) {};
+\draw (axis cs: 14.282, 10.107) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.240cm,inner sep=0cm,outer sep=0cm,fill=violet!40!white,draw=violet!40!white,very thin] (m621V) {};
+\draw (axis cs: 9.532, 7.812) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.235cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray,very thin] (m622V) {};
+\draw (axis cs: -18.875, -47.665) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.217cm,inner sep=0cm,outer sep=0cm,fill=violet!60!darkgray,draw=violet!60!darkgray,very thin] (m623V) {};
+\draw (axis cs: -18.895, -45.987) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.208cm,inner sep=0cm,outer sep=0cm,fill=violet!40!darkgray,draw=violet!40!darkgray,very thin] (m624V) {};
+\draw (axis cs: -17.923, 1.188) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.220cm,inner sep=0cm,outer sep=0cm,fill=yellow!80!darkgray,draw=yellow!80!darkgray,very thin] (m625V) {};
+\draw (axis cs: -17.920, -45.379) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.215cm,inner sep=0cm,outer sep=0cm,fill=yellow!60!darkgray,draw=yellow!60!darkgray,very thin] (m626V) {};
+\draw (axis cs: 13.711, 13.335) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.250cm,inner sep=0cm,outer sep=0cm,fill=blue!100!white,draw=blue!100!white,very thin] (m501P) {};
+\draw (axis cs: 15.389, 22.212) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.242cm,inner sep=0cm,outer sep=0cm,fill=blue!80!white,draw=blue!80!white,very thin] (m502P) {};
+\draw (axis cs: 15.015, 20.201) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.244cm,inner sep=0cm,outer sep=0cm,fill=blue!60!white,draw=blue!60!white,very thin] (m503P) {};
+\draw (axis cs: -35.804, 46.900) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.197cm,inner sep=0cm,outer sep=0cm,fill=blue!40!white,draw=blue!40!white,very thin] (m504P) {};
+\draw (axis cs: 19.447, 21.960) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.245cm,inner sep=0cm,outer sep=0cm,fill=blue!80!darkgray,draw=blue!80!darkgray,very thin] (m505P) {};
+\draw (axis cs: 44.298, -22.786) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.150cm,inner sep=0cm,outer sep=0cm,fill=blue!60!darkgray,draw=blue!60!darkgray,very thin] (m506P) {};
+\draw (axis cs: 33.073, -30.315) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.166cm,inner sep=0cm,outer sep=0cm,fill=blue!40!darkgray,draw=blue!40!darkgray,very thin] (m507P) {};
+\draw (axis cs: -39.025, 28.700) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.199cm,inner sep=0cm,outer sep=0cm,fill=brown!100!white,draw=brown!100!white,very thin] (m508P) {};
+\draw (axis cs: 24.628, -26.829) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.172cm,inner sep=0cm,outer sep=0cm,fill=brown!80!white,draw=brown!80!white,very thin] (m509P) {};
+\draw (axis cs: -14.364, 2.064) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.220cm,inner sep=0cm,outer sep=0cm,fill=brown!80!darkgray,draw=brown!80!darkgray,very thin] (m511P) {};
+\draw (axis cs: 56.240, -20.647) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.138cm,inner sep=0cm,outer sep=0cm,fill=brown!60!darkgray,draw=brown!60!darkgray,very thin] (m512P) {};
+\draw (axis cs: -55.176, 9.469) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.186cm,inner sep=0cm,outer sep=0cm,fill=brown!40!darkgray,draw=brown!40!darkgray,very thin] (m513P) {};
+\draw (axis cs: 25.682, -63.125) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.186cm,inner sep=0cm,outer sep=0cm,fill=cyan!100!white,draw=cyan!100!white,very thin] (m514P) {};
+\draw (axis cs: 63.619, 7.787) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.109cm,inner sep=0cm,outer sep=0cm,fill=cyan!80!white,draw=cyan!80!white,very thin] (m515P) {};
+\draw (axis cs: 51.429, -11.134) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.147cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!white,draw=cyan!60!white,very thin] (m516P) {};
+\draw (axis cs: 17.668, -29.769) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.177cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!white,draw=cyan!40!white,very thin] (m517P) {};
+\draw (axis cs: 36.455, -26.747) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.162cm,inner sep=0cm,outer sep=0cm,fill=cyan!80!darkgray,draw=cyan!80!darkgray,very thin] (m518P) {};
+\draw (axis cs: 3.337, 40.703) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.222cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!darkgray,draw=cyan!60!darkgray,very thin] (m519P) {};
+\draw (axis cs: 13.808, 17.072) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.242cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!darkgray,draw=cyan!40!darkgray,very thin] (m541P) {};
+\draw (axis cs: -58.284, 12.553) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.209cm,inner sep=0cm,outer sep=0cm,fill=green!100!white,draw=green!100!white,very thin] (m542P) {};
+\draw (axis cs: -56.282, 10.695) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.195cm,inner sep=0cm,outer sep=0cm,fill=green!80!white,draw=green!80!white,very thin] (m543P) {};
+\draw (axis cs: -52.738, 7.895) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.190cm,inner sep=0cm,outer sep=0cm,fill=green!60!white,draw=green!60!white,very thin] (m544P) {};
+\draw (axis cs: -46.858, 8.209) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.190cm,inner sep=0cm,outer sep=0cm,fill=green!40!white,draw=green!40!white,very thin] (m545P) {};
+\draw (axis cs: -53.705, 2.175) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.181cm,inner sep=0cm,outer sep=0cm,fill=green!80!darkgray,draw=green!80!darkgray,very thin] (m546P) {};
+\draw (axis cs: -57.751, 13.674) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.207cm,inner sep=0cm,outer sep=0cm,fill=green!60!darkgray,draw=green!60!darkgray,very thin] (m547P) {};
+\draw (axis cs: -57.401, 10.265) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.195cm,inner sep=0cm,outer sep=0cm,fill=green!40!darkgray,draw=green!40!darkgray,very thin] (m548P) {};
+\draw (axis cs: -54.372, 2.863) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.177cm,inner sep=0cm,outer sep=0cm,fill=lime!100!white,draw=lime!100!white,very thin] (m549P) {};
+\draw (axis cs: 16.259, -29.931) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.178cm,inner sep=0cm,outer sep=0cm,fill=lime!80!darkgray,draw=lime!80!darkgray,very thin] (m550P) {};
+\draw (axis cs: 31.019, -29.456) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.167cm,inner sep=0cm,outer sep=0cm,fill=lime!60!darkgray,draw=lime!60!darkgray,very thin] (m551P) {};
+\draw (axis cs: 36.633, -28.790) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.160cm,inner sep=0cm,outer sep=0cm,fill=lime!40!darkgray,draw=lime!40!darkgray,very thin] (m554P) {};
+\draw (axis cs: 48.766, -22.043) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.147cm,inner sep=0cm,outer sep=0cm,fill=magenta!100!white,draw=magenta!100!white,very thin] (m555P) {};
+\draw (axis cs: -1.131, 6.491) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.226cm,inner sep=0cm,outer sep=0cm,fill=magenta!80!white,draw=magenta!80!white,very thin] (m556P) {};
+\draw (axis cs: 59.071, 10.823) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.122cm,inner sep=0cm,outer sep=0cm,fill=magenta!60!white,draw=magenta!60!white,very thin] (m557P) {};
+\draw (axis cs: 26.043, -25.643) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.164cm,inner sep=0cm,outer sep=0cm,fill=magenta!40!white,draw=magenta!40!white,very thin] (m570P) {};
+\draw (axis cs: 25.983, -57.629) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.172cm,inner sep=0cm,outer sep=0cm,fill=magenta!80!darkgray,draw=magenta!80!darkgray,very thin] (m571P) {};
+\draw (axis cs: 20.851, -28.334) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.176cm,inner sep=0cm,outer sep=0cm,fill=magenta!60!darkgray,draw=magenta!60!darkgray,very thin] (m572P) {};
+\draw (axis cs: -40.740, 37.483) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.207cm,inner sep=0cm,outer sep=0cm,fill=magenta!40!darkgray,draw=magenta!40!darkgray,very thin] (m573P) {};
+\draw (axis cs: 66.336, 4.149) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.128cm,inner sep=0cm,outer sep=0cm,fill=olive!100!white,draw=olive!100!white,very thin] (m574P) {};
+\draw (axis cs: 30.675, -60.281) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.161cm,inner sep=0cm,outer sep=0cm,fill=olive!80!white,draw=olive!80!white,very thin] (m575P) {};
+\draw (axis cs: 13.669, 51.611) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.230cm,inner sep=0cm,outer sep=0cm,fill=olive!60!white,draw=olive!60!white,very thin] (m579P) {};
+\draw (axis cs: 68.055, 6.075) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.118cm,inner sep=0cm,outer sep=0cm,fill=olive!40!white,draw=olive!40!white,very thin] (m580P) {};
+\draw (axis cs: 12.970, 51.153) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.231cm,inner sep=0cm,outer sep=0cm,fill=olive!80!darkgray,draw=olive!80!darkgray,very thin] (m581P) {};
+\draw (axis cs: -27.702, 38.464) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.210cm,inner sep=0cm,outer sep=0cm,fill=olive!60!darkgray,draw=olive!60!darkgray,very thin] (m582P) {};
+\draw (axis cs: -47.966, 4.979) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.187cm,inner sep=0cm,outer sep=0cm,fill=olive!40!darkgray,draw=olive!40!darkgray,very thin] (m583P) {};
+\draw (axis cs: -45.183, 7.562) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.189cm,inner sep=0cm,outer sep=0cm,fill=orange!100!white,draw=orange!100!white,very thin] (m584P) {};
+\draw (axis cs: 5.126, 44.223) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.217cm,inner sep=0cm,outer sep=0cm,fill=orange!80!white,draw=orange!80!white,very thin] (m585P) {};
+\draw (axis cs: -45.749, 38.786) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.205cm,inner sep=0cm,outer sep=0cm,fill=orange!60!white,draw=orange!60!white,very thin] (m587P) {};
+\draw (axis cs: 8.579, 37.690) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=orange!40!white,draw=orange!40!white,very thin] (m588P) {};
+\draw (axis cs: 65.434, 8.668) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.106cm,inner sep=0cm,outer sep=0cm,fill=orange!80!darkgray,draw=orange!80!darkgray,very thin] (m589P) {};
+\draw (axis cs: 33.183, -20.153) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.162cm,inner sep=0cm,outer sep=0cm,fill=orange!60!darkgray,draw=orange!60!darkgray,very thin] (m590P) {};
+\draw (axis cs: 44.463, -24.279) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.148cm,inner sep=0cm,outer sep=0cm,fill=orange!40!darkgray,draw=orange!40!darkgray,very thin] (m591P) {};
+\draw (axis cs: 47.165, -28.229) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.149cm,inner sep=0cm,outer sep=0cm,fill=pink!100!white,draw=pink!100!white,very thin] (m592P) {};
+\draw (axis cs: 37.847, -26.900) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.159cm,inner sep=0cm,outer sep=0cm,fill=pink!80!darkgray,draw=pink!80!darkgray,very thin] (m593P) {};
+\draw (axis cs: 47.952, -28.292) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.149cm,inner sep=0cm,outer sep=0cm,fill=pink!60!darkgray,draw=pink!60!darkgray,very thin] (m594P) {};
+\draw (axis cs: -22.773, -33.920) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.213cm,inner sep=0cm,outer sep=0cm,fill=pink!40!darkgray,draw=pink!40!darkgray,very thin] (m595P) {};
+\draw (axis cs: -30.166, -32.346) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.193cm,inner sep=0cm,outer sep=0cm,fill=purple!100!white,draw=purple!100!white,very thin] (m596P) {};
+\draw (axis cs: -30.598, -31.766) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.190cm,inner sep=0cm,outer sep=0cm,fill=purple!80!white,draw=purple!80!white,very thin] (m597P) {};
+\draw (axis cs: -29.886, 41.384) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.205cm,inner sep=0cm,outer sep=0cm,fill=purple!60!white,draw=purple!60!white,very thin] (m598P) {};
+\draw (axis cs: -7.642, 1.037) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.223cm,inner sep=0cm,outer sep=0cm,fill=purple!40!white,draw=purple!40!white,very thin] (m599P) {};
+\draw (axis cs: -13.478, 3.177) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.222cm,inner sep=0cm,outer sep=0cm,fill=purple!80!darkgray,draw=purple!80!darkgray,very thin] (m600P) {};
+\draw (axis cs: 5.802, 33.824) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.235cm,inner sep=0cm,outer sep=0cm,fill=purple!60!darkgray,draw=purple!60!darkgray,very thin] (m601P) {};
+\draw (axis cs: 13.762, 47.305) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.234cm,inner sep=0cm,outer sep=0cm,fill=purple!40!darkgray,draw=purple!40!darkgray,very thin] (m602P) {};
+\draw (axis cs: 5.895, 42.223) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.223cm,inner sep=0cm,outer sep=0cm,fill=red!100!white,draw=red!100!white,very thin] (m603P) {};
+\draw (axis cs: 6.282, 36.979) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.233cm,inner sep=0cm,outer sep=0cm,fill=red!80!white,draw=red!80!white,very thin] (m604P) {};
+\draw (axis cs: -48.683, 7.917) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.192cm,inner sep=0cm,outer sep=0cm,fill=red!60!white,draw=red!60!white,very thin] (m605P) {};
+\draw (axis cs: 6.257, 38.964) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=red!40!white,draw=red!40!white,very thin] (m606P) {};
+\draw (axis cs: -26.289, 38.014) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.216cm,inner sep=0cm,outer sep=0cm,fill=red!80!darkgray,draw=red!80!darkgray,very thin] (m607P) {};
+\draw (axis cs: 13.211, 46.874) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.231cm,inner sep=0cm,outer sep=0cm,fill=red!60!darkgray,draw=red!60!darkgray,very thin] (m608P) {};
+\draw (axis cs: 14.616, -29.584) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.184cm,inner sep=0cm,outer sep=0cm,fill=red!40!darkgray,draw=red!40!darkgray,very thin] (m609P) {};
+\draw (axis cs: -41.934, 35.554) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.201cm,inner sep=0cm,outer sep=0cm,fill=teal!100!white,draw=teal!100!white,very thin] (m610P) {};
+\draw (axis cs: -45.023, 8.813) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.191cm,inner sep=0cm,outer sep=0cm,fill=teal!80!white,draw=teal!80!white,very thin] (m611P) {};
+\draw (axis cs: -19.789, -44.004) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.203cm,inner sep=0cm,outer sep=0cm,fill=teal!60!white,draw=teal!60!white,very thin] (m612P) {};
+\draw (axis cs: 50.315, -9.694) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.152cm,inner sep=0cm,outer sep=0cm,fill=teal!40!white,draw=teal!40!white,very thin] (m613P) {};
+\draw (axis cs: -53.635, 0.252) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.179cm,inner sep=0cm,outer sep=0cm,fill=teal!80!darkgray,draw=teal!80!darkgray,very thin] (m614P) {};
+\draw (axis cs: 50.283, -10.880) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.145cm,inner sep=0cm,outer sep=0cm,fill=teal!60!darkgray,draw=teal!60!darkgray,very thin] (m615P) {};
+\draw (axis cs: 33.390, -36.741) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.170cm,inner sep=0cm,outer sep=0cm,fill=teal!40!darkgray,draw=teal!40!darkgray,very thin] (m616P) {};
+\draw (axis cs: 48.014, -23.554) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.146cm,inner sep=0cm,outer sep=0cm,fill=violet!100!white,draw=violet!100!white,very thin] (m617P) {};
+\draw (axis cs: 51.560, -9.548) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.150cm,inner sep=0cm,outer sep=0cm,fill=violet!80!white,draw=violet!80!white,very thin] (m618P) {};
+\draw (axis cs: 29.701, -21.427) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.167cm,inner sep=0cm,outer sep=0cm,fill=violet!60!white,draw=violet!60!white,very thin] (m619P) {};
+\draw (axis cs: -19.488, -34.267) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.229cm,inner sep=0cm,outer sep=0cm,fill=violet!40!white,draw=violet!40!white,very thin] (m621P) {};
+\draw (axis cs: -25.366, -31.468) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.207cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray,very thin] (m622P) {};
+\draw (axis cs: -17.044, -42.079) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.211cm,inner sep=0cm,outer sep=0cm,fill=violet!60!darkgray,draw=violet!60!darkgray,very thin] (m623P) {};
+\draw (axis cs: -18.537, -43.055) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.202cm,inner sep=0cm,outer sep=0cm,fill=violet!40!darkgray,draw=violet!40!darkgray,very thin] (m624P) {};
+\draw (axis cs: -25.798, -32.855) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.203cm,inner sep=0cm,outer sep=0cm,fill=yellow!80!darkgray,draw=yellow!80!darkgray,very thin] (m625P) {};
+\draw (axis cs: -17.285, -43.211) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.206cm,inner sep=0cm,outer sep=0cm,fill=yellow!60!darkgray,draw=yellow!60!darkgray,very thin] (m626P) {};
+\draw[solid,blue!100!white,opacity=0.4] (m501N) -- (m501V);
+\draw[densely dotted,blue!100!white,opacity=0.8] (m501N) -- (m501P);
+\draw[solid,blue!80!white,opacity=0.4] (m502N) -- (m502V);
+\draw[densely dotted,blue!80!white,opacity=0.8] (m502N) -- (m502P);
+\draw[solid,blue!60!white,opacity=0.4] (m503N) -- (m503V);
+\draw[densely dotted,blue!60!white,opacity=0.8] (m503N) -- (m503P);
+\draw[solid,blue!40!white,opacity=0.4] (m504N) -- (m504V);
+\draw[densely dotted,blue!40!white,opacity=0.8] (m504N) -- (m504P);
+\draw[solid,blue!80!darkgray,opacity=0.4] (m505N) -- (m505V);
+\draw[densely dotted,blue!80!darkgray,opacity=0.8] (m505N) -- (m505P);
+\draw[solid,blue!60!darkgray,opacity=0.4] (m506N) -- (m506V);
+\draw[densely dotted,blue!60!darkgray,opacity=0.8] (m506N) -- (m506P);
+\draw[solid,blue!40!darkgray,opacity=0.4] (m507N) -- (m507V);
+\draw[densely dotted,blue!40!darkgray,opacity=0.8] (m507N) -- (m507P);
+\draw[solid,brown!100!white,opacity=0.4] (m508N) -- (m508V);
+\draw[densely dotted,brown!100!white,opacity=0.8] (m508N) -- (m508P);
+\draw[solid,brown!80!white,opacity=0.4] (m509N) -- (m509V);
+\draw[densely dotted,brown!80!white,opacity=0.8] (m509N) -- (m509P);
+\draw[solid,brown!80!darkgray,opacity=0.4] (m511N) -- (m511V);
+\draw[densely dotted,brown!80!darkgray,opacity=0.8] (m511N) -- (m511P);
+\draw[solid,brown!60!darkgray,opacity=0.4] (m512N) -- (m512V);
+\draw[densely dotted,brown!60!darkgray,opacity=0.8] (m512N) -- (m512P);
+\draw[solid,brown!40!darkgray,opacity=0.4] (m513N) -- (m513V);
+\draw[densely dotted,brown!40!darkgray,opacity=0.8] (m513N) -- (m513P);
+\draw[solid,cyan!100!white,opacity=0.4] (m514N) -- (m514V);
+\draw[densely dotted,cyan!100!white,opacity=0.8] (m514N) -- (m514P);
+\draw[solid,cyan!80!white,opacity=0.4] (m515N) -- (m515V);
+\draw[densely dotted,cyan!80!white,opacity=0.8] (m515N) -- (m515P);
+\draw[solid,cyan!60!white,opacity=0.4] (m516N) -- (m516V);
+\draw[densely dotted,cyan!60!white,opacity=0.8] (m516N) -- (m516P);
+\draw[solid,cyan!40!white,opacity=0.4] (m517N) -- (m517V);
+\draw[densely dotted,cyan!40!white,opacity=0.8] (m517N) -- (m517P);
+\draw[solid,cyan!80!darkgray,opacity=0.4] (m518N) -- (m518V);
+\draw[densely dotted,cyan!80!darkgray,opacity=0.8] (m518N) -- (m518P);
+\draw[solid,cyan!60!darkgray,opacity=0.4] (m519N) -- (m519V);
+\draw[densely dotted,cyan!60!darkgray,opacity=0.8] (m519N) -- (m519P);
+\draw[solid,cyan!40!darkgray,opacity=0.4] (m541N) -- (m541V);
+\draw[densely dotted,cyan!40!darkgray,opacity=0.8] (m541N) -- (m541P);
+\draw[solid,green!100!white,opacity=0.4] (m542N) -- (m542V);
+\draw[densely dotted,green!100!white,opacity=0.8] (m542N) -- (m542P);
+\draw[solid,green!80!white,opacity=0.4] (m543N) -- (m543V);
+\draw[densely dotted,green!80!white,opacity=0.8] (m543N) -- (m543P);
+\draw[solid,green!60!white,opacity=0.4] (m544N) -- (m544V);
+\draw[densely dotted,green!60!white,opacity=0.8] (m544N) -- (m544P);
+\draw[solid,green!40!white,opacity=0.4] (m545N) -- (m545V);
+\draw[densely dotted,green!40!white,opacity=0.8] (m545N) -- (m545P);
+\draw[solid,green!80!darkgray,opacity=0.4] (m546N) -- (m546V);
+\draw[densely dotted,green!80!darkgray,opacity=0.8] (m546N) -- (m546P);
+\draw[solid,green!60!darkgray,opacity=0.4] (m547N) -- (m547V);
+\draw[densely dotted,green!60!darkgray,opacity=0.8] (m547N) -- (m547P);
+\draw[solid,green!40!darkgray,opacity=0.4] (m548N) -- (m548V);
+\draw[densely dotted,green!40!darkgray,opacity=0.8] (m548N) -- (m548P);
+\draw[solid,lime!100!white,opacity=0.4] (m549N) -- (m549V);
+\draw[densely dotted,lime!100!white,opacity=0.8] (m549N) -- (m549P);
+\draw[solid,lime!80!darkgray,opacity=0.4] (m550N) -- (m550V);
+\draw[densely dotted,lime!80!darkgray,opacity=0.8] (m550N) -- (m550P);
+\draw[solid,lime!60!darkgray,opacity=0.4] (m551N) -- (m551V);
+\draw[densely dotted,lime!60!darkgray,opacity=0.8] (m551N) -- (m551P);
+\draw[solid,lime!40!darkgray,opacity=0.4] (m554N) -- (m554V);
+\draw[densely dotted,lime!40!darkgray,opacity=0.8] (m554N) -- (m554P);
+\draw[solid,magenta!100!white,opacity=0.4] (m555N) -- (m555V);
+\draw[densely dotted,magenta!100!white,opacity=0.8] (m555N) -- (m555P);
+\draw[solid,magenta!80!white,opacity=0.4] (m556N) -- (m556V);
+\draw[densely dotted,magenta!80!white,opacity=0.8] (m556N) -- (m556P);
+\draw[solid,magenta!60!white,opacity=0.4] (m557N) -- (m557V);
+\draw[densely dotted,magenta!60!white,opacity=0.8] (m557N) -- (m557P);
+\draw[solid,magenta!40!white,opacity=0.4] (m570N) -- (m570V);
+\draw[densely dotted,magenta!40!white,opacity=0.8] (m570N) -- (m570P);
+\draw[solid,magenta!80!darkgray,opacity=0.4] (m571N) -- (m571V);
+\draw[densely dotted,magenta!80!darkgray,opacity=0.8] (m571N) -- (m571P);
+\draw[solid,magenta!60!darkgray,opacity=0.4] (m572N) -- (m572V);
+\draw[densely dotted,magenta!60!darkgray,opacity=0.8] (m572N) -- (m572P);
+\draw[solid,magenta!40!darkgray,opacity=0.4] (m573N) -- (m573V);
+\draw[densely dotted,magenta!40!darkgray,opacity=0.8] (m573N) -- (m573P);
+\draw[solid,olive!100!white,opacity=0.4] (m574N) -- (m574V);
+\draw[densely dotted,olive!100!white,opacity=0.8] (m574N) -- (m574P);
+\draw[solid,olive!80!white,opacity=0.4] (m575N) -- (m575V);
+\draw[densely dotted,olive!80!white,opacity=0.8] (m575N) -- (m575P);
+\draw[solid,olive!60!white,opacity=0.4] (m579N) -- (m579V);
+\draw[densely dotted,olive!60!white,opacity=0.8] (m579N) -- (m579P);
+\draw[solid,olive!40!white,opacity=0.4] (m580N) -- (m580V);
+\draw[densely dotted,olive!40!white,opacity=0.8] (m580N) -- (m580P);
+\draw[solid,olive!80!darkgray,opacity=0.4] (m581N) -- (m581V);
+\draw[densely dotted,olive!80!darkgray,opacity=0.8] (m581N) -- (m581P);
+\draw[solid,olive!60!darkgray,opacity=0.4] (m582N) -- (m582V);
+\draw[densely dotted,olive!60!darkgray,opacity=0.8] (m582N) -- (m582P);
+\draw[solid,olive!40!darkgray,opacity=0.4] (m583N) -- (m583V);
+\draw[densely dotted,olive!40!darkgray,opacity=0.8] (m583N) -- (m583P);
+\draw[solid,orange!100!white,opacity=0.4] (m584N) -- (m584V);
+\draw[densely dotted,orange!100!white,opacity=0.8] (m584N) -- (m584P);
+\draw[solid,orange!80!white,opacity=0.4] (m585N) -- (m585V);
+\draw[densely dotted,orange!80!white,opacity=0.8] (m585N) -- (m585P);
+\draw[solid,orange!60!white,opacity=0.4] (m587N) -- (m587V);
+\draw[densely dotted,orange!60!white,opacity=0.8] (m587N) -- (m587P);
+\draw[solid,orange!40!white,opacity=0.4] (m588N) -- (m588V);
+\draw[densely dotted,orange!40!white,opacity=0.8] (m588N) -- (m588P);
+\draw[solid,orange!80!darkgray,opacity=0.4] (m589N) -- (m589V);
+\draw[densely dotted,orange!80!darkgray,opacity=0.8] (m589N) -- (m589P);
+\draw[solid,orange!60!darkgray,opacity=0.4] (m590N) -- (m590V);
+\draw[densely dotted,orange!60!darkgray,opacity=0.8] (m590N) -- (m590P);
+\draw[solid,orange!40!darkgray,opacity=0.4] (m591N) -- (m591V);
+\draw[densely dotted,orange!40!darkgray,opacity=0.8] (m591N) -- (m591P);
+\draw[solid,pink!100!white,opacity=0.4] (m592N) -- (m592V);
+\draw[densely dotted,pink!100!white,opacity=0.8] (m592N) -- (m592P);
+\draw[solid,pink!80!darkgray,opacity=0.4] (m593N) -- (m593V);
+\draw[densely dotted,pink!80!darkgray,opacity=0.8] (m593N) -- (m593P);
+\draw[solid,pink!60!darkgray,opacity=0.4] (m594N) -- (m594V);
+\draw[densely dotted,pink!60!darkgray,opacity=0.8] (m594N) -- (m594P);
+\draw[solid,pink!40!darkgray,opacity=0.4] (m595N) -- (m595V);
+\draw[densely dotted,pink!40!darkgray,opacity=0.8] (m595N) -- (m595P);
+\draw[solid,purple!100!white,opacity=0.4] (m596N) -- (m596V);
+\draw[densely dotted,purple!100!white,opacity=0.8] (m596N) -- (m596P);
+\draw[solid,purple!80!white,opacity=0.4] (m597N) -- (m597V);
+\draw[densely dotted,purple!80!white,opacity=0.8] (m597N) -- (m597P);
+\draw[solid,purple!60!white,opacity=0.4] (m598N) -- (m598V);
+\draw[densely dotted,purple!60!white,opacity=0.8] (m598N) -- (m598P);
+\draw[solid,purple!40!white,opacity=0.4] (m599N) -- (m599V);
+\draw[densely dotted,purple!40!white,opacity=0.8] (m599N) -- (m599P);
+\draw[solid,purple!80!darkgray,opacity=0.4] (m600N) -- (m600V);
+\draw[densely dotted,purple!80!darkgray,opacity=0.8] (m600N) -- (m600P);
+\draw[solid,purple!60!darkgray,opacity=0.4] (m601N) -- (m601V);
+\draw[densely dotted,purple!60!darkgray,opacity=0.8] (m601N) -- (m601P);
+\draw[solid,purple!40!darkgray,opacity=0.4] (m602N) -- (m602V);
+\draw[densely dotted,purple!40!darkgray,opacity=0.8] (m602N) -- (m602P);
+\draw[solid,red!100!white,opacity=0.4] (m603N) -- (m603V);
+\draw[densely dotted,red!100!white,opacity=0.8] (m603N) -- (m603P);
+\draw[solid,red!80!white,opacity=0.4] (m604N) -- (m604V);
+\draw[densely dotted,red!80!white,opacity=0.8] (m604N) -- (m604P);
+\draw[solid,red!60!white,opacity=0.4] (m605N) -- (m605V);
+\draw[densely dotted,red!60!white,opacity=0.8] (m605N) -- (m605P);
+\draw[solid,red!40!white,opacity=0.4] (m606N) -- (m606V);
+\draw[densely dotted,red!40!white,opacity=0.8] (m606N) -- (m606P);
+\draw[solid,red!80!darkgray,opacity=0.4] (m607N) -- (m607V);
+\draw[densely dotted,red!80!darkgray,opacity=0.8] (m607N) -- (m607P);
+\draw[solid,red!60!darkgray,opacity=0.4] (m608N) -- (m608V);
+\draw[densely dotted,red!60!darkgray,opacity=0.8] (m608N) -- (m608P);
+\draw[solid,red!40!darkgray,opacity=0.4] (m609N) -- (m609V);
+\draw[densely dotted,red!40!darkgray,opacity=0.8] (m609N) -- (m609P);
+\draw[solid,teal!100!white,opacity=0.4] (m610N) -- (m610V);
+\draw[densely dotted,teal!100!white,opacity=0.8] (m610N) -- (m610P);
+\draw[solid,teal!80!white,opacity=0.4] (m611N) -- (m611V);
+\draw[densely dotted,teal!80!white,opacity=0.8] (m611N) -- (m611P);
+\draw[solid,teal!60!white,opacity=0.4] (m612N) -- (m612V);
+\draw[densely dotted,teal!60!white,opacity=0.8] (m612N) -- (m612P);
+\draw[solid,teal!40!white,opacity=0.4] (m613N) -- (m613V);
+\draw[densely dotted,teal!40!white,opacity=0.8] (m613N) -- (m613P);
+\draw[solid,teal!80!darkgray,opacity=0.4] (m614N) -- (m614V);
+\draw[densely dotted,teal!80!darkgray,opacity=0.8] (m614N) -- (m614P);
+\draw[solid,teal!60!darkgray,opacity=0.4] (m615N) -- (m615V);
+\draw[densely dotted,teal!60!darkgray,opacity=0.8] (m615N) -- (m615P);
+\draw[solid,teal!40!darkgray,opacity=0.4] (m616N) -- (m616V);
+\draw[densely dotted,teal!40!darkgray,opacity=0.8] (m616N) -- (m616P);
+\draw[solid,violet!100!white,opacity=0.4] (m617N) -- (m617V);
+\draw[densely dotted,violet!100!white,opacity=0.8] (m617N) -- (m617P);
+\draw[solid,violet!80!white,opacity=0.4] (m618N) -- (m618V);
+\draw[densely dotted,violet!80!white,opacity=0.8] (m618N) -- (m618P);
+\draw[solid,violet!60!white,opacity=0.4] (m619N) -- (m619V);
+\draw[densely dotted,violet!60!white,opacity=0.8] (m619N) -- (m619P);
+\draw[solid,violet!40!white,opacity=0.4] (m621N) -- (m621V);
+\draw[densely dotted,violet!40!white,opacity=0.8] (m621N) -- (m621P);
+\draw[solid,violet!80!darkgray,opacity=0.4] (m622N) -- (m622V);
+\draw[densely dotted,violet!80!darkgray,opacity=0.8] (m622N) -- (m622P);
+\draw[solid,violet!60!darkgray,opacity=0.4] (m623N) -- (m623V);
+\draw[densely dotted,violet!60!darkgray,opacity=0.8] (m623N) -- (m623P);
+\draw[solid,violet!40!darkgray,opacity=0.4] (m624N) -- (m624V);
+\draw[densely dotted,violet!40!darkgray,opacity=0.8] (m624N) -- (m624P);
+\draw[solid,yellow!80!darkgray,opacity=0.4] (m625N) -- (m625V);
+\draw[densely dotted,yellow!80!darkgray,opacity=0.8] (m625N) -- (m625P);
+\draw[solid,yellow!60!darkgray,opacity=0.4] (m626N) -- (m626V);
+\draw[densely dotted,yellow!60!darkgray,opacity=0.8] (m626N) -- (m626P);
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m501N.east) {\fontsize{6}{6}\selectfont{}501};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m502N.east) {\fontsize{6}{6}\selectfont{}502};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m503N.east) {\fontsize{6}{6}\selectfont{}503};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m504N.east) {\fontsize{6}{6}\selectfont{}504};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m505N.east) {\fontsize{6}{6}\selectfont{}505};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m506N.east) {\fontsize{6}{6}\selectfont{}506};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m507N.east) {\fontsize{6}{6}\selectfont{}507};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m508N.east) {\fontsize{6}{6}\selectfont{}508};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m509N.east) {\fontsize{6}{6}\selectfont{}509};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m511N.east) {\fontsize{6}{6}\selectfont{}511};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m512N.east) {\fontsize{6}{6}\selectfont{}512};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m513N.east) {\fontsize{6}{6}\selectfont{}513};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m514N.east) {\fontsize{6}{6}\selectfont{}514};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m515N.east) {\fontsize{6}{6}\selectfont{}515};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m516N.east) {\fontsize{6}{6}\selectfont{}516};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m517N.east) {\fontsize{6}{6}\selectfont{}517};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m518N.east) {\fontsize{6}{6}\selectfont{}518};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m519N.east) {\fontsize{6}{6}\selectfont{}519};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m541N.east) {\fontsize{6}{6}\selectfont{}541};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m542N.east) {\fontsize{6}{6}\selectfont{}542};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m543N.east) {\fontsize{6}{6}\selectfont{}543};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m544N.east) {\fontsize{6}{6}\selectfont{}544};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m545N.east) {\fontsize{6}{6}\selectfont{}545};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m546N.east) {\fontsize{6}{6}\selectfont{}546};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m547N.east) {\fontsize{6}{6}\selectfont{}547};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m548N.east) {\fontsize{6}{6}\selectfont{}548};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m549N.east) {\fontsize{6}{6}\selectfont{}549};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m550N.east) {\fontsize{6}{6}\selectfont{}550};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m551N.east) {\fontsize{6}{6}\selectfont{}551};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m554N.east) {\fontsize{6}{6}\selectfont{}554};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m555N.east) {\fontsize{6}{6}\selectfont{}555};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m556N.east) {\fontsize{6}{6}\selectfont{}556};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m557N.east) {\fontsize{6}{6}\selectfont{}557};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m570N.east) {\fontsize{6}{6}\selectfont{}570};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m571N.east) {\fontsize{6}{6}\selectfont{}571};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m572N.east) {\fontsize{6}{6}\selectfont{}572};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m573N.east) {\fontsize{6}{6}\selectfont{}573};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m574N.east) {\fontsize{6}{6}\selectfont{}574};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m575N.east) {\fontsize{6}{6}\selectfont{}575};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m579N.east) {\fontsize{6}{6}\selectfont{}579};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m580N.east) {\fontsize{6}{6}\selectfont{}580};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m581N.east) {\fontsize{6}{6}\selectfont{}581};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m582N.east) {\fontsize{6}{6}\selectfont{}582};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m583N.east) {\fontsize{6}{6}\selectfont{}583};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m584N.east) {\fontsize{6}{6}\selectfont{}584};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m585N.east) {\fontsize{6}{6}\selectfont{}585};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m587N.east) {\fontsize{6}{6}\selectfont{}587};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m588N.east) {\fontsize{6}{6}\selectfont{}588};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m589N.east) {\fontsize{6}{6}\selectfont{}589};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m590N.east) {\fontsize{6}{6}\selectfont{}590};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m591N.east) {\fontsize{6}{6}\selectfont{}591};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m592N.east) {\fontsize{6}{6}\selectfont{}592};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m593N.east) {\fontsize{6}{6}\selectfont{}593};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m594N.east) {\fontsize{6}{6}\selectfont{}594};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m595N.east) {\fontsize{6}{6}\selectfont{}595};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m596N.east) {\fontsize{6}{6}\selectfont{}596};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m597N.east) {\fontsize{6}{6}\selectfont{}597};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m598N.east) {\fontsize{6}{6}\selectfont{}598};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m599N.east) {\fontsize{6}{6}\selectfont{}599};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m600N.east) {\fontsize{6}{6}\selectfont{}600};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m601N.east) {\fontsize{6}{6}\selectfont{}601};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m602N.east) {\fontsize{6}{6}\selectfont{}602};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m603N.east) {\fontsize{6}{6}\selectfont{}603};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m604N.east) {\fontsize{6}{6}\selectfont{}604};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m605N.east) {\fontsize{6}{6}\selectfont{}605};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m606N.east) {\fontsize{6}{6}\selectfont{}606};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m607N.east) {\fontsize{6}{6}\selectfont{}607};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m608N.east) {\fontsize{6}{6}\selectfont{}608};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m609N.east) {\fontsize{6}{6}\selectfont{}609};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m610N.east) {\fontsize{6}{6}\selectfont{}610};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m611N.east) {\fontsize{6}{6}\selectfont{}611};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m612N.east) {\fontsize{6}{6}\selectfont{}612};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m613N.east) {\fontsize{6}{6}\selectfont{}613};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m614N.east) {\fontsize{6}{6}\selectfont{}614};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m615N.east) {\fontsize{6}{6}\selectfont{}615};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m616N.east) {\fontsize{6}{6}\selectfont{}616};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m617N.east) {\fontsize{6}{6}\selectfont{}617};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m618N.east) {\fontsize{6}{6}\selectfont{}618};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m619N.east) {\fontsize{6}{6}\selectfont{}619};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m621N.east) {\fontsize{6}{6}\selectfont{}621};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m622N.east) {\fontsize{6}{6}\selectfont{}622};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m623N.east) {\fontsize{6}{6}\selectfont{}623};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m624N.east) {\fontsize{6}{6}\selectfont{}624};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m625N.east) {\fontsize{6}{6}\selectfont{}625};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m626N.east) {\fontsize{6}{6}\selectfont{}626};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m501V.east) {\fontsize{6}{6}\selectfont{}501};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m502V.east) {\fontsize{6}{6}\selectfont{}502};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m503V.east) {\fontsize{6}{6}\selectfont{}503};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m504V.east) {\fontsize{6}{6}\selectfont{}504};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m505V.east) {\fontsize{6}{6}\selectfont{}505};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m506V.east) {\fontsize{6}{6}\selectfont{}506};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m507V.east) {\fontsize{6}{6}\selectfont{}507};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m508V.east) {\fontsize{6}{6}\selectfont{}508};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m509V.east) {\fontsize{6}{6}\selectfont{}509};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m511V.east) {\fontsize{6}{6}\selectfont{}511};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m512V.east) {\fontsize{6}{6}\selectfont{}512};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m513V.east) {\fontsize{6}{6}\selectfont{}513};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m514V.east) {\fontsize{6}{6}\selectfont{}514};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m515V.east) {\fontsize{6}{6}\selectfont{}515};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m516V.east) {\fontsize{6}{6}\selectfont{}516};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m517V.east) {\fontsize{6}{6}\selectfont{}517};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m518V.east) {\fontsize{6}{6}\selectfont{}518};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m519V.east) {\fontsize{6}{6}\selectfont{}519};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m541V.east) {\fontsize{6}{6}\selectfont{}541};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m542V.east) {\fontsize{6}{6}\selectfont{}542};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m543V.east) {\fontsize{6}{6}\selectfont{}543};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m544V.east) {\fontsize{6}{6}\selectfont{}544};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m545V.east) {\fontsize{6}{6}\selectfont{}545};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m546V.east) {\fontsize{6}{6}\selectfont{}546};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m547V.east) {\fontsize{6}{6}\selectfont{}547};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m548V.east) {\fontsize{6}{6}\selectfont{}548};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m549V.east) {\fontsize{6}{6}\selectfont{}549};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m550V.east) {\fontsize{6}{6}\selectfont{}550};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m551V.east) {\fontsize{6}{6}\selectfont{}551};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m554V.east) {\fontsize{6}{6}\selectfont{}554};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m555V.east) {\fontsize{6}{6}\selectfont{}555};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m556V.east) {\fontsize{6}{6}\selectfont{}556};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m557V.east) {\fontsize{6}{6}\selectfont{}557};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m570V.east) {\fontsize{6}{6}\selectfont{}570};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m571V.east) {\fontsize{6}{6}\selectfont{}571};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m572V.east) {\fontsize{6}{6}\selectfont{}572};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m573V.east) {\fontsize{6}{6}\selectfont{}573};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m574V.east) {\fontsize{6}{6}\selectfont{}574};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m575V.east) {\fontsize{6}{6}\selectfont{}575};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m579V.east) {\fontsize{6}{6}\selectfont{}579};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m580V.east) {\fontsize{6}{6}\selectfont{}580};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m581V.east) {\fontsize{6}{6}\selectfont{}581};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m582V.east) {\fontsize{6}{6}\selectfont{}582};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m583V.east) {\fontsize{6}{6}\selectfont{}583};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m584V.east) {\fontsize{6}{6}\selectfont{}584};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m585V.east) {\fontsize{6}{6}\selectfont{}585};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m587V.east) {\fontsize{6}{6}\selectfont{}587};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m588V.east) {\fontsize{6}{6}\selectfont{}588};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m589V.east) {\fontsize{6}{6}\selectfont{}589};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m590V.east) {\fontsize{6}{6}\selectfont{}590};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m591V.east) {\fontsize{6}{6}\selectfont{}591};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m592V.east) {\fontsize{6}{6}\selectfont{}592};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m593V.east) {\fontsize{6}{6}\selectfont{}593};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m594V.east) {\fontsize{6}{6}\selectfont{}594};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m595V.east) {\fontsize{6}{6}\selectfont{}595};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m596V.east) {\fontsize{6}{6}\selectfont{}596};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m597V.east) {\fontsize{6}{6}\selectfont{}597};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m598V.east) {\fontsize{6}{6}\selectfont{}598};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m599V.east) {\fontsize{6}{6}\selectfont{}599};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m600V.east) {\fontsize{6}{6}\selectfont{}600};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m601V.east) {\fontsize{6}{6}\selectfont{}601};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m602V.east) {\fontsize{6}{6}\selectfont{}602};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m603V.east) {\fontsize{6}{6}\selectfont{}603};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m604V.east) {\fontsize{6}{6}\selectfont{}604};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m605V.east) {\fontsize{6}{6}\selectfont{}605};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m606V.east) {\fontsize{6}{6}\selectfont{}606};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m607V.east) {\fontsize{6}{6}\selectfont{}607};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m608V.east) {\fontsize{6}{6}\selectfont{}608};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m609V.east) {\fontsize{6}{6}\selectfont{}609};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m610V.east) {\fontsize{6}{6}\selectfont{}610};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m611V.east) {\fontsize{6}{6}\selectfont{}611};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m612V.east) {\fontsize{6}{6}\selectfont{}612};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m613V.east) {\fontsize{6}{6}\selectfont{}613};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m614V.east) {\fontsize{6}{6}\selectfont{}614};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m615V.east) {\fontsize{6}{6}\selectfont{}615};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m616V.east) {\fontsize{6}{6}\selectfont{}616};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m617V.east) {\fontsize{6}{6}\selectfont{}617};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m618V.east) {\fontsize{6}{6}\selectfont{}618};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m619V.east) {\fontsize{6}{6}\selectfont{}619};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m621V.east) {\fontsize{6}{6}\selectfont{}621};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m622V.east) {\fontsize{6}{6}\selectfont{}622};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m623V.east) {\fontsize{6}{6}\selectfont{}623};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m624V.east) {\fontsize{6}{6}\selectfont{}624};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m625V.east) {\fontsize{6}{6}\selectfont{}625};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m626V.east) {\fontsize{6}{6}\selectfont{}626};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m501P.east) {\fontsize{6}{6}\selectfont{}501};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m502P.east) {\fontsize{6}{6}\selectfont{}502};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m503P.east) {\fontsize{6}{6}\selectfont{}503};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m504P.east) {\fontsize{6}{6}\selectfont{}504};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m505P.east) {\fontsize{6}{6}\selectfont{}505};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m506P.east) {\fontsize{6}{6}\selectfont{}506};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m507P.east) {\fontsize{6}{6}\selectfont{}507};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m508P.east) {\fontsize{6}{6}\selectfont{}508};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m509P.east) {\fontsize{6}{6}\selectfont{}509};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m511P.east) {\fontsize{6}{6}\selectfont{}511};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m512P.east) {\fontsize{6}{6}\selectfont{}512};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m513P.east) {\fontsize{6}{6}\selectfont{}513};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m514P.east) {\fontsize{6}{6}\selectfont{}514};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m515P.east) {\fontsize{6}{6}\selectfont{}515};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m516P.east) {\fontsize{6}{6}\selectfont{}516};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m517P.east) {\fontsize{6}{6}\selectfont{}517};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m518P.east) {\fontsize{6}{6}\selectfont{}518};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m519P.east) {\fontsize{6}{6}\selectfont{}519};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m541P.east) {\fontsize{6}{6}\selectfont{}541};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m542P.east) {\fontsize{6}{6}\selectfont{}542};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m543P.east) {\fontsize{6}{6}\selectfont{}543};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m544P.east) {\fontsize{6}{6}\selectfont{}544};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m545P.east) {\fontsize{6}{6}\selectfont{}545};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m546P.east) {\fontsize{6}{6}\selectfont{}546};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m547P.east) {\fontsize{6}{6}\selectfont{}547};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m548P.east) {\fontsize{6}{6}\selectfont{}548};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m549P.east) {\fontsize{6}{6}\selectfont{}549};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m550P.east) {\fontsize{6}{6}\selectfont{}550};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m551P.east) {\fontsize{6}{6}\selectfont{}551};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m554P.east) {\fontsize{6}{6}\selectfont{}554};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m555P.east) {\fontsize{6}{6}\selectfont{}555};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m556P.east) {\fontsize{6}{6}\selectfont{}556};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m557P.east) {\fontsize{6}{6}\selectfont{}557};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m570P.east) {\fontsize{6}{6}\selectfont{}570};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m571P.east) {\fontsize{6}{6}\selectfont{}571};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m572P.east) {\fontsize{6}{6}\selectfont{}572};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m573P.east) {\fontsize{6}{6}\selectfont{}573};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m574P.east) {\fontsize{6}{6}\selectfont{}574};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m575P.east) {\fontsize{6}{6}\selectfont{}575};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m579P.east) {\fontsize{6}{6}\selectfont{}579};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m580P.east) {\fontsize{6}{6}\selectfont{}580};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m581P.east) {\fontsize{6}{6}\selectfont{}581};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m582P.east) {\fontsize{6}{6}\selectfont{}582};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m583P.east) {\fontsize{6}{6}\selectfont{}583};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m584P.east) {\fontsize{6}{6}\selectfont{}584};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m585P.east) {\fontsize{6}{6}\selectfont{}585};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m587P.east) {\fontsize{6}{6}\selectfont{}587};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m588P.east) {\fontsize{6}{6}\selectfont{}588};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m589P.east) {\fontsize{6}{6}\selectfont{}589};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m590P.east) {\fontsize{6}{6}\selectfont{}590};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m591P.east) {\fontsize{6}{6}\selectfont{}591};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m592P.east) {\fontsize{6}{6}\selectfont{}592};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m593P.east) {\fontsize{6}{6}\selectfont{}593};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m594P.east) {\fontsize{6}{6}\selectfont{}594};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m595P.east) {\fontsize{6}{6}\selectfont{}595};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m596P.east) {\fontsize{6}{6}\selectfont{}596};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m597P.east) {\fontsize{6}{6}\selectfont{}597};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m598P.east) {\fontsize{6}{6}\selectfont{}598};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m599P.east) {\fontsize{6}{6}\selectfont{}599};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m600P.east) {\fontsize{6}{6}\selectfont{}600};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m601P.east) {\fontsize{6}{6}\selectfont{}601};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m602P.east) {\fontsize{6}{6}\selectfont{}602};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m603P.east) {\fontsize{6}{6}\selectfont{}603};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m604P.east) {\fontsize{6}{6}\selectfont{}604};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m605P.east) {\fontsize{6}{6}\selectfont{}605};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m606P.east) {\fontsize{6}{6}\selectfont{}606};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m607P.east) {\fontsize{6}{6}\selectfont{}607};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m608P.east) {\fontsize{6}{6}\selectfont{}608};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m609P.east) {\fontsize{6}{6}\selectfont{}609};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m610P.east) {\fontsize{6}{6}\selectfont{}610};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m611P.east) {\fontsize{6}{6}\selectfont{}611};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m612P.east) {\fontsize{6}{6}\selectfont{}612};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m613P.east) {\fontsize{6}{6}\selectfont{}613};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m614P.east) {\fontsize{6}{6}\selectfont{}614};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m615P.east) {\fontsize{6}{6}\selectfont{}615};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m616P.east) {\fontsize{6}{6}\selectfont{}616};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m617P.east) {\fontsize{6}{6}\selectfont{}617};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m618P.east) {\fontsize{6}{6}\selectfont{}618};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m619P.east) {\fontsize{6}{6}\selectfont{}619};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m621P.east) {\fontsize{6}{6}\selectfont{}621};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m622P.east) {\fontsize{6}{6}\selectfont{}622};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m623P.east) {\fontsize{6}{6}\selectfont{}623};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m624P.east) {\fontsize{6}{6}\selectfont{}624};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m625P.east) {\fontsize{6}{6}\selectfont{}625};
+\node[anchor=west,text=black,xshift=-0.07cm,opacity=1] at (m626P.east) {\fontsize{6}{6}\selectfont{}626};
+
+\end{axis}
+
+begin\begin{axis}[name=spybox-a,
+	%enlargelimits=false,
+	%axis equal=false,
+	xmin=-36.6634,
+	xmax=-35.6473,
+	ymin=46.471,
+	ymax=49.4716,
+	axis on top,
+	width=6cm,
+	height=4cm,
+	ytick={\empty},
+	xtick={\empty},
+	anchor=north west,
+	enlargelimits=false,
+	axis equal=false,
+	at={(main.north east)},xshift=0.5cm,
+	]
+	\draw (axis cs: -36.333, 48.362) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.291cm,inner sep=0cm,outer sep=0cm,fill=blue!40!white,draw=blue!40!white] (m504N) {};
+\draw (axis cs: -36.585, 49.043) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.288cm,inner sep=0cm,outer sep=0cm,fill=blue!40!white,draw=blue!40!white] (m504V) {};
+\draw (axis cs: -35.804, 46.900) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.295cm,inner sep=0cm,outer sep=0cm,fill=blue!40!white,draw=blue!40!white] (m504P) {};
+\draw[solid,blue!40!white,opacity=1,thick] (m504N) -- (m504V);
+\draw[densely dotted,blue!40!white,opacity=1,thick] (m504N) -- (m504P);
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m504N.east) {\fontsize{9}{9}\selectfont{}504};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m504V.east) {\fontsize{9}{9}\selectfont{}504};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m504P.east) {\fontsize{9}{9}\selectfont{}504};
+
+\end{axis}
+\node[anchor=base west,inner sep=0cm,yshift=-0.05cm,xshift=-0.4cm] at (spybox-a.west) {(a)};
+
+\begin{axis}[name=spybox-b,
+	%enlargelimits=false,
+	%axis equal=false,
+	xmin=14.5396,
+	xmax=20.3392,
+	ymin=19.1362,
+	ymax=26.5913,
+	axis on top,
+	width=6cm,
+	height=4cm,
+	ytick={\empty},
+	xtick={\empty},
+	anchor=north west,
+	enlargelimits=false,
+	axis equal=false,
+	at={(spybox-a.south west)},yshift=-0.2cm,
+	]
+	\draw (axis cs: 16.454, 21.313) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.367cm,inner sep=0cm,outer sep=0cm,fill=blue!80!white,draw=blue!80!white] (m502N) {};
+\draw (axis cs: 14.986, 23.632) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.364cm,inner sep=0cm,outer sep=0cm,fill=blue!60!white,draw=blue!60!white] (m503N) {};
+\draw (axis cs: 18.374, 20.711) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.369cm,inner sep=0cm,outer sep=0cm,fill=blue!80!darkgray,draw=blue!80!darkgray] (m505N) {};
+\draw (axis cs: 17.428, 25.526) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.364cm,inner sep=0cm,outer sep=0cm,fill=blue!80!white,draw=blue!80!white] (m502V) {};
+\draw (axis cs: 16.239, 23.591) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.363cm,inner sep=0cm,outer sep=0cm,fill=blue!60!white,draw=blue!60!white] (m503V) {};
+\draw (axis cs: 18.225, 22.091) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.368cm,inner sep=0cm,outer sep=0cm,fill=blue!80!darkgray,draw=blue!80!darkgray] (m505V) {};
+\draw (axis cs: 15.389, 22.212) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.363cm,inner sep=0cm,outer sep=0cm,fill=blue!80!white,draw=blue!80!white] (m502P) {};
+\draw (axis cs: 15.015, 20.201) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.366cm,inner sep=0cm,outer sep=0cm,fill=blue!60!white,draw=blue!60!white] (m503P) {};
+\draw (axis cs: 19.447, 21.960) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.367cm,inner sep=0cm,outer sep=0cm,fill=blue!80!darkgray,draw=blue!80!darkgray] (m505P) {};
+\draw[solid,blue!80!white,opacity=1,thick] (m502N) -- (m502V);
+\draw[densely dotted,blue!80!white,opacity=1,thick] (m502N) -- (m502P);
+\draw[solid,blue!60!white,opacity=1,thick] (m503N) -- (m503V);
+\draw[densely dotted,blue!60!white,opacity=1,thick] (m503N) -- (m503P);
+\draw[solid,blue!80!darkgray,opacity=1,thick] (m505N) -- (m505V);
+\draw[densely dotted,blue!80!darkgray,opacity=1,thick] (m505N) -- (m505P);
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m502N.east) {\fontsize{9}{9}\selectfont{}502};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m503N.east) {\fontsize{9}{9}\selectfont{}503};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m505N.east) {\fontsize{9}{9}\selectfont{}505};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m502V.east) {\fontsize{9}{9}\selectfont{}502};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m503V.east) {\fontsize{9}{9}\selectfont{}503};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m505V.east) {\fontsize{9}{9}\selectfont{}505};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m502P.east) {\fontsize{9}{9}\selectfont{}502};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m503P.east) {\fontsize{9}{9}\selectfont{}503};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m505P.east) {\fontsize{9}{9}\selectfont{}505};
+
+\end{axis}
+\node[anchor=base west,inner sep=0cm,yshift=-0.05cm,xshift=-0.4cm] at (spybox-b.west) {(b)};
+
+\begin{axis}[name=spybox-c,
+	%enlargelimits=false,
+	%axis equal=false,
+	xmin=50.1553,
+	xmax=51.8154,
+	ymin=-11.4516,
+	ymax=-9.231,
+	axis on top,
+	width=6cm,
+	height=4cm,
+	ytick={\empty},
+	xtick={\empty},
+	anchor=north west,
+	enlargelimits=false,
+	axis equal=false,
+	at={(spybox-b.south west)},yshift=-0.2cm,
+	]
+	\draw (axis cs: 32.043, -17.507) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.241cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!white,draw=cyan!60!white] (m516N) {};
+\draw (axis cs: 32.697, -14.412) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.254cm,inner sep=0cm,outer sep=0cm,fill=teal!40!white,draw=teal!40!white] (m613N) {};
+\draw (axis cs: 32.897, -15.358) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.243cm,inner sep=0cm,outer sep=0cm,fill=teal!60!darkgray,draw=teal!60!darkgray] (m615N) {};
+\draw (axis cs: 31.655, -20.821) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.245cm,inner sep=0cm,outer sep=0cm,fill=violet!80!white,draw=violet!80!white] (m618N) {};
+\draw (axis cs: -44.144, 37.449) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.307cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!white,draw=cyan!60!white] (m516V) {};
+\draw (axis cs: -34.793, 24.054) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.299cm,inner sep=0cm,outer sep=0cm,fill=teal!40!white,draw=teal!40!white] (m613V) {};
+\draw (axis cs: -35.998, 24.026) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.292cm,inner sep=0cm,outer sep=0cm,fill=teal!60!darkgray,draw=teal!60!darkgray] (m615V) {};
+\draw (axis cs: -31.593, 39.646) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.313cm,inner sep=0cm,outer sep=0cm,fill=violet!80!white,draw=violet!80!white] (m618V) {};
+\draw (axis cs: 51.429, -11.134) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.221cm,inner sep=0cm,outer sep=0cm,fill=cyan!60!white,draw=cyan!60!white] (m516P) {};
+\draw (axis cs: 50.315, -9.694) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.228cm,inner sep=0cm,outer sep=0cm,fill=teal!40!white,draw=teal!40!white] (m613P) {};
+\draw (axis cs: 50.283, -10.880) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.218cm,inner sep=0cm,outer sep=0cm,fill=teal!60!darkgray,draw=teal!60!darkgray] (m615P) {};
+\draw (axis cs: 51.560, -9.548) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.225cm,inner sep=0cm,outer sep=0cm,fill=violet!80!white,draw=violet!80!white] (m618P) {};
+\draw[solid,cyan!60!white,opacity=1,thick] (m516N) -- (m516V);
+\draw[densely dotted,cyan!60!white,opacity=1,thick] (m516N) -- (m516P);
+\draw[solid,teal!40!white,opacity=1,thick] (m613N) -- (m613V);
+\draw[densely dotted,teal!40!white,opacity=1,thick] (m613N) -- (m613P);
+\draw[solid,teal!60!darkgray,opacity=1,thick] (m615N) -- (m615V);
+\draw[densely dotted,teal!60!darkgray,opacity=1,thick] (m615N) -- (m615P);
+\draw[solid,violet!80!white,opacity=1,thick] (m618N) -- (m618V);
+\draw[densely dotted,violet!80!white,opacity=1,thick] (m618N) -- (m618P);
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m516N.east) {\fontsize{9}{9}\selectfont{}516};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m613N.east) {\fontsize{9}{9}\selectfont{}613};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m615N.east) {\fontsize{9}{9}\selectfont{}615};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m618N.east) {\fontsize{9}{9}\selectfont{}618};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m516V.east) {\fontsize{9}{9}\selectfont{}516};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m613V.east) {\fontsize{9}{9}\selectfont{}613};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m615V.east) {\fontsize{9}{9}\selectfont{}615};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m618V.east) {\fontsize{9}{9}\selectfont{}618};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m516P.east) {\fontsize{9}{9}\selectfont{}516};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m613P.east) {\fontsize{9}{9}\selectfont{}613};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m615P.east) {\fontsize{9}{9}\selectfont{}615};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m618P.east) {\fontsize{9}{9}\selectfont{}618};
+
+\end{axis}
+\node[anchor=base west,inner sep=0cm,yshift=-0.05cm,xshift=-0.4cm] at (spybox-c.west) {(c)};
+
+\begin{axis}[name=spybox-d,
+	%enlargelimits=false,
+	%axis equal=false,
+	xmin=-34.661,
+	xmax=-32.2483,
+	ymin=-48.7077,
+	ymax=-42.6856,
+	axis on top,
+	width=6cm,
+	height=4cm,
+	ytick={\empty},
+	xtick={\empty},
+	anchor=north west,
+	enlargelimits=false,
+	axis equal=false,
+	at={(spybox-c.south west)},yshift=-0.2cm,
+	]
+	\draw (axis cs: -32.619, -43.546) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.293cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray] (m622N) {};
+\draw (axis cs: -33.872, -47.847) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.287cm,inner sep=0cm,outer sep=0cm,fill=violet!60!darkgray,draw=violet!60!darkgray] (m623N) {};
+\draw (axis cs: -33.679, -46.487) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.270cm,inner sep=0cm,outer sep=0cm,fill=violet!40!darkgray,draw=violet!40!darkgray] (m624N) {};
+\draw (axis cs: -33.175, -44.703) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.272cm,inner sep=0cm,outer sep=0cm,fill=yellow!80!darkgray,draw=yellow!80!darkgray] (m625N) {};
+\draw (axis cs: -34.475, -46.380) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.277cm,inner sep=0cm,outer sep=0cm,fill=yellow!60!darkgray,draw=yellow!60!darkgray] (m626N) {};
+\draw (axis cs: 9.532, 7.812) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.352cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray] (m622V) {};
+\draw (axis cs: -18.875, -47.665) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.325cm,inner sep=0cm,outer sep=0cm,fill=violet!60!darkgray,draw=violet!60!darkgray] (m623V) {};
+\draw (axis cs: -18.895, -45.987) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.312cm,inner sep=0cm,outer sep=0cm,fill=violet!40!darkgray,draw=violet!40!darkgray] (m624V) {};
+\draw (axis cs: -17.923, 1.188) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.329cm,inner sep=0cm,outer sep=0cm,fill=yellow!80!darkgray,draw=yellow!80!darkgray] (m625V) {};
+\draw (axis cs: -17.920, -45.379) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.322cm,inner sep=0cm,outer sep=0cm,fill=yellow!60!darkgray,draw=yellow!60!darkgray] (m626V) {};
+\draw (axis cs: -25.366, -31.468) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.311cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray] (m622P) {};
+\draw (axis cs: -17.044, -42.079) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.317cm,inner sep=0cm,outer sep=0cm,fill=violet!60!darkgray,draw=violet!60!darkgray] (m623P) {};
+\draw (axis cs: -18.537, -43.055) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.302cm,inner sep=0cm,outer sep=0cm,fill=violet!40!darkgray,draw=violet!40!darkgray] (m624P) {};
+\draw (axis cs: -25.798, -32.855) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.305cm,inner sep=0cm,outer sep=0cm,fill=yellow!80!darkgray,draw=yellow!80!darkgray] (m625P) {};
+\draw (axis cs: -17.285, -43.211) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.309cm,inner sep=0cm,outer sep=0cm,fill=yellow!60!darkgray,draw=yellow!60!darkgray] (m626P) {};
+\draw[solid,violet!80!darkgray,opacity=1,thick] (m622N) -- (m622V);
+\draw[densely dotted,violet!80!darkgray,opacity=1,thick] (m622N) -- (m622P);
+\draw[solid,violet!60!darkgray,opacity=1,thick] (m623N) -- (m623V);
+\draw[densely dotted,violet!60!darkgray,opacity=1,thick] (m623N) -- (m623P);
+\draw[solid,violet!40!darkgray,opacity=1,thick] (m624N) -- (m624V);
+\draw[densely dotted,violet!40!darkgray,opacity=1,thick] (m624N) -- (m624P);
+\draw[solid,yellow!80!darkgray,opacity=1,thick] (m625N) -- (m625V);
+\draw[densely dotted,yellow!80!darkgray,opacity=1,thick] (m625N) -- (m625P);
+\draw[solid,yellow!60!darkgray,opacity=1,thick] (m626N) -- (m626V);
+\draw[densely dotted,yellow!60!darkgray,opacity=1,thick] (m626N) -- (m626P);
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m622N.east) {\fontsize{9}{9}\selectfont{}622};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m623N.east) {\fontsize{9}{9}\selectfont{}623};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m624N.east) {\fontsize{9}{9}\selectfont{}624};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m625N.east) {\fontsize{9}{9}\selectfont{}625};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m626N.east) {\fontsize{9}{9}\selectfont{}626};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m622V.east) {\fontsize{9}{9}\selectfont{}622};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m623V.east) {\fontsize{9}{9}\selectfont{}623};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m624V.east) {\fontsize{9}{9}\selectfont{}624};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m625V.east) {\fontsize{9}{9}\selectfont{}625};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m626V.east) {\fontsize{9}{9}\selectfont{}626};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m622P.east) {\fontsize{9}{9}\selectfont{}622};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m623P.east) {\fontsize{9}{9}\selectfont{}623};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m624P.east) {\fontsize{9}{9}\selectfont{}624};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m625P.east) {\fontsize{9}{9}\selectfont{}625};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m626P.east) {\fontsize{9}{9}\selectfont{}626};
+
+\end{axis}
+\node[anchor=base west,inner sep=0cm,yshift=-0.05cm,xshift=-0.4cm] at (spybox-d.west) {(d)};
+
+\begin{axis}[name=spybox-e,
+	%enlargelimits=false,
+	%axis equal=false,
+	xmin=9.0568,
+	xmax=15.232,
+	ymin=7.0717,
+	ymax=11.353,
+	axis on top,
+	width=6cm,
+	height=4cm,
+	ytick={\empty},
+	xtick={\empty},
+	anchor=north west,
+	enlargelimits=false,
+	axis equal=false,
+	at={(spybox-d.south west)},yshift=-0.2cm,
+	]
+	\draw (axis cs: 12.577, 13.468) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.375cm,inner sep=0cm,outer sep=0cm,fill=blue!100!white,draw=blue!100!white] (m501N) {};
+\draw (axis cs: 13.518, 15.172) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.372cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!darkgray,draw=cyan!40!darkgray] (m541N) {};
+\draw (axis cs: -22.094, -35.158) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.322cm,inner sep=0cm,outer sep=0cm,fill=pink!40!darkgray,draw=pink!40!darkgray] (m595N) {};
+\draw (axis cs: -24.019, -34.786) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.302cm,inner sep=0cm,outer sep=0cm,fill=purple!80!white,draw=purple!80!white] (m597N) {};
+\draw (axis cs: -21.870, -36.429) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.322cm,inner sep=0cm,outer sep=0cm,fill=violet!40!white,draw=violet!40!white] (m621N) {};
+\draw (axis cs: -32.619, -43.546) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.293cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray] (m622N) {};
+\draw (axis cs: 12.200, 10.614) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.374cm,inner sep=0cm,outer sep=0cm,fill=blue!100!white,draw=blue!100!white] (m501V) {};
+\draw (axis cs: 11.839, 7.683) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.363cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!darkgray,draw=cyan!40!darkgray] (m541V) {};
+\draw (axis cs: 11.525, 8.919) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.362cm,inner sep=0cm,outer sep=0cm,fill=pink!40!darkgray,draw=pink!40!darkgray] (m595V) {};
+\draw (axis cs: 10.386, 10.741) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.361cm,inner sep=0cm,outer sep=0cm,fill=purple!80!white,draw=purple!80!white] (m597V) {};
+\draw (axis cs: 14.282, 10.107) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.360cm,inner sep=0cm,outer sep=0cm,fill=violet!40!white,draw=violet!40!white] (m621V) {};
+\draw (axis cs: 9.532, 7.812) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.352cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray] (m622V) {};
+\draw (axis cs: 13.711, 13.335) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.375cm,inner sep=0cm,outer sep=0cm,fill=blue!100!white,draw=blue!100!white] (m501P) {};
+\draw (axis cs: 13.808, 17.072) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.363cm,inner sep=0cm,outer sep=0cm,fill=cyan!40!darkgray,draw=cyan!40!darkgray] (m541P) {};
+\draw (axis cs: -22.773, -33.920) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.319cm,inner sep=0cm,outer sep=0cm,fill=pink!40!darkgray,draw=pink!40!darkgray] (m595P) {};
+\draw (axis cs: -30.598, -31.766) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.285cm,inner sep=0cm,outer sep=0cm,fill=purple!80!white,draw=purple!80!white] (m597P) {};
+\draw (axis cs: -19.488, -34.267) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.344cm,inner sep=0cm,outer sep=0cm,fill=violet!40!white,draw=violet!40!white] (m621P) {};
+\draw (axis cs: -25.366, -31.468) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.311cm,inner sep=0cm,outer sep=0cm,fill=violet!80!darkgray,draw=violet!80!darkgray] (m622P) {};
+\draw[solid,blue!100!white,opacity=1,thick] (m501N) -- (m501V);
+\draw[densely dotted,blue!100!white,opacity=1,thick] (m501N) -- (m501P);
+\draw[solid,cyan!40!darkgray,opacity=1,thick] (m541N) -- (m541V);
+\draw[densely dotted,cyan!40!darkgray,opacity=1,thick] (m541N) -- (m541P);
+\draw[solid,pink!40!darkgray,opacity=1,thick] (m595N) -- (m595V);
+\draw[densely dotted,pink!40!darkgray,opacity=1,thick] (m595N) -- (m595P);
+\draw[solid,purple!80!white,opacity=1,thick] (m597N) -- (m597V);
+\draw[densely dotted,purple!80!white,opacity=1,thick] (m597N) -- (m597P);
+\draw[solid,violet!40!white,opacity=1,thick] (m621N) -- (m621V);
+\draw[densely dotted,violet!40!white,opacity=1,thick] (m621N) -- (m621P);
+\draw[solid,violet!80!darkgray,opacity=1,thick] (m622N) -- (m622V);
+\draw[densely dotted,violet!80!darkgray,opacity=1,thick] (m622N) -- (m622P);
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m501N.east) {\fontsize{9}{9}\selectfont{}501};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m541N.east) {\fontsize{9}{9}\selectfont{}541};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m595N.east) {\fontsize{9}{9}\selectfont{}595};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m597N.east) {\fontsize{9}{9}\selectfont{}597};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m621N.east) {\fontsize{9}{9}\selectfont{}621};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m622N.east) {\fontsize{9}{9}\selectfont{}622};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m501V.east) {\fontsize{9}{9}\selectfont{}501};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m541V.east) {\fontsize{9}{9}\selectfont{}541};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m595V.east) {\fontsize{9}{9}\selectfont{}595};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m597V.east) {\fontsize{9}{9}\selectfont{}597};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m621V.east) {\fontsize{9}{9}\selectfont{}621};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m622V.east) {\fontsize{9}{9}\selectfont{}622};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m501P.east) {\fontsize{9}{9}\selectfont{}501};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m541P.east) {\fontsize{9}{9}\selectfont{}541};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m595P.east) {\fontsize{9}{9}\selectfont{}595};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m597P.east) {\fontsize{9}{9}\selectfont{}597};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m621P.east) {\fontsize{9}{9}\selectfont{}621};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m622P.east) {\fontsize{9}{9}\selectfont{}622};
+
+\end{axis}
+\node[anchor=base west,inner sep=0cm,yshift=-0.05cm,xshift=-0.4cm] at (spybox-e.west) {(e)};
+
+\begin{axis}[name=spybox-f,
+	%enlargelimits=false,
+	%axis equal=false,
+	xmin=-59.6101,
+	xmax=-42.3708,
+	ymin=6.3392,
+	ymax=14.8966,
+	axis on top,
+	width=6cm,
+	height=4cm,
+	ytick={\empty},
+	xtick={\empty},
+	anchor=north west,
+	enlargelimits=false,
+	axis equal=false,
+	at={(spybox-e.south west)},yshift=-0.2cm,
+	]
+	\draw (axis cs: -33.835, 35.767) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.306cm,inner sep=0cm,outer sep=0cm,fill=brown!40!darkgray,draw=brown!40!darkgray] (m513N) {};
+\draw (axis cs: -7.338, 29.036) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.343cm,inner sep=0cm,outer sep=0cm,fill=green!100!white,draw=green!100!white] (m542N) {};
+\draw (axis cs: -9.337, 30.008) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.332cm,inner sep=0cm,outer sep=0cm,fill=green!80!white,draw=green!80!white] (m543N) {};
+\draw (axis cs: -27.810, 30.216) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.318cm,inner sep=0cm,outer sep=0cm,fill=green!60!white,draw=green!60!white] (m544N) {};
+\draw (axis cs: -30.534, 28.183) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.305cm,inner sep=0cm,outer sep=0cm,fill=green!40!white,draw=green!40!white] (m545N) {};
+\draw (axis cs: -57.443, 15.375) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.309cm,inner sep=0cm,outer sep=0cm,fill=green!60!darkgray,draw=green!60!darkgray] (m547N) {};
+\draw (axis cs: -10.205, 29.808) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.334cm,inner sep=0cm,outer sep=0cm,fill=green!40!darkgray,draw=green!40!darkgray] (m548N) {};
+\draw (axis cs: -36.360, 25.522) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.297cm,inner sep=0cm,outer sep=0cm,fill=orange!100!white,draw=orange!100!white] (m584N) {};
+\draw (axis cs: -26.912, 34.027) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.323cm,inner sep=0cm,outer sep=0cm,fill=red!60!white,draw=red!60!white] (m605N) {};
+\draw (axis cs: 11.443, 39.104) node[circle,scale=0.8,fill opacity=0.75,minimum size=0.338cm,inner sep=0cm,outer sep=0cm,fill=teal!80!white,draw=teal!80!white] (m611N) {};
+\draw (axis cs: -32.716, 36.421) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.313cm,inner sep=0cm,outer sep=0cm,fill=brown!40!darkgray,draw=brown!40!darkgray] (m513V) {};
+\draw (axis cs: -14.506, 26.586) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.334cm,inner sep=0cm,outer sep=0cm,fill=green!100!white,draw=green!100!white] (m542V) {};
+\draw (axis cs: -16.412, 26.138) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.324cm,inner sep=0cm,outer sep=0cm,fill=green!80!white,draw=green!80!white] (m543V) {};
+\draw (axis cs: -30.613, 24.957) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.307cm,inner sep=0cm,outer sep=0cm,fill=green!60!white,draw=green!60!white] (m544V) {};
+\draw (axis cs: -38.006, 10.996) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.282cm,inner sep=0cm,outer sep=0cm,fill=green!40!white,draw=green!40!white] (m545V) {};
+\draw (axis cs: 24.140, -34.149) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.263cm,inner sep=0cm,outer sep=0cm,fill=green!60!darkgray,draw=green!60!darkgray] (m547V) {};
+\draw (axis cs: -15.530, 26.480) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.326cm,inner sep=0cm,outer sep=0cm,fill=green!40!darkgray,draw=green!40!darkgray] (m548V) {};
+\draw (axis cs: -32.246, 27.406) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.307cm,inner sep=0cm,outer sep=0cm,fill=orange!100!white,draw=orange!100!white] (m584V) {};
+\draw (axis cs: -15.942, -1.930) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.318cm,inner sep=0cm,outer sep=0cm,fill=red!60!white,draw=red!60!white] (m605V) {};
+\draw (axis cs: -8.068, -6.446) node[shape=regular polygon,regular polygon sides=3,shape border rotate=90,fill opacity=0.75,minimum size=0.335cm,inner sep=0cm,outer sep=0cm,fill=teal!80!white,draw=teal!80!white] (m611V) {};
+\draw (axis cs: -55.176, 9.469) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.278cm,inner sep=0cm,outer sep=0cm,fill=brown!40!darkgray,draw=brown!40!darkgray] (m513P) {};
+\draw (axis cs: -58.284, 12.553) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.313cm,inner sep=0cm,outer sep=0cm,fill=green!100!white,draw=green!100!white] (m542P) {};
+\draw (axis cs: -56.282, 10.695) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.292cm,inner sep=0cm,outer sep=0cm,fill=green!80!white,draw=green!80!white] (m543P) {};
+\draw (axis cs: -52.738, 7.895) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.285cm,inner sep=0cm,outer sep=0cm,fill=green!60!white,draw=green!60!white] (m544P) {};
+\draw (axis cs: -46.858, 8.209) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.285cm,inner sep=0cm,outer sep=0cm,fill=green!40!white,draw=green!40!white] (m545P) {};
+\draw (axis cs: -57.751, 13.674) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.310cm,inner sep=0cm,outer sep=0cm,fill=green!60!darkgray,draw=green!60!darkgray] (m547P) {};
+\draw (axis cs: -57.401, 10.265) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.293cm,inner sep=0cm,outer sep=0cm,fill=green!40!darkgray,draw=green!40!darkgray] (m548P) {};
+\draw (axis cs: -45.183, 7.562) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.284cm,inner sep=0cm,outer sep=0cm,fill=orange!100!white,draw=orange!100!white] (m584P) {};
+\draw (axis cs: -48.683, 7.917) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.289cm,inner sep=0cm,outer sep=0cm,fill=red!60!white,draw=red!60!white] (m605P) {};
+\draw (axis cs: -45.023, 8.813) node[shape=regular polygon,regular polygon sides=4,fill opacity=0.75,minimum size=0.287cm,inner sep=0cm,outer sep=0cm,fill=teal!80!white,draw=teal!80!white] (m611P) {};
+\draw[solid,brown!40!darkgray,opacity=1,thick] (m513N) -- (m513V);
+\draw[densely dotted,brown!40!darkgray,opacity=1,thick] (m513N) -- (m513P);
+\draw[solid,green!100!white,opacity=1,thick] (m542N) -- (m542V);
+\draw[densely dotted,green!100!white,opacity=1,thick] (m542N) -- (m542P);
+\draw[solid,green!80!white,opacity=1,thick] (m543N) -- (m543V);
+\draw[densely dotted,green!80!white,opacity=1,thick] (m543N) -- (m543P);
+\draw[solid,green!60!white,opacity=1,thick] (m544N) -- (m544V);
+\draw[densely dotted,green!60!white,opacity=1,thick] (m544N) -- (m544P);
+\draw[solid,green!40!white,opacity=1,thick] (m545N) -- (m545V);
+\draw[densely dotted,green!40!white,opacity=1,thick] (m545N) -- (m545P);
+\draw[solid,green!60!darkgray,opacity=1,thick] (m547N) -- (m547V);
+\draw[densely dotted,green!60!darkgray,opacity=1,thick] (m547N) -- (m547P);
+\draw[solid,green!40!darkgray,opacity=1,thick] (m548N) -- (m548V);
+\draw[densely dotted,green!40!darkgray,opacity=1,thick] (m548N) -- (m548P);
+\draw[solid,orange!100!white,opacity=1,thick] (m584N) -- (m584V);
+\draw[densely dotted,orange!100!white,opacity=1,thick] (m584N) -- (m584P);
+\draw[solid,red!60!white,opacity=1,thick] (m605N) -- (m605V);
+\draw[densely dotted,red!60!white,opacity=1,thick] (m605N) -- (m605P);
+\draw[solid,teal!80!white,opacity=1,thick] (m611N) -- (m611V);
+\draw[densely dotted,teal!80!white,opacity=1,thick] (m611N) -- (m611P);
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m513N.east) {\fontsize{9}{9}\selectfont{}513};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m542N.east) {\fontsize{9}{9}\selectfont{}542};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m543N.east) {\fontsize{9}{9}\selectfont{}543};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m544N.east) {\fontsize{9}{9}\selectfont{}544};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m545N.east) {\fontsize{9}{9}\selectfont{}545};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m547N.east) {\fontsize{9}{9}\selectfont{}547};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m548N.east) {\fontsize{9}{9}\selectfont{}548};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m584N.east) {\fontsize{9}{9}\selectfont{}584};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m605N.east) {\fontsize{9}{9}\selectfont{}605};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m611N.east) {\fontsize{9}{9}\selectfont{}611};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m513V.east) {\fontsize{9}{9}\selectfont{}513};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m542V.east) {\fontsize{9}{9}\selectfont{}542};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m543V.east) {\fontsize{9}{9}\selectfont{}543};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m544V.east) {\fontsize{9}{9}\selectfont{}544};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m545V.east) {\fontsize{9}{9}\selectfont{}545};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m547V.east) {\fontsize{9}{9}\selectfont{}547};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m548V.east) {\fontsize{9}{9}\selectfont{}548};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m584V.east) {\fontsize{9}{9}\selectfont{}584};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m605V.east) {\fontsize{9}{9}\selectfont{}605};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m611V.east) {\fontsize{9}{9}\selectfont{}611};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m513P.east) {\fontsize{9}{9}\selectfont{}513};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m542P.east) {\fontsize{9}{9}\selectfont{}542};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m543P.east) {\fontsize{9}{9}\selectfont{}543};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m544P.east) {\fontsize{9}{9}\selectfont{}544};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m545P.east) {\fontsize{9}{9}\selectfont{}545};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m547P.east) {\fontsize{9}{9}\selectfont{}547};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m548P.east) {\fontsize{9}{9}\selectfont{}548};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m584P.east) {\fontsize{9}{9}\selectfont{}584};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m605P.east) {\fontsize{9}{9}\selectfont{}605};
+\node[anchor=west,rectangle,fill=white,text=black,xshift=0.05cm,inner sep=0.01cm] at (m611P.east) {\fontsize{9}{9}\selectfont{}611};
+
+\end{axis}
+\node[anchor=base west,inner sep=0cm,yshift=-0.05cm,xshift=-0.4cm] at (spybox-f.west) {(f)};
+
+
+
+\end{tikzpicture}

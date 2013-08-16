@@ -1,0 +1,77 @@
+\begin{tikzpicture}[>=latex]
+
+	% Critical distance diagram 
+	% by Jeroen Janssens
+
+
+	% The parameters:
+	\def\nemnum{4}		% number of methods
+	\def\signum{2}	    % number of bars to take into account
+	\def\s{3.45*}		    	% scale in width (the * is necessary)
+	\def\cd{1.1179}	    % critical distance
+ 
+	% Define some coordinates:
+	\coordinate (cmin) at (\s1,0);
+	\coordinate (cmax) at (\s\nemnum,0);
+	\coordinate (cleft) at ($(cmin)-(0.2,(\signum*0.25-0.05)$);
+	\coordinate (cright) at ($(cmax)+(0.2,-(\signum*0.25-0.05)$);
+	\coordinate (csig) at (0,-0.15);
+
+	% Draw the main line
+	\draw (cmin) -- (cmax);
+
+	% Draw the ticks
+	\foreach \c in {1,2,...,\nemnum}{
+		\draw ($(cmin)+(cmax)-(\s\c,0)$) -- ($(cmin)+(cmax)-(\s\c,-0.2)$) node[above] {\c};
+     	\ifthenelse{\c < \nemnum} {
+			\draw ($(\s\c,0)+(\s0.5,0)$) -- ($(\s\c,0)+(\s0.5,0.1)$);
+      	}
+	}
+
+	% Draw the critical distance line and label
+	\draw[<->] ($(cmax)+(0,0.7)$) -- node[above=0.10cm,inner sep=0,outer sep=0] {{cd $(p < .10)$}} ($(cmax)-(\s\cd,-0.7)$);
+  
+	% Function for drawing a method (name, average rank, position, color)
+	\def\method(#1,#2,#3,#4,#5){
+		% increase either left or right coordinate
+		\coordinate (c#3) at ($(c#3)-(0,0.4)$);
+		% define the coordinate e(name) that can be used when drawing the significance bars
+		\coordinate (e#1) at ($(cmin)+(cmax)-(\s#2,0)$);
+		% draw the line and the label
+		\draw[<-,#4,thick] (e#1) |- (c#3) node [black,#3=0.1cm,inner sep=0,outer sep=0] {#5};
+	}
+
+	% Function for drawing a significance bar between two methods (name, name)
+	\def\sigbar(#1,#2){
+		\coordinate (csig) at ($(csig) - (0,0.2)$);    
+		\fill[black,rounded corners=0.05cm] ($(e#1)-(0.10,0.05)+(csig)$) rectangle ($(e#2)+(0.10,0.05)+(csig)$);
+	}
+
+	% The methods:
+	%\method(\glsentryname{sos},1.3611,right,violet)
+	%\method(\glsentryname{svdd},2.083,right,magenta)
+	%\method(\glsentryname{lof},2.083,right,blue)
+	%\method(\glsentryname{knndd},2.625,right,red)
+	%\method(\glsentryname{pwdd},4.292,left,brown)
+	%\method(\glsentryname{loci},3.917,left,green!50!black)
+
+%\method(C4.5,3.1429,left,black)
+%\method(C4.5+m,2,right,black)
+%\method(C4.5+cf,2.8929,left, black)
+%\method(C4.5+m+cf,1.9643,right, black)
+
+\method(A,3.1429,left,black,C4.5)
+\method(B,2.8929,left,black,C4.5+cf)
+\method(D,1.9643,right,black,C4.5+m+cf)
+\method(C,2.0,right,black,C4.5+m)
+
+	% The significance bars:
+	%\sigbar(\glsentryname{pwdd},\glsentryname{loci});
+	%\sigbar(\glsentryname{knndd},\glsentryname{svdd});
+
+\sigbar(A,B);
+\sigbar(B,D);
+
+%\draw (current bounding box.south west) rectangle (current bounding box.north east);
+%\thesisbb
+\end{tikzpicture}

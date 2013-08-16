@@ -1,0 +1,24 @@
+\pgfplotstableread[header=true, col sep=comma, trim cells=true]{/home/jeroen/phd/latex/thesis/figures/data/mld-log.dat}\datafile
+
+\newcolumntype{x}[1]{>{\raggedleft\arraybackslash}p{#1}}%
+
+\pgfplotstabletypeset[
+	skip rows between index={0}{18},
+	every head row/.style={before row=\toprule,after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every even row/.style={before row={\rowcolor[gray]{0.9}}},
+	columns={id,latex,log},
+	columns/id/.style={string type,column type=l,column name=Equation,
+		postproc cell content/.append code={%
+	\pgfkeyssetvalue{/pgfplots/table/@cell content}{$5.{##1}$}}
+	},
+	columns/latex/.style={string type,column type={p{2.7cm}},column name=Meta-feature name},
+	columns/log/.style={string type,column type=c,column name=Apply log,
+		postproc cell content/.append code={%
+			\ifthenelse{\equal{##1}{True}}{
+				\pgfkeyssetvalue{/pgfplots/table/@cell content}{\y}%
+			}{
+				\pgfkeyssetvalue{/pgfplots/table/@cell content}{}%
+		}}
+	}
+]\datafile

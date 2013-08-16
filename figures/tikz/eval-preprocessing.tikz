@@ -1,0 +1,90 @@
+%pdfcrop 1 10 1 10
+%preview
+\begin{tikzpicture}
+
+\pgfplotstableread{data/eval-preprocessing-none.dat}\datanone
+\pgfplotstableread{data/eval-preprocessing-pca.dat}\datapca
+\pgfplotstableread{data/eval-preprocessing-var.dat}\datavar
+
+\begin{axis}[
+	name=pnone,
+	xlabel={First feature},
+	ylabel={Second feature},
+	xlabel near ticks,
+	%ylabel near ticks,
+	every axis y label/.style={at={(0,0.5)},xshift=-0.6cm,rotate=90,anchor=base,inner sep=0cm},
+	axis equal,
+	axis x line=bottom,
+	axis y line=left,
+	tick align=inside,
+	xmin=2,
+	xmax=14,
+	x=0.3cm,
+	y=0.3cm,
+	ymin=8,
+	ymax=17,
+	%height=6cm,
+	%title={No preprocessing = $\Delta_N$},
+]
+\addplot[object=blue] table {\datanone};
+\end{axis}
+
+
+\begin{axis}[
+	name=pvar,
+	at={(pnone.south)},
+	anchor={north},
+	yshift=-1.5cm,
+	xlabel={First feature scaled},
+	ylabel={Second feature scaled},
+	xlabel near ticks,
+	%ylabel near ticks,
+	every axis y label/.style={at={(0,0.5)},xshift=-0.6cm,rotate=90,anchor=base,inner sep=0cm},
+	axis equal,
+	width=6cm,
+	xmin=-2.5,
+	xmax=3.5,
+	ymax=3.5,
+	ymin=-2,
+	axis x line=bottom,
+	axis y line=left,
+	tick align=inside,
+	x=0.6cm,
+	y=0.6cm,
+	%height=6cm,
+	%title={Variance preprocessing = $\Delta_V$},
+]
+\addplot[object=blue] table {\datavar};
+\end{axis}
+
+\begin{axis}[
+	name=ppca,
+	at={(pvar.south)},
+	anchor={north},
+	yshift=-1.5cm,
+	xlabel={First principal component},
+	ylabel={},
+	ytick={\empty},
+	xlabel near ticks,
+	ylabel near ticks,
+	axis equal,
+	axis x line=bottom,
+	axis y line=none,
+	tick align=inside,
+	xmin=-8.5,
+	xmax=6.5,
+	every outer x axis line/.append style={stealth-stealth},
+	x=0.24cm,
+	height=2.5cm,
+	%height=6cm,
+	%title={Variance preprocessing = $\Delta_V$},
+]
+\addplot[object=blue] table[x index=0, y index=1] {\datapca};
+\end{axis}
+
+\node[xshift=-1.2cm,anchor=base east] at (pnone.west) {No preprocessing, $\Delta_N$};
+\node[xshift=-1.2cm,anchor=base east] at (pvar.west) {Variance preprocessing, $\Delta_V$};
+\node[xshift=-1.2cm,anchor=base east] at (ppca.west) {PCA preprocessing, $\Delta_P$};
+
+%\thesisbb
+\end{tikzpicture}

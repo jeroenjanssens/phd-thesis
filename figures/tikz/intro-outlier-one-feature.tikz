@@ -1,0 +1,50 @@
+\begin{tikzpicture}[>=latex,object/.style={mark=*,only marks,#1,mark options={scale=1}},
+normal/.style={object={lime!80!black},mark=o},
+anomaly/.style={object={orange!95!black},semithick,mark=asterisk}]
+
+\begin{axis}[scatter/classes={
+	anomaly={anomaly},
+	normal={normal}
+	},
+	name=figs,
+	%xmin=-0.5,
+	inner sep=0cm,
+	outer sep=0cm,
+	%mark size=0.05cm,
+	width=7cm,
+	axis equal,
+	clip=true,
+	axis on top,
+	axis x line=bottom,
+	axis y line=left,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel={speed over ground},
+	ylabel={rate of turn},
+	legend cell align=left,
+	legend pos=outer north east,
+	enlarge x limits={rel=0.1},
+	enlarge y limits={rel=0.1},
+	ymin=-1.7,
+	ymax=3,
+	legend entries={anomalous vessel,normal vessel},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y, meta=label] {data/esi-outlier-one-feature.dat};
+
+\end{axis}
+
+
+\end{tikzpicture}
+
+
+
+
+
+
+     

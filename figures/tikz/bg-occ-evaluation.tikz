@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+
+\begin{scope}
+
+\node (cv) [rectangle,draw=blue] {Cross validation};
+
+\begin{scope}[xshift=3cm,anchor=west,yscale=0.5]
+	\foreach \y [count=\i]in {4,...,-5} {
+		\node[rectangle,draw=red,rounded corners,minimum width=0.75cm] at (0cm,\y cm) (fold\i) {\i};
+		\draw[->] (cv.east) to[out=50-\i*10,in=230-\i *10] (fold\i.west);
+	}
+\end{scope}
+
+
+\begin{scope}[xshift=5cm,anchor=west,yscale=0.5]
+	\foreach \y [count=\i]in {4,...,-5} {
+		\node[rectangle,draw=red!10*\i!white,rounded corners,minimum width=0.75cm] at (0cm,\y cm) (test\i) {\i};
+		\draw[->] (fold\i.east) -- (test\i.west);
+	}
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

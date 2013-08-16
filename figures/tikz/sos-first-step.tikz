@@ -1,0 +1,88 @@
+\begin{tikzpicture}[>=latex]
+
+% Define the Gaussian PDF
+\def\gaussian(#1,#2){(1/sqrt(2*pi*#2*#2)) * exp((0-(x-#1)^2)/(2*#2*#2))}
+
+% Define axis
+\begin{axis}[name=gaussplot,
+	    xmin=90,
+	    xmax=700,
+	    ymin=0,
+	    ymax=0.04,
+	    separate axis lines,
+	    width=9cm,
+	    height=6cm, 
+	    hide y axis,
+	    xtick=\empty,
+	    ytick=\empty,
+	    axis x line=bottom,
+	    axis on top,
+	    every outer x axis line/.append style={<->,thick}]
+
+    % Draw Gaussians
+    \addplot[semithick,red,domain=105:409,samples=100,fill=red!20]{\gaussian(248.910,48)-0.0001};
+    \addlegendentry{$\sigma^{\,2}_a$};
+    \addplot[semithick,green,domain=352:453,samples=200,fill=green!20]{\gaussian(409.012,10)-0.0001};
+    \addlegendentry{$\sigma^{\,2}_b$};
+    \addplot[semithick,blue,domain=453:630,samples=100,fill=blue!20]{\gaussian(535.472,27)-0.0001};
+    \addlegendentry{$\sigma^{\,2}_c$};
+    %\addplot[semithick,black,domain=105:630] {(0)};
+    
+    % Draw data points
+    \addplot[scatter/classes={
+		n={fill=black},
+		a={fill=red},
+		b={fill=green},
+		c={fill=blue}},
+	      scatter,only marks,
+	      scatter src=explicit symbolic]
+		coordinates {
+		  (341.868,0) [n]
+		  (352.303,0) [n]
+		  (377.616,0) [n]
+		  (394.491,0) [n]
+		  (423.700,0) [n]
+		  (436.576,0) [n]
+		  (453.451,0) [n]
+		  (470.326,0) [n]
+		  (504.076,0) [n]
+		  (571.473,0) [n]
+		  (586.346,0) [n]
+		  (596.786,0) [n]
+		  (248.910,0) [a]
+		  (409.012,0) [b]
+		  (535.472,0) [c]
+		};
+
+    % Draw labels
+    \node[above=0.05cm] at (axis cs:248.910,0) {$\mathbf{x}_a$};
+    \node[above=0.05cm] at (axis cs:409.012,0) {$\mathbf{x}_b$};
+    \node[above=0.05cm] at (axis cs:535.472,0) {$\mathbf{x}_c$};
+\end{axis}
+
+% Include the affiny matrix png
+\node[right=of gaussplot,rectangle,draw=black!100,very thick,inner sep=0,xshift=0.2cm] (mat) {\includegraphics[width=4.5cm]{png/sos-first-step-affinity-matrix.png}};
+
+% Draw vertical and horizontal bars
+\draw[red,densely dashed,very thick] ($ (mat.north west) + (0.02cm,-0.02cm) $) rectangle ++(0.3cm,-4.5cm);
+\draw[green,densely dashed,very thick] ($ (mat.north west) + (1.52cm,-0.02cm) $) rectangle ++(0.3cm,-4.5cm);
+\draw[blue,densely dashed,very thick] ($ (mat.north west) + (3.32cm,-0.02cm) $) rectangle ++(0.3cm,-4.5cm);
+
+\draw[red,very thick] ($ (mat.north west) + (0.02cm,-0.02cm) $) rectangle ++(4.5cm,-0.3cm);
+\draw[green,very thick] ($ (mat.north west) + (0.02cm,-1.52cm) $) rectangle ++(4.5cm,-0.3cm);
+\draw[blue,very thick] ($ (mat.north west) + (0.02cm,-3.32cm) $) rectangle ++(4.5cm,-0.3cm);
+
+% Add a,b, and c labels on top and left side
+\node[above=0.1cm,anchor=south] at ($ (mat.north west) + (0.16cm,0cm) $) {$a$};
+\node[above=0.1cm,anchor=south] at ($ (mat.north west) + (1.66cm,0cm) $) {$b$};
+\node[above=0.1cm,anchor=south] at ($ (mat.north west) + (3.46cm,0cm) $) {$c$};
+
+\node[left=0.1cm,anchor=east] at ($ (mat.north west) + (0.cm,-0.16cm) $) {$a$};
+\node[left=0.1cm,anchor=east] at ($ (mat.north west) + (0.cm,-1.66cm) $) {$b$};
+\node[left=0.1cm,anchor=east] at ($ (mat.north west) + (0.cm,-3.46cm) $) {$c$};
+\pgfresetboundingbox 
+\path (gaussplot.north west) +(0cm,0.5cm) rectangle (mat.south east);
+
+%\thesisbb
+
+\end{tikzpicture}

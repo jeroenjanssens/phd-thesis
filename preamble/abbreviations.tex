@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%
+% First things first %
+%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\thesistitle{Maritime Anomaly Detection with Stochastic Outlier Selection}
+\def\thesistitle{Outlier Selection and One-Class Classification}
+\def\thesisauthor{Jeroen Janssens}
+
+%%%%%%%%%%%%%%%%%%%
+% Define acronyms %
+%%%%%%%%%%%%%%%%%%%
+
+\newacronym{ara}{ARA}{Average Relative AUC}
+\newacronym{ps}{PS}{Problem Statement}
+\newacronym{rq}{RQ}{Research Question}
+\newacronym{dfd}{DFD}{Data Flow Diagram}
+\newacronym{esi}{ESI}{Embedded Systems Institute}
+\newacronym{uvt}{TiU}{Tilburg University}
+\newacronym{ml}{ML}{Machine Learning}
+\newacronym{auc}{AUC}{Area Under the ROC Curve}
+\newacronym{roc}{ROC}{Receiver Operating Characteristic}
+\newacronym{kde}{KDE}{Kernel Density Estimation}
+\newacronym{kdd}{KDD}{Knowledge Discovery in Databases}
+\newacronym{knn}{NN}{Nearest Neighbour}
+\newacronym{knndd}{KNNDD}{K-Nearest Neighbour Data Description}
+\newacronym{lof}{LOF}{Local Outlier Factor}
+\newacronym{loci}{LOCI}{Local Correlation Integral}
+\newacronym{svm}{SVM}{Support Vector Machines}
+\newacronym{svdd}{SVDD}{Support Vector Data Description}
+\newacronym{pca}{PCA}{Principal Component Analysis}
+\newacronym{pwdd}{PWDD}{Parzen Window Data Description}
+\newacronym{rfe}{RFE}{Recursive Feature Elimination}
+\newacronym{os}{OS}{Outlier Selection}
+\newacronym{uos}{UOS}{Unsupervised Outlier Selection}
+\newacronym{occ}{OCC}{One-Class Classification}
+%\newacronym{ocl}{OCL}{One-Class Learning}
+\newacronym{mdef}{MDEF}{Multi-Granularity Deviation Factor}
+\newacronym{sos}{SOS}{Stochastic Outlier Selection}
+\newacronym{presto}{Presto}{Poseidon Research Tool}
+\newacronym{lsod}{LSOD}{Least Squares Outlier Detection} 
+\newacronym{sng}{SNG}{Stochastic Neighbour Graph} 
+\newacronym{mss}{MSS}{Maritime Safety and Security}
+\newacronym{mad}{MAD}{Maritime Anomaly Detection}
+
+
+
+\newglossaryentry{algorithm}{name=algorithm,description={A set of rules that precisely defines a sequence of operations.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define commonly used word orders %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\mlkdd{\glsentryname{ml} and \glsentryname{kdd}} % ML and KDD
+\def\lofloci{\glsentryname{lof} and \glsentryname{loci}} % LOF and LOCI
+
+\newcommand{\RQ}[1]{\glsentryname{rq}#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement and research questions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Problem statement:
+%\def\pstext{To what extent can domain experts be supported with real-world anomaly detection by outlier-selection algorithms?}
+\def\pstext{To what extent can outlier-selection algorithms support domain experts with real-world anomaly detection?}
+% Chapter 3:
+\def\rqonetext{How should we evaluate and compare the performance of outlier-selection algorithms?}
+% Chapter 4:
+%\def\rqtwotext{To what extent can the concept of affinity be applied to outlier-selection algorithms?}
+\def\rqtwotext{Can an effective outlier-selection algorithm be devised that employs the concept of affinity?}
+% Chapter 5 and 6:
+\def\rqthreetext{To what extent can we solve the one-class classifier selection problem using a meta-learning approach?}

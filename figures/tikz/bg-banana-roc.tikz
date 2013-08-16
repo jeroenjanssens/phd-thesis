@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+
+	\input{data/bg-banana-splits}
+
+	\begin{axis}[
+		scatter/use mapped color={draw=black,fill=mapped color},
+		xlabel={false alarm rate},
+		ylabel={hit rate},
+		xlabel near ticks,
+		ylabel near ticks,
+		%colorbar=true,
+		xmin=-0.05,
+		xmax=1,
+		ymin=0,
+		ymax=1.05,
+		colorbar=true,
+		colormap/jet,
+	]
+		%\addplot[scatter,
+		%scatter src=explicit,mark size=0.05cm]
+		%table[x=x,y=y,meta=theta] {data/bg-banana-roc.dat};
+
+		\addplot[mesh,thick,scatter src=explicit,
+		point meta min=0.2,
+		point meta max=1,
+		]
+		table[x=x,y=y,meta=theta] {data/bg-banana-roc.dat};
+	
+		\coordinate (ctt) at (axis cs: \thetax,\thetay);
+
+	\end{axis}
+
+
+	\draw (ctt) -- ++(0.25cm,-0.25cm) node[xshift=0.03cm,anchor=west] {$\theta^{'} = \pgfmathprintnumber{\ac}$};
+	\node[circle,minimum width=0.15cm,inner sep=0cm,draw=black,fill=red] at (ctt) {};
+
+\end{tikzpicture}

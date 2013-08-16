@@ -1,0 +1,69 @@
+\begin{tikzpicture}[
+>=latex,
+object/.style={mark=*,only marks,#1,mark options={scale=1}},
+realworldobject/.style={mark=o,only marks,blue},
+normal/.style={object={lime!80!black},mark=o},
+anomaly/.style={object={orange!95!black},semithick,mark=asterisk},
+inlier/.style={object={cyan!80!black},mark=o},
+outlier/.style={object={purple!80!black},semithick,mark=asterisk},
+hit/.style={object={green!80!black},mark=+,semithick},
+miss/.style={object={red!80!black},semithick,mark=asterisk},
+correctreject/.style={object={olive!80!black},mark=o},
+falsealarm/.style={object={violet!80!black},semithick,mark=-},
+]
+
+
+
+
+
+\begin{axis}[scatter/classes={
+	anomaly={anomaly},
+	normal={normal}
+	},
+	name=leftplot,
+	clip marker paths=true,
+	width=7.75cm,
+	xmin=-8,
+	xmax=12,
+	ymin=-14,
+	ymax=14,
+	axis on top,
+	axis equal,
+	title={Complete Banana data set},
+	title style={anchor=base,inner sep=0},
+	axis x line=bottom,
+	axis y line=left,
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	xtick=\empty,
+	ytick=\empty,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	legend cell align=left,
+	legend pos=north east,
+	legend columns=-1,
+	%reverse legend,
+	legend entries={anomaly,normality},
+	legend style={at={(1,1)},anchor=north east,xshift=-0.1cm,yshift=-0.1cm},
+	]
+	\addplot[scatter,
+	only marks,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y,meta=label] {data/bg-banana.dat};
+
+\end{axis}
+
+
+\path[red] (leftplot.south west) -- +(-0.05cm,-0.05cm);
+
+
+
+
+
+
+
+%\thesisbb
+
+\end{tikzpicture}

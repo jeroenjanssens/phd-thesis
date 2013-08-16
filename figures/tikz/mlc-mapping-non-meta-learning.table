@@ -1,0 +1,11 @@
+\pgfplotstableread[header=true, col sep=tab, trim cells=true]{/home/jeroen/phd/latex/thesis/figures/data/mlc-mapping-non-meta-learning.dat}\datafile
+\newcolumntype{x}[1]{>{\raggedleft\arraybackslash}p{#1}}%
+\pgfplotstabletypeset[
+	every head row/.style={before row=\toprule,after row=\midrule},
+  	%every head row/.style={before row=\toprule&\multicolumn{6}{c}{$\lambda$}&\multicolumn{2}{c}{$\lambda$}\\\cmidrule(l{.25em}r{.25em}){2-7}\cmidrule(l{.25em}){8-9},after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every even row/.style={before row={\rowcolor[gray]{0.9}}},
+	columns={variant,score},
+	columns/variant/.style={string type,column type=l,column name=Non-meta-learning variant},
+	columns/score/.style={fixed,zerofill,dec sep align,column name={ARA}},
+]\datafile

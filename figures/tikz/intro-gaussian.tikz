@@ -1,0 +1,104 @@
+\begin{tikzpicture}[>=latex,
+object/.style={mark=*,only marks,#1,mark options={scale=1}},
+inlier/.style={object={cyan!80!black},mark=o},
+outlier/.style={object={purple!80!black},semithick,mark=asterisk}]
+
+% Define the Gaussian PDF
+\def\gaussian(#1,#2){(1/sqrt(2*pi*#2*#2)) * exp((0-(x-#1)^2)/(2*#2*#2))}
+
+% Define axis
+\begin{axis}[name=gaussplot,
+		scatter/classes={
+		outlier={outlier},
+		inlier={inlier}
+		},
+	    xmin=-4,
+		clip=false,
+	    xmax=4,
+	    ymin=0,
+	    ymax=0.5,
+	    separate axis lines,
+	    width=10cm,
+	    height=6cm, 
+	    hide y axis,
+		legend entries={,outlier,inlier},
+		legend cell align=left,
+	  extra x tick style={every x tick/.append style={red,thick},thick,draw=red,grid=none},
+		extra x tick labels={},
+	extra x ticks = {-3,3},
+	    xtick={-3,...,3},
+	    xtick={-3,...,3},
+	    ytick=\empty,
+		xlabel={$x$},
+		xticklabels={$-3\sigma$,$-2\sigma$,$-1\sigma$,$\mu$,$1\sigma$,$2\sigma$,$3\sigma$,},
+		x tick label style={anchor=base,yshift=-0.3cm},
+	    axis x line=bottom,
+	    axis on top,
+	    every outer x axis line/.append style={<->}]
+
+	\coordinate (tl) at (axis cs:2.765,0.01);
+	\coordinate (ml) at (axis cs:2.765,0);
+	\coordinate (br) at (axis cs:3.2,-0.01);
+
+	\fill[black!10!white] (tl) rectangle (br);
+    % Draw Gaussians
+    \addplot[semithick,green,domain=-3.9:3.9,samples=200,fill=green!20]{\gaussian(0,1)-0.0001};
+    
+
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y,meta=cl] {data/bg-gaussian.dat};
+	%\draw[red,thick] (axis cs:-3,-0.2) -- (axis cs:-3,0.2);
+\end{axis}
+
+	%\fill[black!10!white] (ml) rectangle (br);
+
+	\draw[black!70] (tl) rectangle (br);
+
+\begin{axis}[
+	clip marker paths=true,
+	axis background/.style={fill=black!10!white},
+	name=glass,
+	xshift=8.5cm,
+	yshift=1.25cm,
+	scatter/classes={
+	outlier={outlier,very thick,scale=2},
+	inlier={inlier,very thick,scale=2}
+	},
+	scaled ticks=false,
+	tick scale label code/.code={},
+	inner sep=0cm,
+	outer sep=0cm,
+	width=4cm,
+	height=3cm,
+	xmin=2.8,
+	xmax=3.2,
+	ymax=0.009,
+	ymin=-0.005,
+	clip=true,
+	every outer x axis line/.append style={black!70},
+	every outer y axis line/.append style={black!70},
+	axis on top,
+		xtick=\empty,
+	    ytick=\empty,
+	]
+    \addplot[semithick,green,domain=2.7:3.3,samples=100,fill=green!20]{\gaussian(0,1)-0.00006} |- (axis cs:2.7,-0.00006);
+	\draw[black!10!white,thick] (axis cs:2.7,-0.0001) -- (axis cs:3.3,-0.0001);
+	\draw[red,thick](axis cs:3,-0.001) -- (axis cs:3,0.1);
+	\draw (axis cs:2.7,0) -- (axis cs:3.3,0);
+	%\draw[](axis cs:3,0) -- (axis cs:3,-0.001);
+	\node at (axis cs:3,-0.003) {$3\sigma$};
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y,meta=cl] {data/bg-gaussian.dat};
+
+\end{axis}
+
+\draw[black!70,densely dotted] (tl) -- (glass.north west);
+\draw[black!70,densely dotted] (br) -- (glass.south east);
+
+%\path (gaussplot.north west) +(0cm,0.5cm) rectangle (mat.south east);
+
+%\thesisbb
+
+\end{tikzpicture}

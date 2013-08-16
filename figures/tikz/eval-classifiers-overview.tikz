@@ -1,0 +1,16 @@
+
+\setlength{\tabcolsep}{1pt}
+
+\pgfplotstableread[header=true, col sep=tab, trim cells=true]{/home/jeroen/phd/latex/thesis/dev/matlab/eval/results/eval-classifiers-overview.dat}\datafile
+
+\newcolumntype{x}[1]{>{\raggedleft\arraybackslash}p{#1}}%
+
+\pgfplotstabletypeset[
+	every head row/.style={before row=\toprule,after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every even row/.style={before row={\rowcolor[gray]{0.9}}},
+	columns={id,name,ref},
+	columns/id/.style={string type,column type=l,column name=Code},
+	columns/name/.style={string type,column type={p{5.8cm}},column name=Name},
+	columns/ref/.style={string type,column type={p{6.15cm}},column name=Reference},
+]\datafile

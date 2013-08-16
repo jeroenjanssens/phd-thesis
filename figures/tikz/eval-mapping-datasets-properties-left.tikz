@@ -1,0 +1,4 @@
+\begin{tikzpicture}
+\clip (0,0) rectangle (13.22cm,-20cm);
+\node[anchor=north west,inner sep=0cm] (0,0) {\includegraphics{pdf/eval-mapping-datasets-properties.pdf}};
+\end{tikzpicture}

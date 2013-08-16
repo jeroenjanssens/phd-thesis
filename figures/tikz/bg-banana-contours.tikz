@@ -1,0 +1,59 @@
+\begin{tikzpicture}
+
+
+\begin{axis}[
+	name=leftplot,
+	clip marker paths=true,
+	width=7.75cm,
+	xmin=-8,
+	xmax=12,
+	ymin=-14,
+	ymax=14,
+	axis on top,
+	axis equal,
+	title style={anchor=base,inner sep=0},
+	axis x line=bottom,
+	axis y line=left,
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	xtick=\empty,
+	ytick=\empty,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	legend cell align=left,
+	legend pos=north east,
+	legend columns=-1,
+	%reverse legend,
+	%legend entries={theta},
+	colormap/jet,
+	]
+
+	%\addplot[scatter,
+	%only marks,
+	%scatter src=explicit symbolic,
+	%] table[x=x, y=y,meta=label] {data/bg-banana.dat};
+
+	\addplot[line legend,empty line=jump,densely dashed, contour prepared={labels=false,draw color=red, label distance=4cm,contour label style={font=\tiny,every node/.append style={text=black}}}, contour prepared format=matlab,
+	] table {data/bg-banana-threshold.dat};
+
+
+	\addplot[empty line=jump, point meta min=0.2, point meta max=1, contour prepared={labels over line,label distance=4.5cm,contour label style={font=\tiny,every node/.append style={text=black}}}, contour prepared format=matlab,
+	] table {data/bg-banana-contour.dat};
+
+\end{axis}
+
+
+\path[red] (leftplot.south west) -- +(-0.05cm,-0.05cm);
+
+
+
+
+
+
+
+
+%\thesisbb
+
+\end{tikzpicture}

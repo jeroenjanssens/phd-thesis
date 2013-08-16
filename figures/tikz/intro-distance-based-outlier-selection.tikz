@@ -1,0 +1,227 @@
+%pdfcrop ? ? -10 ?
+\begin{tikzpicture}[
+>=latex,
+object/.style={mark=*,only marks,#1,mark options={scale=1}},
+realworldobject/.style={mark=o,only marks,blue},
+normal/.style={object={lime!80!black},mark=o},
+anomaly/.style={object={orange!95!black},semithick,mark=asterisk},
+inlier/.style={object={cyan!80!black},mark=o},
+outlier/.style={object={purple!80!black},semithick,mark=asterisk},
+hit/.style={object={green!80!black},mark=+,semithick},
+miss/.style={object={red!80!black},semithick,mark=asterisk},
+correctreject/.style={object={olive!80!black},mark=o},
+falsealarm/.style={object={violet!80!black},semithick,mark=-},
+]
+
+\begin{axis}[
+	outer sep=0cm,
+	width=7cm,
+	axis equal,
+	clip=true,
+	%axis on top,
+	axis x line=bottom,
+	axis y line=left,
+	xlabel near ticks,
+	ylabel near ticks,
+	%xlabel={first feature~~ $x_1$},
+	%ylabel={second feature~~ $x_2$},
+	legend cell align=left,
+	ymin=-2,
+	legend pos=north east,
+	title={Data set},
+	title style={anchor=base},
+	%legend style={at={(1,1)},anchor=south east},
+	legend columns=-1,
+	reverse legend,
+	enlarge x limits={rel=0.1},
+	enlarge y limits={rel=0.1},
+	legend entries={data point},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+
+	\addplot[only marks,realworldobject,
+	] table[x=x, y=y] {data/bg-two-clusters.dat};
+	
+\end{axis}
+
+\begin{axis}[
+	xshift=6cm,
+	scatter/classes={
+	anomaly={anomaly},
+	normal={normal}
+	},
+	inner sep=0cm,
+	outer sep=0cm,
+	width=7cm,
+	axis equal,
+	clip=true,
+	title={Labels by the expert},
+	title style={anchor=base},
+	%axis on top,
+	axis x line=bottom,
+	axis y line=left,
+	xlabel near ticks,
+	ylabel near ticks,
+	%xlabel={first feature~~ $x_1$},
+	%ylabel={second feature~~ $x_2$},
+	legend cell align=left,
+	ymin=-2,
+	legend pos=north east,
+	%legend style={at={(1,1)},anchor=south east},
+	legend columns=-1,
+	enlarge x limits={rel=0.1},
+	enlarge y limits={rel=0.1},
+	legend entries={anomaly,normality},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+	\coordinate (bl) at (axis cs:-4.9,-1.25);
+	\coordinate (tr) at (axis cs:-4.4,-0.75);
+	\coordinate (ce) at (axis cs:-4.7,-1);
+
+	\fill[black!10!white] (bl) rectangle (tr);
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y, meta=label] {data/bg-two-clusters.dat};
+	
+\end{axis}
+
+	\draw[black!70] (bl) rectangle (tr);
+
+\begin{axis}[
+	clip marker paths=true,
+	axis background/.style={fill=black!10!white},
+	name=glass,
+	xshift=7.5cm,
+	yshift=0.25cm,
+	scatter/classes={
+	anomaly={anomaly,semithick},
+	normal={normal,semithick}
+	},
+	inner sep=0cm,
+	outer sep=0cm,
+	width=3cm,
+	height=3cm,
+	xmin=-4.9,
+	xmax=-4.4,
+	ymax=-0.75,
+	ymin=-1.25,
+	clip=true,
+	every outer x axis line/.append style={black!70},
+	every outer y axis line/.append style={black!70},
+	axis on top,
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y, meta=label] {data/bg-two-clusters.dat};
+	
+\end{axis}
+
+\draw[black!70,densely dotted] (bl) -- (glass.south west);
+\draw[black!70,densely dotted] (tr) -- (glass.north east);
+
+\begin{axis}[
+	scatter/classes={
+	outlier={outlier},
+	inlier={inlier}
+	},
+	yshift=-5.5cm,
+	inner sep=0cm,
+	outer sep=0cm,
+	width=7cm,
+	axis equal,
+	clip=true,
+	%axis on top,
+	axis x line=bottom,
+	axis y line=left,
+	title={Classifications by the algorithm},
+	title style={anchor=base},
+	xlabel near ticks,
+	ylabel near ticks,
+	%xlabel={first feature~~ $x_1$},
+	%ylabel={second feature~~ $x_2$},
+	legend cell align=left,
+	ymin=-2,
+	legend pos=north east,
+	%legend style={at={(1,1)},anchor=south east},
+	legend columns=-1,
+	reverse legend,
+	enlarge x limits={rel=0.1},
+	enlarge y limits={rel=0.1},
+	legend entries={outlier,inlier},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y, meta=cl] {data/bg-two-clusters.dat};
+	
+\end{axis}
+
+
+
+\begin{axis}[
+	scatter/classes={
+	hit={hit},
+	falsealarm={falsealarm},
+	miss={miss},
+	correctreject={correctreject}
+	},
+	xshift=6cm,
+	yshift=-5.5cm,
+	inner sep=0cm,
+	outer sep=0cm,
+	width=7cm,
+	axis equal,
+	clip=true,
+	%axis on top,
+	title={Outcome},
+	title style={anchor=base},
+	axis x line=bottom,
+	axis y line=left,
+	xlabel near ticks,
+	ylabel near ticks,
+	%xlabel={first feature~~ $x_1$},
+	%ylabel={second feature~~ $x_2$},
+	legend cell align=left,
+	ymin=-2,
+	legend pos=north east,
+	%legend style={at={(1,1)},anchor=south east},
+	legend columns=-1,
+	%reverse legend,
+	enlarge x limits={rel=0.1},
+	enlarge y limits={rel=0.1},
+	legend entries={hit,false alarm,miss,correct reject},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	    xtick=\empty,
+	    ytick=\empty,
+	]
+
+	\addplot[scatter,only marks,blue,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y, meta=con] {data/bg-two-clusters.dat};
+	
+\end{axis}
+
+
+%\thesisbb
+
+\end{tikzpicture}
+
+
+
+
+
+
+     

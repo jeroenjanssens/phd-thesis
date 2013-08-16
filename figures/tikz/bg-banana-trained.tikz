@@ -1,0 +1,96 @@
+\begin{tikzpicture}
+
+\begin{axis}[scatter/classes={
+	anomaly={anomaly},
+	normal={normal}
+	},
+	name=leftplot,
+	clip marker paths=true,
+	width=7.75cm,
+	xmin=-8,
+	xmax=12,
+	ymin=-14,
+	ymax=14,
+	axis on top,
+	axis equal,
+	title={One-class classifier trained on normalities},
+	title style={anchor=base,inner sep=0},
+	axis x line=bottom,
+	axis y line=left,
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	xtick=\empty,
+	ytick=\empty,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	legend cell align=left,
+	legend pos=north east,
+	legend columns=-1,
+	legend entries={anomaly,normality},
+	legend style={at={(1,1)},anchor=north east,xshift=-0.1cm,yshift=-0.1cm},
+	]
+	\addplot[scatter,
+	x filter/.code={
+		\ifthenelse{\equal{\thisrow{label}}{anomaly}}{
+			\def\pgfmathresult{}
+		}{}
+	},
+	skip coords between index={67}{201},
+	only marks,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y,meta=label] {data/bg-banana-nofold1.dat};
+
+	\addplot[empty line=jump,densely dashed, contour prepared={labels=false,draw color=red, label distance=4cm,contour label style={font=\tiny,every node/.append style={text=black}}}, contour prepared format=matlab] table {data/bg-banana-threshold.dat};
+
+\end{axis}
+
+\begin{axis}[scatter/classes={
+	hit={hit},
+	falsealarm={falsealarm},
+	miss={miss},
+	correctreject={correctreject}
+	},
+	clip marker paths=true,
+	width=7.75cm,
+	xshift=7cm,
+	xmin=-8,
+	xmax=12,
+	ymin=-14,
+	ymax=14,
+	axis on top,
+	axis equal,
+	title={Tested on normalities and anomalies},
+	title style={anchor=base,inner sep=0},
+	axis x line=bottom,
+	axis y line=left,
+	xlabel near ticks,
+	ylabel near ticks,
+	xlabel style={overlay},
+	ylabel style={overlay},
+	every outer x axis line/.append style={->},
+	every outer y axis line/.append style={->},
+	xtick=\empty,
+	ytick=\empty,
+	legend cell align=left,
+	legend pos=north east,
+	legend columns=-1,
+	legend entries={hit,false alarm,miss,correct reject},
+	legend style={at={(1,1)},anchor=north east,xshift=-0.1cm,yshift=-0.1cm},
+	]
+	\addplot[scatter,
+	x filter/.code={
+		\ifthenelse{\thisrow{fold}>1}{
+			\def\pgfmathresult{}
+		}{}%
+	},
+	only marks,
+	scatter src=explicit symbolic,
+	] table[x=x, y=y,meta=con] {data/bg-banana.dat};
+
+	\addplot[empty line=jump,densely dashed, contour prepared={labels=false,draw color=red, label distance=4cm,contour label style={font=\tiny,every node/.append style={text=black}}}, contour prepared format=matlab,
+	] table {data/bg-banana-threshold.dat};
+\end{axis}
+
+\end{tikzpicture}

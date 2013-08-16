@@ -1,0 +1,63 @@
+\begin{tikzpicture}[>=latex]
+	%\small
+
+	% Critical distance diagram 
+	% by Jeroen Janssens
+
+
+	% The parameters:
+	\def\nemnum{5}		% number of methods
+	\def\signum{2}	    % number of bars to take into account
+	\def\s{1.7*}		    	% scale in width (the * is necessary)
+	\def\cd{1.4378}	    % critical distance
+
+	% Define some coordinates:
+	\coordinate (cmin) at (\s1,0);
+	\coordinate (cmax) at (\s\nemnum,0);
+	\coordinate (cleft) at ($(cmin)-(0.2,(\signum*0.25-0.05)$);
+	\coordinate (cright) at ($(cmax)+(0.2,-(\signum*0.25-0.05)$);
+	\coordinate (csig) at (0,-0.15);
+
+	% Draw the main line
+	\draw (cmin) -- (cmax);
+
+	% Draw the ticks
+	\foreach \c in {1,2,...,\nemnum}{
+		\draw ($(cmin)+(cmax)-(\s\c,0)$) -- ($(cmin)+(cmax)-(\s\c,-0.2)$) node[above] {\c};
+     	\ifthenelse{\c < \nemnum} {
+			\draw ($(\s\c,0)+(\s0.5,0)$) -- ($(\s\c,0)+(\s0.5,0.1)$);
+      	}
+	}
+
+	% Draw the critical distance line and label
+	\draw[<->] ($(cmax)+(0,0.7)$) -- node[above=0.10cm,inner sep=0,outer sep=0] {\small{\textit{critical distance}}} ($(cmax)-(\s\cd,-0.7)$);
+  
+	% Function for drawing a method (name, average rank, position, color)
+	\def\method(#1,#2,#3,#4){
+		% increase either left or right coordinate
+		\coordinate (c#3) at ($(c#3)-(0,0.4)$);
+		% define the coordinate e(name) that can be used when drawing the significance bars
+		\coordinate (e#1) at ($(cmin)+(cmax)-(\s#2,0)$);
+		% draw the line and the label
+		\draw[<-,#4,thick] (e#1) |- (c#3) node [black,#3=0.1cm,inner sep=0,outer sep=0] {#1};
+	}
+
+	% Function for drawing a significance bar between two methods (name, name)
+	\def\sigbar(#1,#2){
+		\coordinate (csig) at ($(csig) - (0,0.2)$);    
+		\fill[black,rounded corners=0.05cm] ($(e#1)-(0.10,0.05)+(csig)$) rectangle ($(e#2)+(0.10,0.05)+(csig)$);
+	}
+
+	% The methods:
+	\method(SOS,1.3611,right,violet)
+	\method(LOF,2.8056,right,blue)
+	\method(LOCI,4.5833,left,green!50!black)
+	\method(KNN,3.3056,left,red)
+	\method(LSOD,2.9444,right,orange)
+   
+	% The significance bars:
+	\sigbar(KNN,LOF);
+	\sigbar(LOCI,KNN);
+%\draw (current bounding box.south west) rectangle (current bounding box.north east);
+
+\end{tikzpicture}

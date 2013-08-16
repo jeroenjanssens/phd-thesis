@@ -1,0 +1,16 @@
+%pdfcrop 1 1 1 10
+\begin{tikzpicture}
+	\begin{scope}
+		\clip (0,0) rectangle (-7.5cm,20cm);
+		\node[anchor=south east,xshift=0.9cm] (l) at (0,0) {\includegraphics{pdf/eval-auc-matrix-pca.pdf}};
+	\end{scope}
+	\begin{scope}
+		\clip (0.3cm,0) rectangle (9cm,20cm);
+		\node[anchor=south west,xshift=0.3cm] (r) at (0cm,0) {\includegraphics{pdf/eval-auc-matrix-individual.pdf}};
+	\end{scope}
+
+
+	\node[xshift=0.1cm,yshift=-0.3cm,anchor=base] at (l.south) {PCA preprocessing};
+	\node[xshift=-0.4cm,yshift=-0.3cm,anchor=base] at (r.south) {No preprocessing, sorted by AUC};
+
+\end{tikzpicture}

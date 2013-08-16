@@ -1,0 +1,247 @@
+\begin{tikzpicture}[
+>=latex,
+auto,
+data object/.style={font=\normalsize,circle,draw=#1!70!white,fill=#1!30!white,thick,inner sep=0.1cm},
+selects/.style={->,thick},
+affinity normal/.style={thick,draw=blue!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=blue!#1!white]{>}}}, postaction={decorate}},
+affinity give/.style={very thick,draw=orange!#1!white,decoration={markings,mark=at position .9 with {\arrow[thick,fill=orange!#1!white]{>}}}, postaction={decorate}},
+affinity get/.style={very thick,draw=cyan!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=cyan!#1!white]{>}}}, postaction={decorate}},
+affinity hidden/.style={thick,draw=gray!#1!white,decoration={markings,mark=at position .9 with {\arrow[thin,fill=gray!#1!white]{>}}}, postaction={decorate}},
+]
+\begin{scope}[yshift=0.000cm]
+    \node at (-1cm,1cm) {(a)};
+    \node[data object=orange] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=gray] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [affinity hidden=14.5229,bend left=3,overlay] (o-5) to  (o-6);
+    \draw [affinity hidden=14.7597,bend left=28,overlay] (o-4) to  (o-6);
+    \draw [affinity hidden=16.3186,bend right=2,overlay] (o-2) to  (o-6);
+    \draw [affinity hidden=17.0959,bend left=10,overlay] (o-3) to  (o-6);
+    \draw [affinity hidden=32.6414,bend left=22,overlay] (o-6) to  (o-1);
+    \draw [affinity hidden=32.6414,bend right=22,overlay] (o-6) to  (o-4);
+    \draw [affinity hidden=59.4011,bend left=24,overlay] (o-3) to  (o-1);
+    \draw [affinity hidden=62.628,bend left=24,overlay] (o-2) to  (o-4);
+    \draw [affinity hidden=70.7179,bend left=3,overlay] (o-6) to  (o-5);
+    \draw [affinity hidden=71.9222,bend right=12,overlay] (o-4) to  (o-2);
+    \draw [affinity hidden=74.9784,bend right=7,overlay] (o-5) to  (o-1);
+    \draw [affinity hidden=77.8907,bend left=7,overlay] (o-2) to  (o-1);
+    \draw [affinity hidden=78.342,bend left=7,overlay] (o-3) to  (o-4);
+    \draw [affinity hidden=79.1952,bend left=7,overlay] (o-5) to  (o-4);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-1);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-3);
+    \draw [affinity hidden=81.6706,bend left=7,overlay] (o-5) to  (o-2);
+    \draw [affinity hidden=83.5924,bend left=7,overlay] (o-3) to  (o-2);
+    \draw [affinity hidden=83.6492,bend left=7,overlay] (o-5) to  (o-3);
+    \draw [affinity hidden=83.7641,bend left=7,overlay] (o-2) to  (o-3);
+    \draw [affinity hidden=86.2886,bend left=7,overlay] (o-4) to  (o-5);
+    \draw [affinity hidden=93.4149,bend left=7,overlay] (o-2) to  (o-5);
+    \draw [affinity hidden=95.5848,bend left=7,overlay] (o-3) to  (o-5);
+    \draw [affinity hidden=98.0156,bend right=2,overlay] (o-6) to  (o-3);
+    \draw [affinity hidden=100,bend left=10,overlay] (o-6) to  (o-2);
+    \draw [affinity give=14.8085,bend right=16,overlay] (o-1) to node[font=\footnotesize,inner sep=0.02cm] {.04} (o-6);
+    \draw [affinity give=70.6657,bend left=24,overlay] (o-1) to node[font=\footnotesize,inner sep=0.02cm] {.21} (o-3);
+    \draw [affinity give=81.8157,bend left=7,overlay] (o-1) to node[font=\footnotesize,inner sep=0.02cm] {.24} (o-2);
+    \draw [affinity give=82.0062,bend left=7,overlay] (o-1) to node[font=\footnotesize,inner sep=0.02cm] {.25} (o-4);
+    \draw [affinity give=84.72,bend right=7,overlay] (o-1) to node[font=\footnotesize,inner sep=0.02cm] {.25} (o-5);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+\end{scope}
+\begin{scope}[xshift=9.350cm,yshift=0.100cm]
+\begin{axis}[name=matrix-a, x=0.3cm, y=-0.3cm, z=0cm, xtick={1,...,6}, ytick={1,...,6}, view={90}{90}, xticklabel style={gray,xshift=0.15cm,yshift=-0.1cm,font=\footnotesize}, yticklabel style={gray,yshift=-0.15cm,font=\footnotesize}, axis x line=top, x axis line style={-}, y axis line style={-}, z axis line style={-}, title style={yshift=0.2cm,anchor=base}, colormap name=cmb, title={$\mathbf{B}$}] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=7,mesh/ordering=y varies] file {data/sos-matrix-b.dat}; \end{axis} \draw[thin] (matrix-a.north east) rectangle (matrix-a.south west);
+\begin{axis}[name=matrix-a-hl, at={(matrix-a.north west)}, xshift=0.000cm, yshift=-0.000cm, anchor=north west, x=0.3cm, y=-0.3cm, z=0cm, view={90}{90}, x axis line style={-}, y axis line style={-}, z axis line style={-}, xtick={\empty}, ytick={\empty}, colormap name=cmgive, colorbar sampled, colorbar style={height=1.8cm,ymin=0,ymax=0.254,try min ticks=5,max space between ticks=12pt,font=\footnotesize,at={(matrix-a.north east)},xshift=-0.2cm,width=0.25cm,ytick style={draw=none},samples=100,scaled y ticks = false, yticklabel style={/pgf/number format/fixed}}, point meta min=0, point meta max=0.299] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=2,mesh/cols=7,mesh/ordering=y varies] coordinates { (1,1,0.000)
+(1,2,0.000)
+(2,1,0.245)
+(2,2,0.000)
+(3,1,0.212)
+(3,2,0.000)
+(4,1,0.246)
+(4,2,0.000)
+(5,1,0.254)
+(5,2,0.000)
+(6,1,0.044)
+(6,2,0.000)
+(7,1,0.000)
+(7,2,0.000)
+ }; \end{axis}
+ \end{scope}
+\begin{scope}[yshift=-3.500cm]
+    \node at (-1cm,1cm) {(b)};
+    \node[data object=gray] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=orange] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [affinity hidden=14.5229,bend left=3,overlay] (o-5) to  (o-6);
+    \draw [affinity hidden=14.7597,bend left=28,overlay] (o-4) to  (o-6);
+    \draw [affinity hidden=14.8085,bend right=16,overlay] (o-1) to  (o-6);
+    \draw [affinity hidden=16.3186,bend right=2,overlay] (o-2) to  (o-6);
+    \draw [affinity hidden=17.0959,bend left=10,overlay] (o-3) to  (o-6);
+    \draw [affinity hidden=59.4011,bend left=24,overlay] (o-3) to  (o-1);
+    \draw [affinity hidden=62.628,bend left=24,overlay] (o-2) to  (o-4);
+    \draw [affinity hidden=70.6657,bend left=24,overlay] (o-1) to  (o-3);
+    \draw [affinity hidden=71.9222,bend right=12,overlay] (o-4) to  (o-2);
+    \draw [affinity hidden=74.9784,bend right=7,overlay] (o-5) to  (o-1);
+    \draw [affinity hidden=77.8907,bend left=7,overlay] (o-2) to  (o-1);
+    \draw [affinity hidden=78.342,bend left=7,overlay] (o-3) to  (o-4);
+    \draw [affinity hidden=79.1952,bend left=7,overlay] (o-5) to  (o-4);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-1);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-3);
+    \draw [affinity hidden=81.6706,bend left=7,overlay] (o-5) to  (o-2);
+    \draw [affinity hidden=81.8157,bend left=7,overlay] (o-1) to  (o-2);
+    \draw [affinity hidden=82.0062,bend left=7,overlay] (o-1) to  (o-4);
+    \draw [affinity hidden=83.5924,bend left=7,overlay] (o-3) to  (o-2);
+    \draw [affinity hidden=83.6492,bend left=7,overlay] (o-5) to  (o-3);
+    \draw [affinity hidden=83.7641,bend left=7,overlay] (o-2) to  (o-3);
+    \draw [affinity hidden=84.72,bend right=7,overlay] (o-1) to  (o-5);
+    \draw [affinity hidden=86.2886,bend left=7,overlay] (o-4) to  (o-5);
+    \draw [affinity hidden=93.4149,bend left=7,overlay] (o-2) to  (o-5);
+    \draw [affinity hidden=95.5848,bend left=7,overlay] (o-3) to  (o-5);
+    \draw [affinity give=32.6414,bend left=22,overlay] (o-6) to node[font=\footnotesize,inner sep=0.02cm] {.10} (o-1);
+    \draw [affinity give=32.6414,bend right=22,overlay] (o-6) to node[font=\footnotesize,inner sep=0.02cm] {.10} (o-4);
+    \draw [affinity give=70.7179,bend left=3,overlay] (o-6) to node[font=\footnotesize,inner sep=0.02cm] {.21} (o-5);
+    \draw [affinity give=98.0156,bend right=2,overlay] (o-6) to node[font=\footnotesize,inner sep=0.02cm] {.29} (o-3);
+    \draw [affinity give=100,bend left=10,overlay] (o-6) to node[font=\footnotesize,inner sep=0.02cm] {.30} (o-2);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+\end{scope}
+\begin{scope}[xshift=9.350cm,yshift=-3.400cm]
+\begin{axis}[name=matrix-a, x=0.3cm, y=-0.3cm, z=0cm, xtick={1,...,6}, ytick={1,...,6}, view={90}{90}, xticklabel style={gray,xshift=0.15cm,yshift=-0.1cm,font=\footnotesize}, yticklabel style={gray,yshift=-0.15cm,font=\footnotesize}, axis x line=top, x axis line style={-}, y axis line style={-}, z axis line style={-}, title style={yshift=0.2cm,anchor=base}, colormap name=cmb, title={$\mathbf{B}$}] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=7,mesh/ordering=y varies] file {data/sos-matrix-b.dat}; \end{axis} \draw[thin] (matrix-a.north east) rectangle (matrix-a.south west);
+\begin{axis}[name=matrix-a-hl, at={(matrix-a.north west)}, xshift=0.000cm, yshift=-1.500cm, anchor=north west, x=0.3cm, y=-0.3cm, z=0cm, view={90}{90}, x axis line style={-}, y axis line style={-}, z axis line style={-}, xtick={\empty}, ytick={\empty}, colormap name=cmgive, colorbar sampled, colorbar style={height=1.8cm,ymin=0,ymax=0.300,try min ticks=5,max space between ticks=12pt,font=\footnotesize,at={(matrix-a.north east)},xshift=-0.2cm,width=0.25cm,ytick style={draw=none},samples=100,scaled y ticks = false, yticklabel style={/pgf/number format/fixed}}, point meta min=0, point meta max=0.299] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=2,mesh/cols=7,mesh/ordering=y varies] coordinates { (1,1,0.098)
+(1,2,0.000)
+(2,1,0.299)
+(2,2,0.000)
+(3,1,0.293)
+(3,2,0.000)
+(4,1,0.098)
+(4,2,0.000)
+(5,1,0.212)
+(5,2,0.000)
+(6,1,0.000)
+(6,2,0.000)
+(7,1,0.000)
+(7,2,0.000)
+ }; \end{axis}
+ \end{scope}
+\begin{scope}[yshift=-7.000cm]
+    \node at (-1cm,1cm) {(c)};
+    \node[data object=cyan] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=gray] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [affinity hidden=14.5229,bend left=3,overlay] (o-5) to  (o-6);
+    \draw [affinity hidden=14.7597,bend left=28,overlay] (o-4) to  (o-6);
+    \draw [affinity hidden=14.8085,bend right=16,overlay] (o-1) to  (o-6);
+    \draw [affinity hidden=16.3186,bend right=2,overlay] (o-2) to  (o-6);
+    \draw [affinity hidden=17.0959,bend left=10,overlay] (o-3) to  (o-6);
+    \draw [affinity hidden=32.6414,bend right=22,overlay] (o-6) to  (o-4);
+    \draw [affinity hidden=62.628,bend left=24,overlay] (o-2) to  (o-4);
+    \draw [affinity hidden=70.6657,bend left=24,overlay] (o-1) to  (o-3);
+    \draw [affinity hidden=70.7179,bend left=3,overlay] (o-6) to  (o-5);
+    \draw [affinity hidden=71.9222,bend right=12,overlay] (o-4) to  (o-2);
+    \draw [affinity hidden=78.342,bend left=7,overlay] (o-3) to  (o-4);
+    \draw [affinity hidden=79.1952,bend left=7,overlay] (o-5) to  (o-4);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-3);
+    \draw [affinity hidden=81.6706,bend left=7,overlay] (o-5) to  (o-2);
+    \draw [affinity hidden=81.8157,bend left=7,overlay] (o-1) to  (o-2);
+    \draw [affinity hidden=82.0062,bend left=7,overlay] (o-1) to  (o-4);
+    \draw [affinity hidden=83.5924,bend left=7,overlay] (o-3) to  (o-2);
+    \draw [affinity hidden=83.6492,bend left=7,overlay] (o-5) to  (o-3);
+    \draw [affinity hidden=83.7641,bend left=7,overlay] (o-2) to  (o-3);
+    \draw [affinity hidden=84.72,bend right=7,overlay] (o-1) to  (o-5);
+    \draw [affinity hidden=86.2886,bend left=7,overlay] (o-4) to  (o-5);
+    \draw [affinity hidden=93.4149,bend left=7,overlay] (o-2) to  (o-5);
+    \draw [affinity hidden=95.5848,bend left=7,overlay] (o-3) to  (o-5);
+    \draw [affinity hidden=98.0156,bend right=2,overlay] (o-6) to  (o-3);
+    \draw [affinity hidden=100,bend left=10,overlay] (o-6) to  (o-2);
+    \draw [affinity get=32.6414,bend left=22,overlay] (o-6) to node[font=\footnotesize,inner sep=0.02cm] {.10} (o-1);
+    \draw [affinity get=59.4011,bend left=24,overlay] (o-3) to node[font=\footnotesize,inner sep=0.02cm] {.18} (o-1);
+    \draw [affinity get=74.9784,bend right=7,overlay] (o-5) to node[font=\footnotesize,inner sep=0.02cm] {.22} (o-1);
+    \draw [affinity get=77.8907,bend left=7,overlay] (o-2) to node[font=\footnotesize,inner sep=0.02cm] {.23} (o-1);
+    \draw [affinity get=80.5228,bend left=7,overlay] (o-4) to node[font=\footnotesize,inner sep=0.02cm] {.24} (o-1);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+\end{scope}
+\begin{scope}[xshift=9.350cm,yshift=-6.900cm]
+\begin{axis}[name=matrix-a, x=0.3cm, y=-0.3cm, z=0cm, xtick={1,...,6}, ytick={1,...,6}, view={90}{90}, xticklabel style={gray,xshift=0.15cm,yshift=-0.1cm,font=\footnotesize}, yticklabel style={gray,yshift=-0.15cm,font=\footnotesize}, axis x line=top, x axis line style={-}, y axis line style={-}, z axis line style={-}, title style={yshift=0.2cm,anchor=base}, colormap name=cmb, title={$\mathbf{B}$}] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=7,mesh/ordering=y varies] file {data/sos-matrix-b.dat}; \end{axis} \draw[thin] (matrix-a.north east) rectangle (matrix-a.south west);
+\begin{axis}[name=matrix-a-hl, at={(matrix-a.north west)}, xshift=0.000cm, yshift=0.000cm, anchor=north west, x=0.3cm, y=-0.3cm, z=0cm, view={90}{90}, x axis line style={-}, y axis line style={-}, z axis line style={-}, xtick={\empty}, ytick={\empty}, colormap name=cmget, colorbar sampled, colorbar style={height=1.8cm,ymin=0,ymax=0.250,try min ticks=5,max space between ticks=12pt,font=\footnotesize,at={(matrix-a.north east)},xshift=-0.2cm,width=0.25cm,ytick style={draw=none},samples=100,scaled y ticks = false, yticklabel style={/pgf/number format/fixed}}, point meta min=0, point meta max=0.299] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=2,mesh/ordering=y varies] coordinates { (1,1,0.000)
+(1,2,0.233)
+(1,3,0.178)
+(1,4,0.241)
+(1,5,0.224)
+(1,6,0.098)
+(1,7,0.000)
+(2,1,0.000)
+(2,2,0.000)
+(2,3,0.000)
+(2,4,0.000)
+(2,5,0.000)
+(2,6,0.000)
+(2,7,0.000)
+ }; \end{axis}
+ \end{scope}
+\begin{scope}[yshift=-10.500cm]
+    \node at (-1cm,1cm) {(d)};
+    \node[data object=gray] (o-1) at (0.000cm,0.000cm) {$v_1$};
+    \node[data object=gray] (o-2) at (2.000cm,0.250cm) {$v_2$};
+    \node[data object=gray] (o-3) at (2.000cm,2.000cm) {$v_3$};
+    \node[data object=gray] (o-4) at (0.000cm,2.000cm) {$v_4$};
+    \node[data object=gray] (o-5) at (1.250cm,1.250cm) {$v_5$};
+    \node[data object=cyan] (o-6) at (7.000cm,1.000cm) {$v_6$};
+
+    \draw [affinity hidden=32.6414,bend left=22,overlay] (o-6) to  (o-1);
+    \draw [affinity hidden=32.6414,bend right=22,overlay] (o-6) to  (o-4);
+    \draw [affinity hidden=59.4011,bend left=24,overlay] (o-3) to  (o-1);
+    \draw [affinity hidden=62.628,bend left=24,overlay] (o-2) to  (o-4);
+    \draw [affinity hidden=70.6657,bend left=24,overlay] (o-1) to  (o-3);
+    \draw [affinity hidden=70.7179,bend left=3,overlay] (o-6) to  (o-5);
+    \draw [affinity hidden=71.9222,bend right=12,overlay] (o-4) to  (o-2);
+    \draw [affinity hidden=74.9784,bend right=7,overlay] (o-5) to  (o-1);
+    \draw [affinity hidden=77.8907,bend left=7,overlay] (o-2) to  (o-1);
+    \draw [affinity hidden=78.342,bend left=7,overlay] (o-3) to  (o-4);
+    \draw [affinity hidden=79.1952,bend left=7,overlay] (o-5) to  (o-4);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-1);
+    \draw [affinity hidden=80.5228,bend left=7,overlay] (o-4) to  (o-3);
+    \draw [affinity hidden=81.6706,bend left=7,overlay] (o-5) to  (o-2);
+    \draw [affinity hidden=81.8157,bend left=7,overlay] (o-1) to  (o-2);
+    \draw [affinity hidden=82.0062,bend left=7,overlay] (o-1) to  (o-4);
+    \draw [affinity hidden=83.5924,bend left=7,overlay] (o-3) to  (o-2);
+    \draw [affinity hidden=83.6492,bend left=7,overlay] (o-5) to  (o-3);
+    \draw [affinity hidden=83.7641,bend left=7,overlay] (o-2) to  (o-3);
+    \draw [affinity hidden=84.72,bend right=7,overlay] (o-1) to  (o-5);
+    \draw [affinity hidden=86.2886,bend left=7,overlay] (o-4) to  (o-5);
+    \draw [affinity hidden=93.4149,bend left=7,overlay] (o-2) to  (o-5);
+    \draw [affinity hidden=95.5848,bend left=7,overlay] (o-3) to  (o-5);
+    \draw [affinity hidden=98.0156,bend right=2,overlay] (o-6) to  (o-3);
+    \draw [affinity hidden=100,bend left=10,overlay] (o-6) to  (o-2);
+    \draw [affinity get=14.5229,bend left=3,overlay] (o-5) to node[font=\footnotesize,inner sep=0.02cm] {.04} (o-6);
+    \draw [affinity get=14.7597,bend left=28,overlay] (o-4) to node[font=\footnotesize,inner sep=0.02cm] {.04} (o-6);
+    \draw [affinity get=14.8085,bend right=16,overlay] (o-1) to node[font=\footnotesize,inner sep=0.02cm] {.04} (o-6);
+    \draw [affinity get=16.3186,bend right=2,overlay] (o-2) to node[font=\footnotesize,inner sep=0.02cm] {.05} (o-6);
+    \draw [affinity get=17.0959,bend left=10,overlay] (o-3) to node[font=\footnotesize,inner sep=0.02cm] {.05} (o-6);
+    \path[red] (-0.5cm,-0.55cm) rectangle (8cm,2.62cm);
+\end{scope}
+\begin{scope}[xshift=9.350cm,yshift=-10.400cm]
+\begin{axis}[name=matrix-a, x=0.3cm, y=-0.3cm, z=0cm, xtick={1,...,6}, ytick={1,...,6}, view={90}{90}, xticklabel style={gray,xshift=0.15cm,yshift=-0.1cm,font=\footnotesize}, yticklabel style={gray,yshift=-0.15cm,font=\footnotesize}, axis x line=top, x axis line style={-}, y axis line style={-}, z axis line style={-}, title style={yshift=0.2cm,anchor=base}, colormap name=cmb, title={$\mathbf{B}$}] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=7,mesh/ordering=y varies] file {data/sos-matrix-b.dat}; \end{axis} \draw[thin] (matrix-a.north east) rectangle (matrix-a.south west);
+\begin{axis}[name=matrix-a-hl, at={(matrix-a.north west)}, xshift=1.500cm, yshift=0.000cm, anchor=north west, x=0.3cm, y=-0.3cm, z=0cm, view={90}{90}, x axis line style={-}, y axis line style={-}, z axis line style={-}, xtick={\empty}, ytick={\empty}, colormap name=cmget, colorbar sampled, colorbar style={height=1.8cm,ymin=0,ymax=0.051,try min ticks=5,max space between ticks=12pt,font=\footnotesize,at={(matrix-a.north east)},xshift=-0.2cm,width=0.25cm,ytick style={draw=none},samples=100,scaled y ticks = false, yticklabel style={/pgf/number format/fixed}}, point meta min=0, point meta max=0.299] \addplot3[surf,draw=black,thin,shader=flat corner,mesh/rows=7,mesh/cols=2,mesh/ordering=y varies] coordinates { (1,1,0.044)
+(1,2,0.049)
+(1,3,0.051)
+(1,4,0.044)
+(1,5,0.043)
+(1,6,0.000)
+(1,7,0.000)
+(2,1,0.000)
+(2,2,0.000)
+(2,3,0.000)
+(2,4,0.000)
+(2,5,0.000)
+(2,6,0.000)
+(2,7,0.000)
+ }; \end{axis}
+ \end{scope}
+\end{tikzpicture}

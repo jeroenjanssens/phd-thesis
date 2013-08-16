@@ -1,0 +1,12 @@
+\begin{tabular}{lccccc}\toprule
+&\multicolumn{3}{c}{\glsentryname{ml}}&\multicolumn{2}{c}{\glsentryname{kdd}}\\
+\cmidrule(r){2-4}\cmidrule(){5-6}
+Feature&\multicolumn{1}{c}{\glsentryname{knndd}}&\multicolumn{1}{c}{\glsentryname{pwdd}}&\multicolumn{1}{c}{\glsentryname{svdd}}&\multicolumn{1}{c}{\glsentryname{lof}}&\multicolumn{1}{c}{\glsentryname{loci}}\\
+\midrule
+\rowcolor[gray]{0.9}
+Estimate local density & \y & &  & \y &\y  \\
+Estimate global density& &\y  & &  & \\
+\rowcolor[gray]{0.9}
+Domain based & & &\y &  &  \\
+\bottomrule
+\end{tabular}

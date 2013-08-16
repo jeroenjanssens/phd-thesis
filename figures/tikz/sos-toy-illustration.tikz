@@ -1,0 +1,58 @@
+%tikz2pdf-bin xelatex
+\def\size{4.1cm}
+\def\mm{0.97}
+\begin{tikzpicture}[>=latex]
+  \def\toyds(#1,#2){
+  \begin{axis}[name=m#1#2,xmin=-\mm,ymin=-\mm,xmax=\mm,ymax=\mm,
+		width=\size,
+		height=\size,
+		xtick=\empty,
+		outer sep=0cm,
+		xlabel style={overlay},
+		ylabel style={overlay},
+		ytick=\empty]
+  \addplot+[anomaly,mark options={scale=0.75}] file {data/toy-dataset-#1-#2-a.dat};
+  \addplot[normal,mark options={scale=0.75}] file {data/toy-dataset-#1-#2-n.dat};
+  \end{axis}}
+
+
+  \def\toydslegend(#1,#2){
+  \begin{axis}[name=m#1#2,xmin=-\mm,ymin=-\mm,xmax=\mm,ymax=\mm,
+		width=\size,
+		height=\size,
+		xtick=\empty,
+		outer sep=0cm,
+		xlabel style={overlay},
+		ylabel style={overlay},
+		ytick=\empty,
+		legend cell align=left,
+		legend entries={anomaly,normality},
+legend to name=toylegend,]
+  \addplot+[anomaly,mark options={scale=0.75}] file {data/toy-dataset-#1-#2-a.dat};
+  \addplot[normal,mark options={scale=0.75}] file {data/toy-dataset-#1-#2-n.dat};
+  \end{axis}}
+
+
+  \def\arrow{
+    \draw[->,thick,black] (0,1.3) to (0.5,1.3);
+  }
+
+  \matrix[inner sep=0.0cm, row sep=0.1cm,column sep=0.2cm,ampersand replacement=\&]{
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(a)\hspace*{0.2cm}}; \& \toydslegend(a,1) \& \arrow \& \toyds(a,2) \& \arrow \& \toyds(a,3) \\
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(b)\hspace*{0.2cm}}; \& \toyds(b,1) \& \arrow \& \toyds(b,2) \& \arrow \& \toyds(b,3) \\
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(c)\hspace*{0.2cm}}; \& \toyds(c,1) \& \arrow \& \toyds(c,2) \& \arrow \& \toyds(c,3) \\
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(d)\hspace*{0.2cm}}; \& \toyds(d,1) \& \arrow \& \toyds(d,2) \& \arrow \& \toyds(d,3) \\
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(e)\hspace*{0.2cm}}; \& \toyds(e,1) \& \arrow \& \toyds(e,2) \& \arrow \& \toyds(e,3) \\
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(f)\hspace*{0.2cm}}; \& \toyds(f,1) \& \arrow \& \toyds(f,2) \& \arrow \& \toyds(f,3) \\
+    \node[anchor=east,inner sep=0cm, outer sep=0cm] at (0,1.3) {(g)\hspace*{0.2cm}}; \& \toyds(g,1) \& \arrow \& \toyds(g,2) \& \arrow \& \toyds(g,3) \\
+  };
+
+  \node[inner sep=0cm,above=of ma1,anchor=base,yshift=-0.7cm] {$\lambda_{\text{start}}$}; 
+  \node[inner sep=0cm,above=of ma2,anchor=base,yshift=-0.7cm] {$\lambda_{\text{inter}}$}; 
+  \node[inner sep=0cm,above=of ma3,anchor=base,yshift=-0.7cm] {$\lambda_{\text{end}}$}; 
+
+\node[inner sep=0cm,right=of ma3.north east,/pgfplots/legend image post style={scale=1.5,thick},anchor=north west,xshift=-0.4cm,yshift=0.0cm] {\pgfplotslegendfromname{toylegend}};
+
+%\thesisbb
+
+ \end{tikzpicture}

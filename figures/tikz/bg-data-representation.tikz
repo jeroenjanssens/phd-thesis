@@ -1,0 +1,68 @@
+%pdfcrop 0.1 0.1 -228.7 0.1
+\begin{tikzpicture}
+
+ \begin{axis}[width=5cm,name=apple-orange-plot,
+		height=5cm,
+ 		xmin=5.5,
+ 		xmax=10.5,
+ 		ymin=3.5,
+ 		ymax=10.5,
+ 		%xtick={6,7,8,9,10},
+% 		ytick={4,5,6,7,8,9,10,11},
+		xlabel near ticks,
+		ylabel near ticks,
+		outer sep=0cm,xlabel=width,ylabel=height,
+%use units,
+%x unit=m,x unit prefix=c,
+%y unit=m,y unit prefix=c,
+legend entries={orange,apple},
+legend cell align=left,
+reverse legend,
+legend pos=south east,
+]
+\addplot+[object=orange] table[x index=2,y index=3] {data/fruit-data-oranges.dat};
+\addplot+[object=green] table[x index=2,y index=3] {data/fruit-data-apples.dat};
+  \end{axis}
+
+\node[inner sep=0cm,anchor=north east,xshift=-5.4cm] at (apple-orange-plot.north west) (apple-orange-image){\includegraphics[height=3.4cm]{png/apple-orange.jpg}};
+\draw (apple-orange-image.north west) rectangle (apple-orange-image.south east);
+
+\node[anchor=east,inner sep=0cm,yshift=-0.2cm,xshift=0.03cm] at(apple-orange-image.south east) {\fontsize{8}{8}{\emph{Source: Mike Johnson - TheBusyBrain.com}}};
+
+
+%source: Mike Johnson - TheBusyBrain.com
+
+
+\setlength{\tabcolsep}{3pt}
+\pgfplotstableread{data/fruit-data-table.dat}\loadedtable
+
+\node[anchor=north west,xshift=-6.3cm,rectangle,inner sep=0cm] (apple-orange-table) at (apple-orange-plot.north) 
+{\pgfplotstabletypeset[
+columns={width,height,label},
+fixed,
+fixed zerofill,
+precision=1,
+%column type/.add={|}{},
+columns/label/.style={string type},
+%columns//.style={column name={width},}, 
+%columns/2/.style={column name={height},},
+every head row/.style={after row=\hline},
+every even row/.style={before row={\rowcolor[gray]{0.9}}},
+]\loadedtable};
+
+\draw (apple-orange-table.south west) -- (apple-orange-table.north west) -- (apple-orange-table.north east) -- (apple-orange-table.south east);
+
+\draw[black,dash pattern=on 1pt off 1pt,dash phase=1pt] (apple-orange-table.south west) -- +(0,-0.3cm);
+\draw[black,dash pattern=on 1pt off 1pt,dash phase=1pt] (apple-orange-table.south east) -- +(0,-0.3cm);
+
+\node[yshift=-0.2cm,xshift=-0.05cm] at (apple-orange-table.south) {\ldots};
+\node[yshift=-0.2cm,xshift=-1.07cm] at (apple-orange-table.south) {\ldots};
+\node[yshift=-0.2cm,xshift=+1cm] at (apple-orange-table.south) {\ldots};
+
+\node[anchor=base,yshift=0.4cm,inner sep=0cm] at (apple-orange-image.north) {Real-world observations};
+\node[anchor=base,yshift=0.4cm,inner sep=0cm] at (apple-orange-table.north) {Labelled data set};
+\node[anchor=base,yshift=0.4cm,inner sep=0cm] at (apple-orange-plot.north) {Scatter plot of data set};
+
+\node[anchor=east,inner sep=0cm,yshift=-0.5cm] at(apple-orange-table.south east) {\fontsize{8}{8}{\emph{Source: Iain Murray}}};
+
+\end{tikzpicture}

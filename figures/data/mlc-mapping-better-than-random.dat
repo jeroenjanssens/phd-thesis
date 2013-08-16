@@ -1,0 +1,8 @@
+done	dtwo	one	two	value	variant
+-4	1	192	197	196	raw
+10	7	210	207	200	standardised, selected
+8	10	212	214	204	log, selected
+-1	-2	206	205	207	standardised
+-3	-8	207	202	210	log
+-6	-12	205	199	211	log, standardised, selected
+-8	-9	204	203	212	log, standardised

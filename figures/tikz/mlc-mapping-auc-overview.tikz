@@ -1,0 +1,40 @@
+%pdfcrop 1 10 1 10
+\begin{tikzpicture}[meta line/.style={mark=none,solid,cyan,opacity=0.4}]
+	\pgfplotstableread{data/mlc-mapping-auc-overview.dat}\data%
+
+	\begin{axis}[name=ax0,
+		axis x line=bottom,
+		separate axis lines,
+		hide y axis, every outer x axis line/.append style={-,opacity=0,draw=none},
+		width=13cm,
+		scaled x ticks=false,tick style={draw=none},
+		height=7cm,
+		outer sep=0cm,
+		xticklabel shift={-.1cm},
+		xmin=-0.05,
+		xmax=1.17,
+		xlabel={AUC},
+		ymin=0.0,
+		legend cell align=left,
+		legend style={at={(0,1)}, anchor=north west, xshift=0.5cm,yshift=-0.5cm},
+		ylabel style={overlay},
+		xticklabel style={overlay},
+		xtick={0.0,0.1,...,1.05},
+		ytick=\empty]
+		\foreach \c in {1,2,...,21}{
+			\addplot+[yshift=0.1cm,meta line,forget plot] table[x=x,y=meta_\c] from \data;
+		}
+		\addlegendimage{legend image code/.code={
+			\foreach \c in {1,2,...,20}{
+				\draw[cyan,opacity=0.2,yshift=-0.05cm] (0cm,rnd*0.1cm) -- +(0.6cm,0cm);
+			}
+			}}
+		\addlegendentry{meta-learning}
+		\addplot+[mark=none,yshift=0.1cm,thick,densely dashed,gray,legend image post style={yshift=-0.1cm}] table[x=x,y=baseline] from \data;
+		\addlegendentry{random}
+		\addplot+[mark=none,yshift=0.1cm,thick,dashdotted,magenta,legend image post style={yshift=-0.1cm}] table[x=x,y=best] from \data;
+		\addlegendentry{best}
+		\addplot+[mark=none,yshift=0.1cm,thick,densely dotted,black,legend image post style={yshift=-0.1cm}] table[x=x,y=max] from \data;
+		\addlegendentry{oracle}
+	\end{axis}
+\end{tikzpicture}

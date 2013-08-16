@@ -1,0 +1,18 @@
+
+\pgfplotstableread[header=true, col sep=tab, trim cells=true]{/home/jeroen/phd/latex/thesis/dev/matlab/eval/results/eval-datasets-overview-b.dat}\datafile
+
+\newcolumntype{x}[1]{>{\raggedleft\arraybackslash}p{#1}}%
+
+\pgfplotstabletypeset[
+	every head row/.style={before row=\toprule,after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every even row/.style={before row={\rowcolor[gray]{0.9}}},
+	columns={id,name,class,numdims,numpcadims,numtargets,numoutliers},
+	columns/id/.style={string type,column type=l,column name=Code},
+	columns/name/.style={string type,column type={p{2.7cm}},column name=Multi-class data set},
+	columns/class/.style={string type,column type={p{3.35cm}},column name=Normal class},
+	columns/numdims/.style={column name=$m$,column type={x{0.9cm}}},
+	columns/numpcadims/.style={column name=$m_{\text{PCA}}$,,column type={x{0.9cm}}},
+	columns/numtargets/.style={column name={\mathcal{C}$_{\text{N}}$},column type={x{0.9cm}}},
+	columns/numoutliers/.style={column name={\mathcal{C}$_{\text{A}}$},column type={x{0.9cm}}},
+]\datafile

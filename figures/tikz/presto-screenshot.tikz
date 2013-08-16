@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\def\thesisann(#1,#2,#3){%
+\fill[formule!30, outer sep=0mm] (#1,#2) circle (1.8mm);
+\node[] at (#1,#2) {\textbf{\uppercase{#3}}};
+\draw[black,thick,outer sep=0mm] (#1,#2) circle (1.8mm);	
+}
+
+\node[inner sep=0pt, outer sep=0pt] at (0,0){\includegraphics[width=13.2cm]{png/presto-screenshot.png}};%
+\small{
+  \thesisann(-5.76,0.64,a);
+  \thesisann(-2,2,b);  
+  \thesisann(5.85,0.64,c);  
+  \thesisann(-4.7,-1,d);  
+  \thesisann(-2.5,-1.75,e);  
+  \thesisann(-3.2,0.5,f);
+}
+%\thesisbb
+\end{tikzpicture}

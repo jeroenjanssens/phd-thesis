@@ -1,0 +1,76 @@
+\begin{tikzpicture}%
+    
+
+  %\pgfplotstableread{datafile.dat}\loadedtable
+  %dataset	sos	
+
+  %\addplot table[x index=2,y index=3] {datafile.dat};
+  %\addplot table[x=dof,y index=2] {datafile.dat};
+\pgfplotstableread{data/results-real-sos.dat}\realresults%
+\small
+  \begin{axis}[
+    small,
+    width=13.2cm,%15
+	%height=5cm,
+	height=6.5cm,
+    xtick=data,
+%	transpose legend,
+	legend columns=-1,
+    xticklabels={
+{Iris},
+{Ecoli},
+%{Vowel Recognition},
+{Breast W. Original},
+{Delft Pump},
+%{Balance Scale},
+{Waveform Generator},
+{Wine Recognition},
+{BioMed},
+%{Automobile},
+{Vehicle Silhouettes},
+{Colon Gene},
+{Glass Identification},
+%{Sonar},
+%{Ionosphere},
+{Boston Housing},
+{Heart Disease},
+{Haberman's Survival},
+{Breast W. New},
+%{Diabetes},
+{Arrhythmia},
+{Liver Disorders},
+{SPECTF Heart},
+{Hepatitis}},
+    %symbolic x coords={a,b,c,d,e,f,g,h,i},
+    %ymin=0.35,
+ ymin=0.4,
+    ymax=1.03,
+	xmin=0,
+	xmax=19,
+    ytick={0.4,0.5,0.6,0.7,0.8,0.9,1.0},
+yticklabels={0,0.5,0.6,0.7,0.8,0.9,1},
+xmajorgrids,
+ymajorgrids,
+every major grid/.append style={semithick, dotted},
+every major tick/.append style={black},
+    %yticklabels={0.5,0.6,0.7,0.8,0.9,1.0},
+    axis y discontinuity=crunch,
+    enlarge x limits=false,
+    enlarge y limits=false,
+    ylabel={Weighted AUC},
+	every axis y label/.style={at={(ticklabel cs:0.5)},rotate=90,anchor=near ticklabel},
+    xticklabel style={rotate=-30,anchor=west,yshift=-0.2 cm},
+	 legend pos=outer north east,reverse legend,legend cell align=left,legend entries={LSOD,LOCI,LOF,KNN,SOS},
+  legend style={xshift=-0.32cm,yshift=0.3cm,anchor=south east}]
+	
+    \addplot[thick,dashed,orange] table[x index=0,y index=2] {\realresults}; %LSOD
+ \addplot[thick,densely dashed,green!50!black] table[x index=0,y index=3] {\realresults}; %LOCI
+\addplot[thick,dotted,blue] table[x index=0,y index=4] {\realresults}; %LOF 
+\addplot[thick,densely dotted,red] table[x index=0,y index=5] {\realresults}; %KNN
+    \addplot[thick,violet!80] table[x index=0,y index=1] {\realresults};	%SOS
+
+  \end{axis}
+
+%\thesisbb
+
+\end{tikzpicture}

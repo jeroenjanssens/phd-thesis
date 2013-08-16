@@ -1,0 +1,13 @@
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+&\multicolumn{5}{c}{Outlier-selection algorithm}\\
+\cmidrule(l){2-6}
+&SOS&KNNDD&LOF&LOCI&LSOD\\
+\midrule
+Average AUC\phantom{0}& \textbf{0.811}&0.748&0.763&0.716&0.742\\
+Average rank&		\textbf{1.250}&3.444&2.833&4.639&2.833\\
+%Old (before AISTATS2011):
+%Average AUC\phantom{0}& \textbf{0.805}&	0.747&0.761&0.717&0.736\\
+%Average rank&		\textbf{1.361}&3.306&2.806&4.583&2.944\\
+\bottomrule
+\end{tabular}

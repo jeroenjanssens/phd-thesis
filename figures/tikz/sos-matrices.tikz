@@ -1,0 +1,34 @@
+%pdfcrop ? ? ? ?
+%pdfcrop 10 10 10 10
+%preview
+
+
+\begin{tikzpicture}
+
+
+\sosmatrix{x}{2}{title=$\mathbf{X}$,colormap name=cmx,point meta max=8}
+\sosmatrix{d}{6}{title=$\mathbf{D}$,at={(matrix-x.north east)},anchor={north west},colormap name=cmd,xshift=1.24cm,point meta max=8}
+\sosmatrix{a}{6}{title=$\mathbf{A}$,at={(matrix-d.north east)},anchor={north west},colormap name=cma,xshift=1.24cm,point meta max=1}
+\sosmatrix{b}{6}{title=$\mathbf{B}$,at={(matrix-a.north east)},anchor={north west},colormap name=cmb,xshift=1.42cm,point meta max=0.3}
+\sosmatrix{o}{1}{title=$\textbf{Φ}$,at={(matrix-b.north east)},anchor={north west},colormap/jet,xshift=1.42cm,point meta min=0,point meta max=1}
+
+\begin{scope}[distance=0.75cm]
+\draw[semithick,->] ($(matrix-x.above north)+(0.1cm,0cm)$) to[bend left] node[above,name=subs] {4.2.1} ($(matrix-d.above north)+(-0.1cm,0cm)$);
+\draw[semithick,->] ($(matrix-d.above north)+(0.1cm,0cm)$) to[bend left] node[above] {4.2.2} ($(matrix-a.above north)+(-0.1cm,0cm)$);
+\draw[semithick,->] ($(matrix-a.above north)+(0.1cm,0cm)$) to[bend left] node[above] {4.2.3} ($(matrix-b.above north)+(-0.1cm,0cm)$);
+\draw[semithick,->] ($(matrix-b.above north)+(0.1cm,0cm)$) to[bend left] node[above] {4.2.4 -- 6} ($(matrix-o.above north)+(-0.1cm,0cm)$);
+\end{scope}
+
+
+\draw[gray,decorate,decoration={brace,mirror}] ($(matrix-x.left of north west) + (0.2cm,0cm)$) to node[rotate=90,above,yshift=0.1cm] {$n$} ($(matrix-x.left of south west) + (0.2cm,0cm)$) ; 
+\draw[gray,decorate,decoration={brace,mirror}] ($(matrix-x.south west) + (0cm,-0.1cm)$) to node[yshift=-0.35cm,anchor=base] {$m$} ($(matrix-x.south east) + (0cm,-0.1cm)$); 
+
+\node[anchor=base west,xshift=-2.4cm] at (subs.base) {Subsections:};
+
+\draw[gray,decorate,decoration={brace,mirror}] ($(matrix-d.south west) + (0cm,-0.1cm)$) to node[yshift=-0.35cm,anchor=base] {$n$} ($(matrix-d.south east) + (0cm,-0.1cm)$); 
+\draw[gray,decorate,decoration={brace,mirror}] ($(matrix-a.south west) + (0cm,-0.1cm)$) to node[yshift=-0.35cm,anchor=base] {$n$} ($(matrix-a.south east) + (0cm,-0.1cm)$); 
+\draw[gray,decorate,decoration={brace,mirror}] ($(matrix-b.south west) + (0cm,-0.1cm)$) to node[yshift=-0.35cm,anchor=base] {$n$} ($(matrix-b.south east) + (0cm,-0.1cm)$); 
+\draw[gray,decorate,decoration={brace,mirror}] ($(matrix-o.south west) + (0cm,-0.1cm)$) to node[yshift=-0.35cm,anchor=base,font=\small] {$1$} ($(matrix-o.south east) + (0cm,-0.1cm)$); 
+
+%\thesisbb
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tabular}{lcccc}\toprule
+Methodology	stages										& RQ1& RQ2& RQ3\\
+\midrule
+\rowcolor[gray]{0.9}
+Review and analyse scientific literature 			& \y & \y & \y \\
+Design and develop a novel outlier-selection algorithm 			& \n & \y & \n \\
+\rowcolor[gray]{0.9}
+Implement outlier-selection algorithm in MATLAB®	& \y & \y & \n \\
+Perform comparative experiments						& \y & \y & \y \\
+\rowcolor[gray]{0.9}
+Analyse obtained results							& \y & \y & \y \\
+%Find appropriate data representation				& \n & \n & \y \\
+\bottomrule
+\end{tabular}

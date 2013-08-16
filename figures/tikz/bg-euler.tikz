@@ -1,0 +1,178 @@
+\begin{tikzpicture}[>=latex]
+
+\def\realworld{(0cm,0cm) circle[x radius=3cm, y radius=2cm]}
+\def\dataset{(1cm,0cm) circle (1.5cm)}
+\def\anomalies{(-1cm,0cm) circle (1.5cm)}
+\def\outliers{(0.75cm,0cm) circle (1cm)}
+
+\def\dscale{0.5}
+\def\dshift{-2.25cm}
+\def\F{\phantom{\overline{\mathcal{A}}\!\!\!\!}}
+%\delimitershortfall=-1pt
+
+\newcommand{\dlabel}[1]{\node[anchor=base west,outer sep=0.0cm,inner sep=0cm] at (-4.3cm,-0.15cm) {(#1)};}
+\newcommand{\dlegend}[3]{\draw[fill=#2] (4cm, 2.25cm) ++(0cm,-#1 cm) rectangle +(0.5cm,0.5cm) node[outer sep=0cm,draw=none,text height=0cm,text height=0.1cm,xshift=0.1cm, yshift=-0.22cm, anchor=base west] {#3};}
+\newcommand{\dnotation}[2]{\node[outer sep=0cm,anchor=base west,yshift=-0.22cm] at (15cm, 2.75cm-#1 cm){$#2$};}
+
+\begin{scope}[yshift=1.5cm,xshift=-2cm]
+\draw (0.5cm,0cm) -- (11.5cm,0cm);
+\node[anchor=base west, inner sep=0cm] at (0.5cm,0.15cm) {Euler diagram};
+\node[anchor=base west, inner sep=0cm] at (3.98cm,0.15cm) {Set legend};
+\node[anchor=base west, inner sep=0cm] at (9.6cm,0.15cm) {Set notation};
+\end{scope}
+
+
+\begin{scope}[yshift=0*\dshift,scale=\dscale]
+	\dlegend{1}{brown!60}{real-world observations}
+	\dnotation{1}{\mathcal{X}}
+	%\pgfresetboundingbox
+	\fill[brown!60] \realworld;
+	\draw \realworld;
+	\node[anchor=center] at (0cm,0) {$\mathcal{X}$};
+	\dlabel{a}
+
+\end{scope}
+
+
+\begin{scope}[yshift=1*\dshift,scale=\dscale]
+	\fill[lime!60] \realworld;
+	\fill[orange!60] \anomalies;
+	\draw \realworld;
+	\draw \anomalies;
+	\node[anchor=center] at (-1cm,0) {$\mathcal{A}$};
+	\node[anchor=center] at (1.5cm,0) {$\mathcal{X}$};
+	\dlabel{b}
+
+	\dlegend{1}{orange!60}{labelled by expert as anomalous}
+	\dlegend{2}{lime!60}{labelled by expert as normal}
+	\dnotation{1}{\mathcal{A}}
+	\dnotation{2}{\mathcal{X} \cap \overline{\mathcal{A}}}
+\end{scope}
+
+
+\begin{scope}[yshift=2*\dshift,scale=\dscale]
+	\fill[gray!10] \realworld;
+	\fill[blue!60] \dataset;
+	\draw \realworld;
+	\draw \dataset;
+	\draw \anomalies;
+	\dlabel{c}
+
+	\dlegend{1}{blue!60}{data points}
+	\dlegend{2}{gray!10}{unrecorded}
+	\dnotation{1}{\mathcal{D}}
+	\dnotation{2}{\mathcal{X} \cap \overline{\mathcal{D}}}
+
+	\node[anchor=center] at (-1.5cm,0) {$\mathcal{A}$};
+	\node[anchor=center] at (1.5cm,0) {$\mathcal{D}$};
+	\node[anchor=center] at (0cm,1.65cm) {$\mathcal{X}$};
+\end{scope}
+
+
+\begin{scope}[yshift=3*\dshift,scale=\dscale]
+	\fill[gray!10] \realworld;
+	\draw \anomalies;
+	\fill[lime!60] \dataset;
+	
+	\begin{scope}
+		\clip \anomalies;
+		\fill[orange!60] \dataset;
+	\end{scope}
+
+	\begin{scope}
+		\clip \dataset;
+		\draw \anomalies;
+	\end{scope}
+
+	\draw \realworld;
+	\draw \dataset;
+	\dlabel{d}
+
+	\dlegend{1}{orange!60}{anomalies represented as data points}
+	\dlegend{2}{lime!60}{normalities represented as data points}
+	\dnotation{1}{\mathcal{C}_{\text{A}} = \mathcal{D} \cap \mathcal{A}}
+	\dnotation{2}{\mathcal{C}_{\text{N}} = \mathcal{D} \cap \overline{\mathcal{A}}}
+
+	\node[anchor=center] at (-1.5cm,0) {$\mathcal{A}$};
+	\node[anchor=center] at (1.5cm,0) {$\mathcal{D}$};
+	\node[anchor=center] at (0cm,1.65cm) {$\mathcal{X}$};
+\end{scope}
+
+
+\begin{scope}[yshift=4*\dshift,scale=\dscale]
+	\fill[gray!10] \realworld;
+	\fill[cyan!60] \dataset;
+	\fill[purple!60] \outliers;
+
+	\draw \realworld;
+	\draw \dataset;
+	\draw \outliers;
+	\draw \anomalies;
+	\dlabel{e}
+
+	\dlegend{1}{purple!60}{classified by algorithm as an outlier}
+	\dlegend{2}{cyan!60}{classified by algorithm as an inlier}
+	\dnotation{1}{\mathcal{C}_{\text{O}}}
+	\dnotation{2}{\mathcal{C}_{\text{I}} = \mathcal{D} \cap \overline{\mathcal{C}_{\text{O}}}}
+
+	\node[anchor=center] at (-1.5cm,0) {$\mathcal{A}$};
+	\node[anchor=center] at (2.1cm,0) {$\mathcal{D}$};
+	\node[anchor=center] at (1.05cm,0) {$\mathcal{C}_{\text{O}}$};
+	\node[anchor=center] at (0cm,1.65cm) {$\mathcal{X}$};
+\end{scope}
+
+
+\begin{scope}[yshift=5*\dshift,scale=\dscale]
+
+	\fill[gray!10] \realworld;
+	\draw \anomalies;
+	% correct rejects
+	\fill[olive!60] \dataset;
+	% false alarms
+	\fill[violet!60] \outliers;
+
+	% misses
+	\begin{scope}
+	\clip \anomalies ;
+	\fill[red!60] \dataset;
+	\end{scope}
+
+	% hits
+	\begin{scope}
+	\clip \anomalies ;
+	\fill[green!60] \outliers;
+	\end{scope}
+
+	\draw \realworld ;
+	\draw \dataset ;
+	\draw \outliers ;
+	%\draw \anomalies ;
+	\dlabel{f}
+
+	\begin{scope}
+		\clip \dataset;
+		\draw \anomalies;
+	\end{scope}
+
+	\dlegend{1}{green!60}{hits}
+	\dlegend{3}{red!60}{misses}
+	\dlegend{2}{violet!60}{false alarms} 
+	\dlegend{4}{olive!60}{correct rejects}
+
+	\dnotation{1}{\mathcal{H\!i} = \mathcal{C}_{\text{A}} \cap \mathcal{C}_{\text{O}}}
+	\dnotation{2}{\mathcal{F\!A} = \mathcal{C}_{\text{N}}  \cap \mathcal{C}_{\text{O}} }
+	\dnotation{3}{\mathcal{M\!i} = \mathcal{C}_{\text{A}}  \cap \mathcal{C}_{\text{I}}  }
+	\dnotation{4}{\mathcal{C\!R} = \mathcal{C}_{\text{N}}  \cap \mathcal{C}_{\text{I}} }
+
+
+
+
+	\node[anchor=center] at (-1.5cm,0) {$\mathcal{A}$};
+	\node[anchor=center] at (2.1cm,0) {$\mathcal{D}$};
+	\node[anchor=center] at (1.05cm,0) {$\mathcal{C}_{\text{O}}$};
+	\node[anchor=center] at (0cm,1.65cm) {$\mathcal{X}$};
+\end{scope}
+
+%\thesisbb
+
+\end{tikzpicture}
