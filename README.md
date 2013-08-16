@@ -16,26 +16,26 @@ $ tikz2pdf figures/tikz/*.tikz --template figures/thesis-template.tex --output f
 
 Below are some figures from the thesis. Please note that these are rendered with a different font. Also, the conversion from PDF to PNG with ImageMagick isn't all that great.
 
-### figures/examples/bg-banana-roc.png
+### figures/tikz/bg-banana-roc.tikz
 ![Example 1](figures/examples/bg-banana-roc.png)
 
-### figures/examples/bg-multiclass.png
+### figures/tikz/bg-multiclass.tikz
 ![Example 2](figures/examples/bg-multiclass.png)
 
-### figures/examples/eval-boxplot-preprocessing-pca.png
+### figures/tikz/eval-boxplot-preprocessing-pca.tikz
 ![Example 3](figures/examples/eval-boxplot-preprocessing-pca.png)
 
-### figures/examples/mlc-mapping-auc-overview.png
+### figures/tikz/mlc-mapping-auc-overview.tikz
 ![Example 4](figures/examples/mlc-mapping-auc-overview.png)
 
-### figures/examples/sos-densities.png
+### figures/tikz/sos-densities.tikz
 ![Example 5](figures/examples/sos-densities.png)
 
-### figures/examples/sos-graph-matlab-binding.png
+### figures/tikz/sos-graph-matlab-binding.tikz
 ![Example 6](figures/examples/sos-graph-matlab-binding.png)
 
-### figures/examples/sos-graphs-sample.png
+### figures/tikz/sos-graphs-sample.tikz
 ![Example 7](figures/examples/sos-graphs-sample.png)
 
-### figures/examples/sos-nemenyi.png
+### figures/tikz/sos-nemenyi.tikz
 ![Example 8](figures/examples/sos-nemenyi.png)
