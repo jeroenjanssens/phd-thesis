@@ -1,9 +1,11 @@
 Outlier Selection and One-Class Classification
 ==============================================
 
-The PDF of my thesis can be downloaded separately from [http://jeroenjanssens.com/jeroenjanssens-thesis.pdf](http://jeroenjanssens.com/jeroenjanssens-thesis.pdf) (10MB). 
+What is common in a terrorist attack, a forged painting, and a rotten apple? The answer is: all three are anomalies; they are real-world observations that deviate from what is considered to be normal. Detecting anomalies is of utmost importance because an undetected anomaly can be dangerous or expensive. A human domain expert may suffer from three cognitive limitations: fatigue, information overload, and emotional bias. The cognitive limitations will hamper the detection of anomalies. Outlier-selection and one- class classification algorithms are capable of automatically classifying data points as outliers in large amounts of data. In this thesis we study to what extent outlier-selection and one-class classification algorithms can support domain experts with real-world anomaly detection. 
 
 ![Thesis cover](cover.png)
+
+The PDF can also be [downloaded separately](http://jeroenjanssens.com/jeroenjanssens-thesis.pdf) (228 pages, 10MB). 
 
 Figures
 -------
